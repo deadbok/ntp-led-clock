@@ -16,10 +16,12 @@ This project would never have begun without finding the work by
 As always write more documentation.
 
  * Initial things to study
-   *  Write or find some example code for the RTC (DS1302).
-   *  Write or find some example code for the display chip (TM1650).
+   * Write or find some example code for the RTC (DS1302).
+   * Write or find some example code for the display chip (TM1650).
    * Write or find some example code for using NTP.
+   * Write or find some example code for using the external flash chip (P25Q80H).
  * Code design
    * Decide how to tie the RTC in with NTP.
    * Decide how much should be configurable via HTTP
+   * Decide how to use the external flash.
  * Write code 

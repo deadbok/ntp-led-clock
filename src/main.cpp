@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <Wire.h>
 #include <TM1650.h>
 
@@ -18,7 +19,7 @@ void setup()
 
 void loop()
 {
-  Serial.println("0b00000001");
+  /*Serial.println("0b00000001");
   Wire.beginTransmission(TM1650_DISPLAY_BASE);
   Wire.write(0b00000001);
   Wire.endTransmission();
@@ -42,31 +43,31 @@ void loop()
   Wire.endTransmission();
   delay(5000);
 
-Serial.println("0b000100000");
+  Serial.println("0b00010000");
   Wire.beginTransmission(TM1650_DISPLAY_BASE);
   Wire.write(0b00010000);
   Wire.endTransmission();
   delay(5000);
 
-Serial.println("0b001000000");
+  Serial.println("0b00100000");
   Wire.beginTransmission(TM1650_DISPLAY_BASE);
   Wire.write(0b00100000);
   Wire.endTransmission();
   delay(5000);
 
-Serial.println("0b010000000");
+  Serial.println("0b01000000");
   Wire.beginTransmission(TM1650_DISPLAY_BASE);
   Wire.write(0b01000000);
   Wire.endTransmission();
   delay(5000);
 
-Serial.println("0b100000000");
+  Serial.println("0b10000000");
   Wire.beginTransmission(TM1650_DISPLAY_BASE);
   Wire.write(0b10000000);
   Wire.endTransmission();
-  delay(5000);
+  delay(5000);*/
 
-/*  Serial.println("Display off");
+  Serial.println("Display off");
   d.displayOff();
   Serial.println("____"); 
   d.displayString("____");
@@ -75,7 +76,7 @@ Serial.println("0b100000000");
   Serial.println("Display on");
   d.displayOn();
   delay(100);
-  char line[] = "1234";
+  char line[] = "2458";
 
   Serial.println(line);
   d.displayString(line);
@@ -153,5 +154,5 @@ Serial.println("0b100000000");
       d.setDot(j, false);
       delay(200);
     }
-  }*/
+  }
 }

@@ -21,3 +21,7 @@ To display a zero with the regular connections:
 To display a zero with the connections on this board:
 
     10111011
+
+So I have added a function to the 
+[TM1650 library](https://github.com/arkhipenko/TM1650), that bit shifts things
+in to place when writing characters to the display. 

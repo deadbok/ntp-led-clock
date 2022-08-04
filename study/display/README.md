@@ -1,5 +1,6 @@
-The display is driven by the TM1650 chip, for which there is a library. The
-display is connected rather strangely:
+The display is a 4-digit 7-segment common cathode LED display. The display is
+driven by the TM1650 chip, for which there is a library. The display is
+connected rather strangely:
 
  | Segment | TM1650 |
  |:-------:|:------:|

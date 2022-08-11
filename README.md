@@ -13,6 +13,8 @@ This project would never have begun without finding the work by
 Some good documentation on the NTP services in the ESP8266 can be found at:
 <https://werner.rothschopf.net/202011_arduino_esp8266_ntp_en.htm> and
 <https://werner.rothschopf.net/microcontroller/202112_arduino_esp_ntp_rtc_en.htm>
+and a really helpful thread at:
+<https://forum.arduino.cc/t/getting-time-from-ntp-service-using-nodemcu-1-0-esp-12e/702333>.
 
 ## Time sources
 
@@ -49,5 +51,6 @@ The clock has a built-in web server to configure:
     - [ ] NTP code
     - [ ] Web server code
     - [ ] Web page for configuration
-    - [ ] Configuration from web page to and from clock
-    - [ ] Set AP mode when no WiFi connection could be established
+      - [ ] Configuration from web page to and from clock
+      - [ ] Set AP mode when no WiFi connection could be established
+      - [ ] Get time-zone from browser

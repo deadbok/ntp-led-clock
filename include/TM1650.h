@@ -339,7 +339,6 @@ void TM1650::displayString(char *aString)
 			Wire.write(iBuffer[i] | dot);
 #endif
 			Wire.endTransmission();
-			Serial.println("");
 		}
 		else
 			break;

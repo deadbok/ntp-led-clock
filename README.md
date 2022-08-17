@@ -49,7 +49,11 @@ The clock has a built-in web server to configure:
     - [ ] Display update via timer interrupt
     - [x] RTC code
     - [ ] NTP code
+    - [ ] Make use of the LED on the back og the board.
+    - [ ] Put WiFi to sleep when unused
+    - [ ] Update the display via timer interrupt
     - [ ] Web server code
+    - [ ] *Remember* 12 hour mode
     - [ ] Web page for configuration
       - [ ] Configuration from web page to and from clock
       - [ ] Set AP mode when no WiFi connection could be established

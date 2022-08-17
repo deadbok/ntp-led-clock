@@ -46,13 +46,21 @@ uint32_t sntp_update_delay_MS_rfc_not_less_than_15000()
 //Callback when the time is set.
 void time_is_set(bool from_sntp)
 {
-  Serial.print(F("Time was set "));
+  RtcDateTime cb_rtc_time_date(0);
+  timeval     cb_time;
+
+  Serial.println(F("Time was set"));
   if (from_sntp)
   {
-    Serial.print(F("from SNTP."));
-    //Update RTC time.
+    led.toggle();
+    Serial.println(F("Updating RTC time from SNTP"));
+  
+    gettimeofday(&cb_time, NULL);
+    cb_rtc_time_date.InitWithEpoch32Time(cb_time.tv_sec);
+    RTC.SetDateTime(cb_rtc_time_date);
+  
+    led.toggle();
   }
-  Serial.println();
 }
 
 void setup()
@@ -132,24 +140,32 @@ void setup()
 
 void loop()
 {
-  struct tm       *time_info;
-  struct timezone tz;
-  time_t          now;
-  timeval         tv;
+  //struct tm       *time_info;
+  //struct timezone tz;
+  //time_t          now;
+  //timeval         tv;
 
 
   if (waitTime < 1)
   {
-    gettimeofday(&tv, &tz);
-		now = time(nullptr);
-    time_info = localtime(&now);
+    //gettimeofday(&tv, &tz);
+		//now = time(nullptr);
+    //time_info = localtime(&now);
 
+    //char digits[] = "0000";
+
+    //digits[0] = '0' + (time_info->tm_hour / 10);
+    //digits[1] = '0' + (time_info->tm_hour % 10);
+    //digits[2] = '0' + (time_info->tm_min / 10);
+    //digits[3] = '0' + (time_info->tm_min % 10);
+
+    RtcDateTime now = RTC.GetDateTime();
     char digits[] = "0000";
 
-    digits[0] = '0' + (time_info->tm_hour / 10);
-    digits[1] = '0' + (time_info->tm_hour % 10);
-    digits[2] = '0' + (time_info->tm_min / 10);
-    digits[3] = '0' + (time_info->tm_min % 10);
+    digits[0] = '0' + (now.Hour() / 10);
+    digits[1] = '0' + (now.Hour() % 10);
+    digits[2] = '0' + (now.Minute() / 10);
+    digits[3] = '0' + (now.Minute() % 10);
 
     Serial.println(digits);
   

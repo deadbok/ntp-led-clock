@@ -23,6 +23,7 @@ The clock is using the RTC and the NTP to keep the clock current.
   - When the clock initialises it starts running from the RTC
   - If a connection to the internet is established it updates the RTC from NTP
   - The RTC will continue to update from NTP every 12 hours
+  - RTC runs on UTC
 
 ## Configuration
 
@@ -46,14 +47,14 @@ The clock has a built-in web server to configure:
     - [ ] Decide how to use the external flash.
   - [ ] Write code
     - [x] Time display
-    - [ ] Display update via timer interrupt
-    - [x] RTC code
+        - [x] RTC code
     - [ ] NTP code
-    - [ ] Make use of the LED on the back og the board.
+    - [x] Make use of the LED on the back og the board.
     - [ ] Put WiFi to sleep when unused
     - [ ] Update the display via timer interrupt
     - [ ] Web server code
     - [ ] *Remember* 12 hour mode
+    - [ ] Rechargeable battery support
     - [ ] Web page for configuration
       - [ ] Configuration from web page to and from clock
       - [ ] Set AP mode when no WiFi connection could be established

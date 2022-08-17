@@ -30,7 +30,7 @@ The clock has a built-in web server to configure:
 
   - WiFi access configuration (SSID & PSK)
   - The NTP server to use
-  - The timezone
+  - The time zone
 
 ## Todo
 

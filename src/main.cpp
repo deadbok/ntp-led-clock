@@ -17,16 +17,19 @@
 #include <stdlib.h>
 #include <ap_secret.h>
 #include <hardware.h>
+#include <led.h>
 #include <TM1650.h>
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
 #include <version.h>
 
-//The variable for the 7-segment display.
+//The instance for the 7-segment display.
 TM1650                Display;
-//The variables for the RTC.
+//The instance for the RTC.
 ThreeWire             RTCWire(DS1302_IO, DS1302_SCLK, DS1302_CE);
 RtcDS1302<ThreeWire>  RTC(RTCWire);
+//The instance to control the LED
+LED                   led(LED_PIN);
 //Variable used for delays.
 unsigned int          waitTime;
 
@@ -43,10 +46,10 @@ uint32_t sntp_update_delay_MS_rfc_not_less_than_15000()
 //Callback when the time is set.
 void time_is_set(bool from_sntp)
 {
-  Serial.print("Time was set ");
+  Serial.print(F("Time was set "));
   if (from_sntp)
   {
-    Serial.print("from SNTP.");
+    Serial.print(F("from SNTP."));
     //Update RTC time.
   }
   Serial.println();
@@ -56,9 +59,10 @@ void setup()
 {
   //Greetings on the serial port.
   Serial.begin(115200);
-  Serial.printf("\nNTP LED Clock %s.\n", VERSION);
-  Serial.print("Compiled: ");
-  Serial.print(__DATE__);
+  Serial.print(F("\nNTP LED Clock v"));
+  Serial.println(F(VERSION));
+  Serial.print(F("Compiled: "));
+  Serial.println(F(__DATE__));
 
   // Initialise the 7-segment display
   Wire.begin(TM1650_SDA, TM1650_SCL);
@@ -69,14 +73,14 @@ void setup()
   //Set the callback for when time is set.
   settimeofday_cb(time_is_set);
     
-  //Cycle the dots on the display to tell we are alive.
+  //Look alive
   for (int i = 0; i < 4; i++)
   {
     Display.setDot(i, true);
-    delay(300);
-    Display.setDot(i, false);
-    delay(200);
   }
+
+  //Initialise the LED
+  led.init();
 
   //Initialise the RTC.
   RTC.Begin();
@@ -85,35 +89,37 @@ void setup()
 
   if (RTC.GetIsWriteProtected())
   {
-    Serial.println("Enabling RTC writing");
+    Serial.println(F("Enabling RTC writing"));
     RTC.SetIsWriteProtected(false);
   }
 
   if (!RTC.IsDateTimeValid()) 
   {
-    Serial.println("RTC time is not valid.");
+    Serial.println(F("RTC time is not valid, setting default"));
     RTC.SetDateTime(compiled);
   }
 
   if (!RTC.GetIsRunning())
   {
-    Serial.println("Starting RTC.");
+    Serial.println(F("Starting RTC"));
     RTC.SetIsRunning(true);
   }
 
   //Connect to the network
   WiFi.mode(WIFI_STA);
   WiFi.begin(STASSID, STAPSK);
-  Serial.print("Connect");
+  Serial.print(F("Connect"));
   while (WiFi.status() != WL_CONNECTED)
   {
-    Serial.print(".");
+    led.toggle();
+    Serial.print(F("."));
     delay(200);
   }
   Serial.println(F("WiFi connected"));
+  led.on();
 
   //Set up NTP
-	configTime (0, 0, NTP_SERVERS);
+	configTime(0, 0, NTP_SERVERS);
 
   //Set time zone for denmark
 	setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
@@ -137,7 +143,7 @@ void loop()
     gettimeofday(&tv, &tz);
 		now = time(nullptr);
     time_info = localtime(&now);
-    
+
     char digits[] = "0000";
 
     digits[0] = '0' + (time_info->tm_hour / 10);

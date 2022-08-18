@@ -7,6 +7,11 @@
  *
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
+//For no timer debug ouput.
+#define TIMER_INTERRUPT_DEBUG         0
+#define _TIMERINTERRUPT_LOGLEVEL_     0
+//For longest timer
+#define USING_TIM_DIV256              true
 
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
@@ -22,6 +27,7 @@
 #include <TM1650.h>
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
+#include <ESP8266TimerInterrupt.h>
 #include <version.h>
 
 //The instance for the 7-segment display.
@@ -30,10 +36,17 @@ TM1650                Display;
 ThreeWire             RTCWire(DS1302_IO, DS1302_SCLK, DS1302_CE);
 RtcDS1302<ThreeWire>  RTC(RTCWire);
 //The instance to control the LED
-LED                   led(LED_PIN);
+LED                   Led(LED_PIN);
 //Variable used for delays.
 unsigned int          waitTime;
-
+//Init ESP8266 timer 1
+ESP8266Timer          ITimer;
+//Variable used in the ISR for counting seconds
+volatile unsigned int ISR_seconds;
+//Update display?
+volatile bool         update_display;
+//Toggle dots?
+volatile bool         dots;
 
 //The NTP servers to sync with
 #define NTP_SERVERS "0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org"
@@ -53,7 +66,7 @@ void time_is_set(bool from_sntp)
   Serial.println(F("Time was set"));
   if (from_sntp)
   {
-    led.toggle();
+    Led.toggle();
     Serial.println(F("Updating RTC time from SNTP"));
   
     //Get time set by NTP
@@ -62,8 +75,27 @@ void time_is_set(bool from_sntp)
     cb_rtc_time_date.InitWithEpoch32Time(cb_time.tv_sec);
     RTC.SetDateTime(cb_rtc_time_date);
   
-    led.toggle();
+    Led.toggle();
   }
+}
+
+void IRAM_ATTR timer_handler()
+{
+  //Toggle the dots
+  dots = !dots;
+  //Reset seconds every 12 hours
+  if (ISR_seconds == (60 * 60 * 12))
+    ISR_seconds = 0;
+
+  //Toggle the dots.
+  //Led.toggle();
+
+  //Update display every minute
+  if (!(ISR_seconds % 60))
+    update_display = true;
+
+  //Increase seconds.
+  ISR_seconds++;
 }
 
 void setup()
@@ -91,7 +123,7 @@ void setup()
   }
 
   //Initialise the LED
-  led.init();
+  Led.init();
 
   //Initialise the RTC.
   RTC.Begin();
@@ -122,30 +154,39 @@ void setup()
   Serial.print(F("Connect"));
   while (WiFi.status() != WL_CONNECTED)
   {
-    led.toggle();
+    Led.toggle();
     Serial.print(F("."));
     delay(200);
   }
   Serial.println(F("WiFi connected"));
-  led.on();
+  Led.on();
 
   //Set up NTP
+  Serial.println(F("Setting up NTP client"));
 	configTime(0, 0, NTP_SERVERS);
 
   //Set time zone for denmark
 	setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
 	tzset();
 
+
+  //Setup timer ISR to fire every 500 miliseconds
+  if (ITimer.attachInterruptInterval(1000 * 1000, timer_handler))
+    Serial.println(F("Starting timer"));
+  else
+    Serial.println(F("Cannot start timer!"));
+
   //Set the initial delay 0 zero to display the time, the first time through the
   //loop.
-  waitTime = 0;
+  //waitTime = 0;
+  update_display = true;
 }
 
 void loop()
 {
-  struct tm       *time_info;
+  struct tm *time_info;    
 
-  if (waitTime < 1)
+  if (update_display)
   {
     RtcDateTime rtc_now = RTC.GetDateTime();
     time_t now;
@@ -160,19 +201,15 @@ void loop()
     digits[2] = '0' + (time_info->tm_min / 10);
     digits[3] = '0' + (time_info->tm_min % 10);
    
-     Serial.println(digits);
+    Serial.println(digits);
   
     Display.displayString(digits);
-    //Reset delay.
-    waitTime = 60;
+    //Updated
+    update_display = false;
   }
 
-  //Blink the middle dots to look alive.
-  Display.setDot(1, true);
-  delay(400);
-  Display.setDot(1, false);
-  delay(600);
-
-  //Decrease time before updating the time.
-  waitTime--;
+  if (dots) 
+    Display.setDot(1, true);
+  else
+    Display.setDot(1, false);
 }

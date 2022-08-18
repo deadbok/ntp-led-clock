@@ -41,7 +41,7 @@ The clock has a built-in web server to configure:
 *This means that the esp8266 time library code will malfunction starting*
 *03:14:07 on Tuesday, 19 January 2038 GMT.*
 
-## Todo
+## To do
 
 **As always write more documentation.**
 

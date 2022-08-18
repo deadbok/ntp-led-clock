@@ -33,6 +33,14 @@ The clock has a built-in web server to configure:
   - The NTP server to use
   - The time zone
 
+## Y2K38
+
+*At the time this code was written, the ESP8266 time_t value uses signed 32 bit.*
+*That means that the esp8266 time functions will suffer from the the Y2K38*
+*problem: <https://en.wikipedia.org/wiki/Year_2038_problem>.*
+*This means that the esp8266 time library code will malfunction starting*
+*03:14:07 on Tuesday, 19 January 2038 GMT.*
+
 ## Todo
 
 **As always write more documentation.**

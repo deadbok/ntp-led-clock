@@ -15,6 +15,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <stdlib.h>
+#include <sntp.h>
 #include <ap_secret.h>
 #include <hardware.h>
 #include <led.h>
@@ -55,7 +56,9 @@ void time_is_set(bool from_sntp)
     led.toggle();
     Serial.println(F("Updating RTC time from SNTP"));
   
+    //Get time set by NTP
     gettimeofday(&cb_time, NULL);
+    //Update RTC with UTC time from NTP
     cb_rtc_time_date.InitWithEpoch32Time(cb_time.tv_sec);
     RTC.SetDateTime(cb_rtc_time_date);
   
@@ -140,34 +143,24 @@ void setup()
 
 void loop()
 {
-  //struct tm       *time_info;
-  //struct timezone tz;
-  //time_t          now;
-  //timeval         tv;
-
+  struct tm       *time_info;
 
   if (waitTime < 1)
   {
-    //gettimeofday(&tv, &tz);
-		//now = time(nullptr);
-    //time_info = localtime(&now);
-
-    //char digits[] = "0000";
-
-    //digits[0] = '0' + (time_info->tm_hour / 10);
-    //digits[1] = '0' + (time_info->tm_hour % 10);
-    //digits[2] = '0' + (time_info->tm_min / 10);
-    //digits[3] = '0' + (time_info->tm_min % 10);
-
-    RtcDateTime now = RTC.GetDateTime();
+    RtcDateTime rtc_now = RTC.GetDateTime();
+    time_t now;
+    //Get UTC from RTC
+    now = rtc_now.Epoch32Time();
+    //Convert to local time
+    time_info = localtime(&now);
+    
     char digits[] = "0000";
-
-    digits[0] = '0' + (now.Hour() / 10);
-    digits[1] = '0' + (now.Hour() % 10);
-    digits[2] = '0' + (now.Minute() / 10);
-    digits[3] = '0' + (now.Minute() % 10);
-
-    Serial.println(digits);
+    digits[0] = '0' + (time_info->tm_hour / 10);
+    digits[1] = '0' + (time_info->tm_hour % 10);
+    digits[2] = '0' + (time_info->tm_min / 10);
+    digits[3] = '0' + (time_info->tm_min % 10);
+   
+     Serial.println(digits);
   
     Display.displayString(digits);
     //Reset delay.

@@ -43,12 +43,12 @@ The clock has a built-in web server to configure:
     - [x] Write or find some example code for using NTP.
   - [ ] Code design
     - [x] Decide how to tie the RTC in with NTP.
-    - [ ] Decide how much should be configurable via HTTP
-    - [ ] Decide how to use the external flash.
+    - [x] Decide how much should be configurable via HTTP
+    - [ ] Decide how to use the flash memory.
   - [ ] Write code
     - [x] Time display
-        - [x] RTC code
-    - [ ] NTP code
+    - [x] RTC code
+    - [x] NTP code
     - [x] Make use of the LED on the back og the board.
     - [ ] Put WiFi to sleep when unused
     - [ ] Update the display via timer interrupt

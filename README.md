@@ -59,7 +59,7 @@ The clock has a built-in web server to configure:
     - [x] NTP code
     - [x] Make use of the LED on the back og the board.
     - [ ] Put WiFi to sleep when unused
-    - [ ] Update the display via timer interrupt
+    - [x] Update the display via timer interrupt
     - [ ] Web server code
     - [ ] *Remember* 12 hour mode
     - [ ] Rechargeable battery support

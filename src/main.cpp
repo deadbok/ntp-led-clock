@@ -47,6 +47,8 @@ volatile unsigned int ISR_seconds;
 volatile bool         update_display;
 //Toggle dots?
 volatile bool         dots;
+//Keep track of last minute to determine when to update the display
+ unsigned char        last_minute;
 
 //The NTP servers to sync with
 #define NTP_SERVERS "0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org"
@@ -91,8 +93,8 @@ void IRAM_ATTR timer_handler()
   //Led.toggle();
 
   //Update display every minute
-  if (!(ISR_seconds % 60))
-    update_display = true;
+  //if (!(ISR_seconds % 60))
+  //  update_display = true;
 
   //Increase seconds.
   ISR_seconds++;
@@ -184,11 +186,12 @@ void setup()
 
 void loop()
 {
-  struct tm *time_info;    
+  struct tm       *time_info;
+  RtcDateTime     rtc_now = RTC.GetDateTime();
 
-  if (update_display)
+  if (last_minute < rtc_now.Minute())
   {
-    RtcDateTime rtc_now = RTC.GetDateTime();
+    last_minute = rtc_now.Minute();
     time_t now;
     //Get UTC from RTC
     now = rtc_now.Epoch32Time();
@@ -204,8 +207,6 @@ void loop()
     Serial.println(digits);
   
     Display.displayString(digits);
-    //Updated
-    update_display = false;
   }
 
   if (dots) 

@@ -37,15 +37,13 @@ ThreeWire             RTCWire(DS1302_IO, DS1302_SCLK, DS1302_CE);
 RtcDS1302<ThreeWire>  RTC(RTCWire);
 //The instance to control the LED
 LED                   Led(LED_PIN);
-//Variable used for delays.
-unsigned int          waitTime;
 //Init ESP8266 timer 1
 ESP8266Timer          ITimer;
 //Variable used in the ISR for counting seconds
 volatile unsigned int ISR_seconds;
-//Update display?
-volatile bool         update_display;
-//Toggle dots?
+//Update dots
+volatile bool         update_dots;
+//Dots on/off
 volatile bool         dots;
 //Keep track of last minute to determine when to update the display
  unsigned char        last_minute;
@@ -83,21 +81,17 @@ void time_is_set(bool from_sntp)
 
 void IRAM_ATTR timer_handler()
 {
+  //Increase seconds.
+  ISR_seconds++;
+
   //Toggle the dots
   dots = !dots;
+  //Update the dots
+  update_dots = true;
+
   //Reset seconds every 12 hours
   if (ISR_seconds == (60 * 60 * 12))
     ISR_seconds = 0;
-
-  //Toggle the dots.
-  //Led.toggle();
-
-  //Update display every minute
-  //if (!(ISR_seconds % 60))
-  //  update_display = true;
-
-  //Increase seconds.
-  ISR_seconds++;
 }
 
 void setup()
@@ -171,17 +165,11 @@ void setup()
 	setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
 	tzset();
 
-
-  //Setup timer ISR to fire every 500 miliseconds
+  //Setup timer ISR to fire every second
   if (ITimer.attachInterruptInterval(1000 * 1000, timer_handler))
     Serial.println(F("Starting timer"));
   else
     Serial.println(F("Cannot start timer!"));
-
-  //Set the initial delay 0 zero to display the time, the first time through the
-  //loop.
-  //waitTime = 0;
-  update_display = true;
 }
 
 void loop()
@@ -193,6 +181,7 @@ void loop()
   {
     last_minute = rtc_now.Minute();
     time_t now;
+
     //Get UTC from RTC
     now = rtc_now.Epoch32Time();
     //Convert to local time
@@ -209,8 +198,14 @@ void loop()
     Display.displayString(digits);
   }
 
-  if (dots) 
-    Display.setDot(1, true);
-  else
-    Display.setDot(1, false);
+  //Toggle the dots if changed
+  if (update_dots)
+  {
+    if (dots) 
+      Display.setDot(1, true);
+    else
+      Display.setDot(1, false);
+    
+    update_dots = false;
+  }
 }

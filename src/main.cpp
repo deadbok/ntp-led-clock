@@ -189,7 +189,7 @@ void loop()
   struct tm       *time_info;
   RtcDateTime     rtc_now = RTC.GetDateTime();
 
-  if (last_minute < rtc_now.Minute())
+  if (last_minute != rtc_now.Minute())
   {
     last_minute = rtc_now.Minute();
     time_t now;

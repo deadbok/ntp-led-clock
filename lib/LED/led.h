@@ -9,6 +9,9 @@
  */
 #include <Arduino.h>
 
+#ifndef _LED_H_
+#define _LED_H_
+
 class LED
 {
 public:
@@ -22,3 +25,5 @@ public:
 private:
 	unsigned char pin;
 };
+
+#endif

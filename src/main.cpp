@@ -28,6 +28,7 @@
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
 #include <ESP8266TimerInterrupt.h>
+#include <CFGWebServer.h>
 #include <version.h>
 
 //The instance for the 7-segment display.
@@ -46,7 +47,9 @@ volatile bool         update_dots;
 //Dots on/off
 volatile bool         dots;
 //Keep track of last minute to determine when to update the display
- unsigned char        last_minute;
+unsigned char         last_minute;
+//Web server for configuring when running.
+CFGWebServer          cfgWebServer;
 
 //The NTP servers to sync with
 #define NTP_SERVERS "0.pool.ntp.org", "1.pool.ntp.org", "2.pool.ntp.org"
@@ -98,7 +101,8 @@ void setup()
 {
   //Greetings on the serial port.
   Serial.begin(115200);
-  Serial.print(F("\nNTP LED Clock v"));
+  Serial.println(F(""));
+  Serial.print(F("NTP LED Clock v"));
   Serial.println(F(VERSION));
   Serial.print(F("Compiled: "));
   Serial.println(F(__DATE__));
@@ -154,7 +158,11 @@ void setup()
     Serial.print(F("."));
     delay(200);
   }
-  Serial.println(F("WiFi connected"));
+  Serial.println(F(""));
+  Serial.print(F("WiFi connected: "));
+  Serial.println(STASSID);
+  Serial.print(F("IP address: "));
+  Serial.println(WiFi.localIP());
   Led.on();
 
   //Set up NTP
@@ -170,6 +178,8 @@ void setup()
     Serial.println(F("Starting timer"));
   else
     Serial.println(F("Cannot start timer!"));
+
+  cfgWebServer.start();
 }
 
 void loop()

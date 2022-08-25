@@ -1,0 +1,106 @@
+picocom v3.1
+
+port is        : /dev/ttyUSB0
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : yes
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+0814
+0815
+0816
+0817
+0818
+0819
+0820
+0821
+0822
+0823
+0824
+0825
+0826
+0827
+0828
+0829
+0830
+0831
+0832
+0833
+0834
+0835
+0836
+0837
+0838
+0839
+0840
+0841
+0842
+0843
+0844
+0845
+0846
+0847
+0848
+0849
+0850
+0851
+0852
+0853
+0854
+0855
+0856
+0857
+0858
+0859
+0900
+0901
+0902
+0903
+0904
+0905
+0906
+0907
+0908
+0909
+0910
+0911
+0912
+0913
+0914
+0915
+0916
+0917
+0918
+0919
+0920
+0921
+0922
+0923
+0924
+0925
+0926
+0927
+0928
+0929
+0930
+0931
+0932
+0933

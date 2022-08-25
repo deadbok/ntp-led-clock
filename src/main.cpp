@@ -82,6 +82,7 @@ void time_is_set(bool from_sntp)
   }
 }
 
+//Handler for the timer interrupt
 void IRAM_ATTR timer_handler()
 {
   //Increase seconds.

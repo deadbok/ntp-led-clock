@@ -71,3 +71,11 @@
 	border-color: #2d2;
 	background: #dfd;
 }
+
+input[type=text] {
+	box-sizing: border-box;
+  }
+
+  input[type=time] {
+	box-sizing: border-box;
+  }

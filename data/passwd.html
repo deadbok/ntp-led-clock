@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NTP LED clock</title>
+<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+</head>
+<body>
+	<div class="header inverted">
+		NTP LED clock
+	</div>
+	<div class="main">
+		<h3>Network connection password setup</h3>
+		<form onsubmit="setPasswd()">
+		Password:<br />
+		<input type="password" id="passwd" maxlength="64">
+		<input type="button" onclick="setPasswd()" value="Set">
+		</form>
+		<div class="message" id="state"></div>
+	</div>	
+	<div class="footer inverted">
+		<small><span class="copyright">&copy; Copyright 2022 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
+	</div>		
+<script src="js/request.js"></script>
+<script>
+function setPasswd() {
+	var passwd = document.getElementById("passwd").value;
+	var state = document.getElementById("state");
+
+	JSONrequest('PUT', '/rest/net/password', function(data) {
+		state.className += " success";
+		state.innerHTML = "<strong>Done!</strong> WIFI password saved.";
+		window.location.assign("/index.html");
+
+	}, function() {
+		state.className += " error";
+		state.innerHTML = "<strong>Error!</strong> Could not update password.";
+	}, "{ \"password\" : \"" + passwd + "\" }");
+}
+</script>
+</body>
+</html>

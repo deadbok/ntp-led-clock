@@ -14,10 +14,11 @@
 		- WiFi access configuration (SSID & PSK)
 		- The NTP server to use
 		- The time zone
-		<h3>Runtime configuration:</h3>
-		<p>Time configuration: <span id="network"></span></p>
-		<form onsubmit="networkSelect()" action="">
-			Time zone: 
+		<h3>NTP and time zone:</h3>
+		<form onsubmit="ntp_cfg()" action="">
+			<label for="server">Server host name:</label><br>
+			<input type="text" id="server" name="server" value="pool.ntp.org"><br><br>
+			<label for="tz">Time zone:</label><br>
 			<select id="tz">
 				<option value="GMT0">Africa/Abidjan</option>
 				<option value="GMT0">Africa/Accra</option>
@@ -481,10 +482,24 @@
 				<option value="<+12>-12">Pacific/Wake</option>
 				<option value="<+12>-12">Pacific/Wallis</option>				
 			</select>
-			<input type="button" onclick="networkSelect()" value="Set">
+			<input type="button" onclick="ntp_cfg()" value="Set"><br><br>
 		</form>
-		<div class="message" id="scnstat">
-			<strong>Scanning!</strong> Still scanning for WIFI networks.
+		<h3>Time:</h3>
+		<form onsubmit="time_cfg()" action="">
+			<input type="time" id="itime">
+			<input type="button" onclick="time_cfg()" value="Set"><br><br>
+		</form>
+		<h3>Network:</h3>
+		<form onsubmit="networkSelect()" action="">
+			<label for="networks">SSID:</label><br>
+			<select id="networks">
+				<option value="nets">Networks...</option>
+			</select><br><br>
+			<label for="hostname">Hostname:</label><br>
+			<input type="text" id="hostname" maxlength="32">
+			<input type="button" onclick="setHostname()" value="Set">
+		</form>
+		<div class="message" id="state">
 		</div>
 	</div>	
 	<div class="footer inverted">
@@ -492,16 +507,18 @@
 	</div>		
 	<script src="./js/request.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		function networkSelect() {
-			var networkName = document.getElementById("tz").value;
-			var network = document.getElementById("network");
+		function ntp_cfg() {
+			var tz = document.getElementById("tz").value;
+			var server = document.getElementById("server").value;
 
 			JSONrequest('PUT', '/rest/net/network', function(data) {
-				tz.innerHTML = networkName;
-				window.location.assign("/passwd.html");
+				state.className += " success";
+				state.innerHTML = "<strong>Done!</strong> configuration updated.";
+				window.location.assign("/index.html");
 			}, function() {
-				network.innerHTML = "Could not set network name.";
-			}, "{ \"network\" : \"" + networkName + "\" }");
+				state.className += " error";
+				state.innerHTML = "<strong>Error!</strong> Could not update configuration.";
+			});
 		}
 	</script>
 	<noscript>Sorry I need JavaScript!</noscript>

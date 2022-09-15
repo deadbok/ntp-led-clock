@@ -219,4 +219,7 @@ void loop()
     
     update_dots = false;
   }
+
+  //Do housekeeping of the webserver
+  cfgWebServer.cleanup();
 }

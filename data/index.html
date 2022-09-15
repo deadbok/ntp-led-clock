@@ -508,10 +508,12 @@
 	<script src="./js/request.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		function ntp_cfg() {
-			var tz = document.getElementById("tz").value;
-			var server = document.getElementById("server").value;
+			var data = JSON.stringify({
+				tz: document.getElementById("tz").value,
+				server: document.getElementById("server").value
+			});
 
-			JSONrequest('PUT', '/rest/net/network', function(data) {
+			JSONrequest('PUT', '/ws/ntp', function(data) {
 				state.className += " success";
 				state.innerHTML = "<strong>Done!</strong> configuration updated.";
 				window.location.assign("/index.html");

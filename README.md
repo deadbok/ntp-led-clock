@@ -52,7 +52,7 @@ The clock has a built-in web server to configure:
   - [ ] Code design
     - [x] Decide how to tie the RTC in with NTP.
     - [x] Decide how much should be configurable via HTTP
-    - [ ] Decide how to use the flash memory.
+    - [x] Decide how to use the flash memory.
   - [ ] Write code
     - [x] Time display
     - [x] RTC code
@@ -62,7 +62,9 @@ The clock has a built-in web server to configure:
     - [x] Update the display via timer interrupt
     - [ ] Web server code
     - [ ] *Remember* 12 hour mode
-    - [ ] Rechargeable battery support
+    - [ ] Rechargeable battery support for the RTC
+    - [ ] Save config as JSON file in the FS
+    - [ ] mDNS
     - [ ] Web page for configuration
       - [ ] Configuration from web page to and from clock
       - [ ] Set AP mode when no WiFi connection could be established

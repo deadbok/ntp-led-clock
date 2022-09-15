@@ -22,13 +22,18 @@ public:
 	CFGWebServer();
 
     void start();
+    void cleanup();
+
+    static void onNTPWsEvent(AsyncWebSocket * server,
+                             AsyncWebSocketClient * client, AwsEventType type,
+                             void * arg, uint8_t *data, size_t len);
 
 	~CFGWebServer();    
 private:
 	//The web server
     AsyncWebServer server;
     //Web Socket
-    AsyncWebSocket ws;
+    AsyncWebSocket NTPws;
 };
 
 #endif

@@ -9,7 +9,6 @@
  */
 #include <ESPAsyncWebServer.h>
 #include <ESPAsyncTCP.h>
-#include <LittleFS.h>
 #include <AsyncJson.h>
 #include <ArduinoJson.h>
 

@@ -21,14 +21,15 @@
 #include <sys/time.h>
 #include <stdlib.h>
 #include <sntp.h>
-#include <ap_secret.h>
-#include <hardware.h>
-#include <led.h>
 #include <TM1650.h>
 #include <ThreeWire.h>  
 #include <RtcDS1302.h>
 #include <ESP8266TimerInterrupt.h>
+#include <LittleFS.h>
 #include <CFGWebServer.h>
+#include <ap_secret.h>
+#include <hardware.h>
+#include <led.h>
 #include <version.h>
 
 //The instance for the 7-segment display.
@@ -149,6 +150,12 @@ void setup()
     RTC.SetIsRunning(true);
   }
 
+  //Init filesystem
+  if (!LittleFS.begin())
+  {
+    Serial.println(F("Error starting LittleFS"));
+  }
+
   //Connect to the network
   WiFi.mode(WIFI_STA);
   WiFi.begin(STASSID, STAPSK);
@@ -187,25 +194,25 @@ void loop()
 {
   struct tm       *time_info;
   RtcDateTime     rtc_now = RTC.GetDateTime();
+  time_t          now;
+  char digits[] = "0000";
 
   if (last_minute != rtc_now.Minute())
   {
     last_minute = rtc_now.Minute();
-    time_t now;
-
+   
     //Get UTC from RTC
     now = rtc_now.Epoch32Time();
     //Convert to local time
     time_info = localtime(&now);
-    
-    char digits[] = "0000";
+
+    //Get time into a 4 charater string for the display  
     digits[0] = '0' + (time_info->tm_hour / 10);
     digits[1] = '0' + (time_info->tm_hour % 10);
     digits[2] = '0' + (time_info->tm_min / 10);
     digits[3] = '0' + (time_info->tm_min % 10);
    
     Serial.println(digits);
-  
     Display.displayString(digits);
   }
 

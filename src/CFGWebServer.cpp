@@ -1,12 +1,11 @@
 #include <CFGWebServer.h>
+#include <LittleFS.h>
 
 CFGWebServer::CFGWebServer() : server(80), NTPws("/ws/ntp")
-{
-    if (!LittleFS.begin())
-    {
-        Serial.println(F("Error starting LittleFS"));
-    }
+{}
 
+void CFGWebServer::start()
+{
     // Serve files in directory "/" when request url starts with "/"
     // Request to the root or none existing files will try to server the default
     // file name "index.htm" if exists
@@ -26,10 +25,7 @@ CFGWebServer::CFGWebServer() : server(80), NTPws("/ws/ntp")
         Serial.println(request->url());
         request->send(response);
     });
-}
 
-void CFGWebServer::start()
-{
     //Start the web server
     this->server.begin();
 }

@@ -72,10 +72,48 @@
 	background: #dfd;
 }
 
-input[type=text] {
-	box-sizing: border-box;
-  }
+input[type=text]
+{
+ 	box-sizing: border-box;
+}
 
-  input[type=time] {
+input[type=time]
+{
 	box-sizing: border-box;
-  }
+}
+
+.row
+{
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+.column
+{
+	float: left;
+}
+
+.left, .right 
+{
+	width: 25%;
+}
+
+.middle 
+{
+	width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after 
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+	width: 100%;
+}
+} 

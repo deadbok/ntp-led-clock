@@ -60,7 +60,8 @@ The clock has a built-in web server to configure:
     - [x] Make use of the LED on the back og the board.
     - [ ] Put WiFi to sleep when unused
     - [x] Update the display via timer interrupt
-    - [ ] Web server code
+    - [x] Web server code
+    - [ ] Websocket server code
     - [ ] *Remember* 12 hour mode
     - [ ] Rechargeable battery support for the RTC
     - [ ] Save config as JSON file in the FS

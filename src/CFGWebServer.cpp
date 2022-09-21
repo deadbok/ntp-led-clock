@@ -1,4 +1,4 @@
-#include <CFGWebServer.h>
+#include "CFGWebServer.h"
 #include <LittleFS.h>
 
 CFGWebServer::CFGWebServer() : server(80), NTPws("/ws/ntp")
@@ -66,7 +66,7 @@ void CFGWebServer::onNTPWsEvent(AsyncWebSocket * server,
                     Serial.printf("Data: %s", data);
                 }
                 else
-                    Serial.println(F("Recieved something unexpected!"));
+                    Serial.println(F("Received something unexpected!"));
             }
             break;
     } 

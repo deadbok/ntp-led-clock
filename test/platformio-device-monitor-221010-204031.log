@@ -1,0 +1,3359 @@
+..............
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+1502
+Time was set
+Updating RTC time from SNTP
+2040
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff4046 3fff3d4c 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff4046 3fff3d4c 4020c181  
+3fffed50:  3fff3d4c 3fff3d4c 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff4046 3fff3d4c 4020a13c  
+3fffed80:  401033a4 3fffc200 00000022 40216a14  
+3fffed90:  00000000 3fff4046 3fff3d80 40216088  
+3fffeda0:  3fff4046 00000000 3fff187c 00000002  
+3fffedb0:  00000002 3fff4046 3fff3d4c 4020a202  
+3fffedc0:  00000000 4bc6a7f0 e20c49ba 00ddb4b5  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3d80 00000000 401006f5 00000000  
+3fffedf0:  0000bfbe 00000000 3fff3d4c 3fff3e94  
+3fffee00:  3fffee60 3fff3c64 3fff3b2c 4020a3e4  
+3fffee10:  3fffee60 3fff3c64 3fff3b2c 40219fc8  
+3fffee20:  0000016e 3fff3eda 3fff3c64 3fff3d4c  
+3fffee30:  00000000 3fff0bac 3fff3b2c 3fff1874  
+3fffee40:  3fff0000 00000020 3fff3acc 00000000  
+3fffee50:  3fff3e94 3fff3b2c 3fff3c64 4021a028  
+3fffee60:  3fff35d0 3fff35c4 00000000 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3e94 3fff1874  
+3fffee80:  3fff3b2c 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff3af2 000000d4 3ffebe36 40253ff0  
+3fffeea0:  00000018 00000000 3ffebe29 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3eb2 3fff3e94 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef88 3fff3a8c  
+3fffeef0:  3fffdc80 00000020 3fff35ac 3fff3a8c  
+3fffef00:  3fff1440 00000008 3fff3e94 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff35ac 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff35ac 40279f53  
+3fffef30:  3fff3ea4 3fff3e94 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff35ac 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  00000000 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 6363672f 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  00000000 400042db feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  00000000 400042db 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 000bc000  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d 3fff32d4 000bc000  
+3ffffb40:  feefeffe 00000040 00000000 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  00000000 400042db feefeffe feefeffe  
+3ffffbb0:  40004b31 3fff32d4 00000040 000bc080  
+3ffffbc0:  40106b4c 4000422e 60000200 3fff33ec  
+3ffffbd0:  4010126e 00000001 3fff32d4 000bc080  
+3ffffbe0:  00000100 00000040 00000000 40219070  
+3ffffbf0:  00000040 0168a101 3fff32d4 402190fd  
+3ffffc00:  00000000 400042db 3fff335c 000bc000  
+3ffffc10:  00000000 400042db 00000040 000bc040  
+3ffffc20:  00000000 400042db 00000040 000bc080  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  00000000 00000000 0000001f 401002c4  
+3ffffc90:  00000040 0168a101 3fffc228 40105f91  
+3ffffca0:  4000050c 000bc080 3fff335c 000bc080  
+3ffffcb0:  40219084 00000030 00000008 ffffffff  
+3ffffcc0:  40217c8d 000bc000 3fff32d4 00000040  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  402288f4 00000000 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeef88 00000000  
+3ffffd00:  40102feb 3ffeef88 00000000 00000000  
+3ffffd10:  00000005 00000000 00000020 000000ff  
+3ffffd20:  00000050 00000001 40105645 3ffef6e8  
+3ffffd30:  00000002 00000000 00000020 401002c4  
+3ffffd40:  00000005 00000000 00000020 401002c4  
+3ffffd50:  3ffeb522 401056df 00000005 40102464  
+3ffffd60:  3ffeb525 401056f7 3ffeef88 401031c8  
+3ffffd70:  40102feb 3ffeef88 00000000 00040000  
+3ffffd80:  00007fff 02ecfcc1 3ffef844 401031c8  
+3ffffd90:  3ffebdb8 00000000 00000000 00040000  
+3ffffda0:  00007fff 02ecfcc1 40103682 00000100  
+3ffffdb0:  3ffebdb8 7fffffff 00002200 00000001  
+3ffffdc0:  00000001 00004208 00000022 3fffc278  
+3ffffdd0:  3ffebdb8 2c9f0300 4000050c 02ecfcc1  
+3ffffde0:  3ffebdc4 2c9f0300 4000050c 3fffc278  
+3ffffdf0:  401033a4 3fffc200 00000022 ffffffff  
+3ffffe00:  4010074d 00000030 00000010 ffffffff  
+3ffffe10:  40002ecc 00000001 00000001 00000001  
+3ffffe20:  00000004 00000028 6000080c fffffffe  
+3ffffe30:  ffffffff 3fffc6fc 00000001 00000010  
+3ffffe40:  00000001 3fff0d2c 00000004 00000030  
+3ffffe50:  00000001 3fff0d2c 00000006 00000030  
+3ffffe60:  00000000 00000000 0000001f 401002c4  
+3ffffe70:  4000df09 00000030 3fffc228 40105f91  
+3ffffe80:  4000050c 3fffff7e 3ffe8ce0 00000005  
+3ffffe90:  401002b5 00000030 0000001b ffffffff  
+3ffffea0:  401002e5 00000001 00000000 00000000  
+3ffffeb0:  00000000 00000000 3ffe8ce4 fffffffe  
+3ffffec0:  ffffffff 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  60000314 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000026 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 3ffe8f87 3fff0f14 40214fa0  
+3fffff40:  0000000a 0000000a 00000028 40214fc8  
+3fffff50:  3fffdad0 3fffff70 3ffe83c4 40207bea  
+3fffff60:  007a1200 ee45b2bd 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(1,7)
+
+
+ ets Jan  8 2013,rst cause:4, boot mode:(1,7)
+
+wdt reset
+␀{l␀l��|␀�d�|␃␄␄␌�␌d�␌b|��␃�␛�s�cd␌#��no�$gn���␄c␜p�ds$sd8�o�␐␃␌␄�␄$␌��␄␄␌b␌'�|␃�␌��␌b��og�␀l��l`␃�␒␛og␄�␏l␇␃o;���g␄␌{;�`␃x�o�␘␃␌␄;����␜��␃␌#␌g�|␂␄�␌c��og�␀␌�l`␃�␒␓og␄�␏l␇␃n;���g␄␌s␛l`␃␇sۓn␌␄;␓$`␃�␃␌␄␌␄�ǜl ␃��n�␏l
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2044
+Time was set
+Updating RTC time from SNTP
+2045
+2046
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff4136 3fff3e3c 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff4136 3fff3e3c 4020c181  
+3fffed50:  3fff3e3c 3fff3e3c 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff4136 3fff3e3c 4020a13c  
+3fffed80:  401033a4 3fffc200 00000022 40216a14  
+3fffed90:  00000000 3fff4136 3fff3e70 40216088  
+3fffeda0:  3fff4136 00000000 3fff187c 00000002  
+3fffedb0:  00000002 3fff4136 3fff3e3c 4020a202  
+3fffedc0:  00000000 4bc6a7f0 5a9fbe76 02222628  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3e70 00000000 401006f5 00000000  
+3fffedf0:  0001d858 00000000 3fff3e3c 3fff3f84  
+3fffee00:  3fffee60 3fff3d54 3fff3c1c 4020a3e4  
+3fffee10:  3fffee60 3fff3d54 3fff3c1c 40219fc8  
+3fffee20:  0000016e 3fff3fca 3fff3d54 3fff3e3c  
+3fffee30:  00000000 3fff0bac 3fff3c1c 3fff1874  
+3fffee40:  3fff0000 00000020 3fff3bbc 00000000  
+3fffee50:  3fff3f84 3fff3c1c 3fff3d54 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3f84 3fff1874  
+3fffee80:  3fff3c1c 3fff1878 3fff1879 40255b51  
+3fffee90:  0000c354 3fffdcc0 3ffeb638 00000030  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3fa2 3fff3f84 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeefb0 3fff398c  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff398c  
+3fffef00:  3fff1440 00000008 3fff3f84 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3f94 3fff3f84 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  00000000 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  00000005 00000000 00000020 401002c4  
+3ffffcc0:  feefeffe feefeffe 00000005 40102464  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  40102feb 3ffeef88 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeefb0 401031c8  
+3ffffd00:  40102feb 3ffeefb0 00000000 401002c4  
+3ffffd10:  ffffffa5 07203368 3ffef844 401031c8  
+3ffffd20:  00000005 00000000 00000020 401002c4  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  00000002 00000000 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeefb0 40102464  
+3ffffd60:  40102feb 3ffeefb0 3ffeec90 40102464  
+3ffffd70:  00007fff 073514a6 3ffef844 401031c8  
+3ffffd80:  3ffebdac 00000000 00000000 401031c8  
+3ffffd90:  00007fff 073514a6 40103682 00000100  
+3ffffda0:  3ffebdac 7fffffff 00002200 00000001  
+3ffffdb0:  00000001 00004208 00002200 00000001  
+3ffffdc0:  3ffebdac 00080000 00000000 073514a6  
+3ffffdd0:  3ffebdb8 2c9f0300 4000050c 3fffc278  
+3ffffde0:  401033a4 3fffc200 00000022 3fffc278  
+3ffffdf0:  401013b7 00000030 00000020 ffffffff  
+3ffffe00:  40101414 00000010 00000001 00000010  
+3ffffe10:  0000000a 0000002e 6000080c fffffffe  
+3ffffe20:  ffffffff 3fffc6fc 00000001 00000010  
+3ffffe30:  00000001 3fff0d2c 00000000 00000030  
+3ffffe40:  00000000 3fff0d2c 00000002 00000030  
+3ffffe50:  00002200 401045ec 00040000 00000030  
+3ffffe60:  3ffef6e8 40103553 3fff0fa4 00000030  
+3ffffe70:  3ffebdb8 7fffffff 00000000 00000001  
+3ffffe80:  00000001 2c9f0300 4000050c 3fffc278  
+3ffffe90:  401033a4 3fffc200 00000022 07282b7c  
+3ffffea0:  40216bd7 00000030 0000001c ffffffff  
+3ffffeb0:  40216d34 00000000 3ff00014 00000000  
+3ffffec0:  00000000 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  00000000 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000015 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 3ffe8f87 3fff0f14 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  3fffdad0 3fffff70 3ffe83c4 40207bea  
+3fffff60:  007a1200 44cd0c8d 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2046
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f5e 3fff3c64 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f5e 3fff3c64 4020c181  
+3fffed50:  3fff3c64 3fff3c64 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f5e 3fff3c64 4020a13c  
+3fffed80:  00000001 00004208 00000020 40216a14  
+3fffed90:  00000000 3fff3f5e 3fff3c98 40216088  
+3fffeda0:  3fff3f5e 2c9f0300 4000050c 00000002  
+3fffedb0:  00000002 3fff3f5e 3fff3c64 4020a202  
+3fffedc0:  00000000 4bc6a7f0 77ced916 00177f5a  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c98 00000000 401006f5 00000000  
+3fffedf0:  00001452 00000000 3fff3c64 3fff3dac  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3df2 3fff3b5c 3fff3c64  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3dac 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff3c50 3fff3c44 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3dac 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  0000bf38 000000d7 3ffecabe 3ffeca9c  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3dca 3fff3dac 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeefb0 3fff3974  
+3fffeef0:  3fffdc80 00000020 3fff34d4 3fff3974  
+3fffef00:  3fff1440 00000008 3fff3dac 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34d4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34d4 40279f53  
+3fffef30:  3fff3dbc 3fff3dac 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34d4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  40102891 00000000 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeef88 00000000  
+3ffffd00:  40102feb 3ffeef88 3ffef6e8 00000000  
+3ffffd10:  00000005 00000000 00000020 401002c4  
+3ffffd20:  3ffebddc 00000000 00000005 40102464  
+3ffffd30:  3ffeb525 401056f7 3ffeef88 401002c4  
+3ffffd40:  40102feb 3ffeef88 00000020 401002c4  
+3ffffd50:  00007fff 004f5cdc 3ffef844 401031c8  
+3ffffd60:  3ffebddc 00000000 00000000 40102464  
+3ffffd70:  00007fff 004f5cdc 40103682 00000100  
+3ffffd80:  3ffebddc 7fffffff 00002200 00000001  
+3ffffd90:  00000001 00004208 00000000 00040000  
+3ffffda0:  3ffebddc 401045ec 00040000 004f5cdc  
+3ffffdb0:  3ffebda0 2c9f0300 4000050c 3fffc278  
+3ffffdc0:  401033a4 3fffc200 00000022 00000001  
+3ffffdd0:  40002edb 00000030 00000010 ffffffff  
+3ffffde0:  40002edb 689222b5 00000000 fffffffe  
+3ffffdf0:  00000004 00000020 6000080c fffffffe  
+3ffffe00:  ffffffff 3fffc6fc 00000001 00000001  
+3ffffe10:  3fff0d2c 00000007 00000000 00000030  
+3ffffe20:  40205b96 e0033031 00000001 0000000e  
+3ffffe30:  0000000a 0000002e 6000080c fffffffe  
+3ffffe40:  ffffffff 3fffc6fc 00000064 00000001  
+3ffffe50:  00000001 3fff0d2c 00000001 00000030  
+3ffffe60:  000000bf 3fffdad0 3fff0fa4 00000030  
+3ffffe70:  401033a4 3fffc200 00000022 401013a8  
+3ffffe80:  40207c21 00000030 0000001b ffffffff  
+3ffffe90:  4020567f 00000000 3fffff60 00000003  
+3ffffea0:  4021b188 00000000 3ffe8ce4 fffffffe  
+3ffffeb0:  ffffffff 3fffc6fc 00000050 3fff0d39  
+3ffffec0:  00000004 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  60000314 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  0000001c 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 6892cd8e 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2046
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  00000016 000000d4 00000020 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 00000000 0000001f 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 aa7ef9db 0017a495  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  00001472 00000014 00000000 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 4bc6a7f0 000014bd 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef88 3fff397c  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff397c  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  00000005 00000000 00000020 401002c4  
+3ffffcc0:  feefeffe feefeffe 00000005 40102464  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  40102feb 3ffeefb0 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeef88 401031c8  
+3ffffd00:  40102feb 3ffeef88 00000000 00000000  
+3ffffd10:  00007fff 004fd82e 3ffef844 401031c8  
+3ffffd20:  3ffebdc4 00000000 00000000 401002c4  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  3ffebdc4 7fffffff 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeef88 40102464  
+3ffffd60:  40102feb 3ffeef88 3ffeef88 004fd82e  
+3ffffd70:  00007fff 004fdd3c 3ffef844 401031c8  
+3ffffd80:  3ffebdd0 00000000 00000000 00040000  
+3ffffd90:  00007fff 004fdd3c 40103682 00000100  
+3ffffda0:  3ffebdd0 7fffffff 00002200 00000001  
+3ffffdb0:  00000001 00004208 6000080c fffffffe  
+3ffffdc0:  3ffebdd0 3fffc6fc 00000001 004fdd3c  
+3ffffdd0:  3ffebddc 2c9f0300 4000050c 3fffc278  
+3ffffde0:  401033a4 3fffc200 00000022 3fffc278  
+3ffffdf0:  40002ee8 00000030 00000010 ffffffff  
+3ffffe00:  40002ee8 8c7fd2bb 00000001 00000001  
+3ffffe10:  00000004 0000002e 6000080c fffffffe  
+3ffffe20:  ffffffff 3fffc6fc 00000000 00000050  
+3ffffe30:  8c7fd2a8 3fff0d2c 00000006 00000030  
+3ffffe40:  8c7c1b17 3fffdad0 3fff0fa4 00000030  
+3ffffe50:  401047f3 00000021 00000002 00040000  
+3ffffe60:  00002200 00000001 3fff0d2c 40100780  
+3ffffe70:  401036bc 00080000 0000001f 401002c4  
+3ffffe80:  00000000 00000000 0000001f 401002c4  
+3ffffe90:  4000050c 2c9f0300 4000050c 3fffc278  
+3ffffea0:  401033a4 3fffc200 00000022 ffffffff  
+3ffffeb0:  40216d54 00000030 0000001b ffffffff  
+3ffffec0:  40216d54 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  ffffffff 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000023 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 8c8020ec 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2046
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  00000016 000000d4 00000020 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 3fff0010 00000002 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 ddb22d0e 0017a158  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  0000146f 00000000 3fff3c44 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000001c 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  ffffffff 3fffc6fc 00000064 3fffdab0  
+3fffeea0:  00000018 00000000 3fff0fa4 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef38 3fff3974  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff3974  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  feefeffe feefeffe 40272383 40228860  
+3ffffce0:  402288f4 00000000 00000000 00000000  
+3ffffcf0:  00000000 00000000 00000000 00000000  
+3ffffd00:  00000000 00000000 00000000 00000000  
+3ffffd10:  00000005 00000000 00000020 401002c4  
+3ffffd20:  00000005 00000000 00000005 40102464  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  00000005 00000000 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeef38 40102464  
+3ffffd60:  40102feb 3ffeef38 3ffeef38 401002c4  
+3ffffd70:  00007fff 004fd0e8 3ffef844 401031c8  
+3ffffd80:  3ffebdd0 00000000 00000000 401031c8  
+3ffffd90:  00007fff 004fd0e8 40103682 00000100  
+3ffffda0:  3ffebdd0 7fffffff 00002200 00000001  
+3ffffdb0:  00000001 00004208 00002200 00000001  
+3ffffdc0:  3ffebdd0 00004208 00000022 004fd0e8  
+3ffffdd0:  3ffebddc 2c9f0300 4000050c 3fffc278  
+3ffffde0:  401033a4 3fffc200 00000022 3fffc278  
+3ffffdf0:  40205aea 00000030 00000010 ffffffff  
+3ffffe00:  40205ae8 00000001 00000000 fffffffe  
+3ffffe10:  00000000 00000780 00000020 fffffffe  
+3ffffe20:  ffffffff 3fffc6fc 00000000 00000001  
+3ffffe30:  3fff0d2c 00000005 00000000 00000030  
+3ffffe40:  00000001 3fff0d2c 00000004 00000030  
+3ffffe50:  401036bc 00080000 0000001f 401002c4  
+3ffffe60:  000000bf 00000000 3fffc228 40105f91  
+3ffffe70:  4000050c 2c9f0300 4000050c 3fffc278  
+3ffffe80:  401033a4 3fffc200 00000022 ffffffff  
+3ffffe90:  40205676 00000030 0000001b ffffffff  
+3ffffea0:  402059fe 3fff0bac 00000004 00000005  
+3ffffeb0:  3fffff83 00000000 3ffe8ce4 fffffffe  
+3ffffec0:  ffffffff 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  60000314 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  0000002a 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 b069a2cf 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2046
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f5e 3fff3c64 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f5e 3fff3c64 4020c181  
+3fffed50:  3fff3c64 3fff3c64 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f5e 3fff3c64 4020a13c  
+3fffed80:  00000016 000000d4 00000020 40216a14  
+3fffed90:  00000000 3fff3f5e 3fff3c98 40216088  
+3fffeda0:  3fff3f5e 3fff1838 40272383 00000002  
+3fffedb0:  00000002 3fff3f5e 3fff3c64 4020a202  
+3fffedc0:  00000000 4bc6a7f0 c4189374 0018c812  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c98 00000000 401006f5 00000000  
+3fffedf0:  0000156e 00000000 3fff3c64 3fff3dac  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3df2 3fff3b5c 3fff3c64  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3dac 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff3c50 3fff3c44 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3dac 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 000000d7 3ffedd8a 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3dca 3fff3dac 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeefb0 3fff3974  
+3fffeef0:  3fffdc80 00000020 3fff34d4 3fff3974  
+3fffef00:  3fff1440 00000008 3fff3dac 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34d4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34d4 40279f53  
+3fffef30:  3fff3dbc 3fff3dac 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34d4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  402288f4 00000000 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeef88 00000000  
+3ffffd00:  40102feb 3ffeef88 00000000 00000000  
+3ffffd10:  00000005 00000000 00000020 401002c4  
+3ffffd20:  00000002 00000000 00000020 401002c4  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  00000002 00000000 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeef88 40102464  
+3ffffd60:  40102feb 3ffeef88 3ffeec90 401002c4  
+3ffffd70:  3ffeb525 401056f7 3ffeefb0 401031c8  
+3ffffd80:  40102feb 3ffeefb0 00000000 401031c8  
+3ffffd90:  00007fff 0053b51c 3ffef844 401031c8  
+3ffffda0:  3ffebdd0 00000000 00000000 00000001  
+3ffffdb0:  00007fff 0053b51c 40103682 00000100  
+3ffffdc0:  3ffebdd0 7fffffff 00002200 00000001  
+3ffffdd0:  00000001 00004208 4000050c 3fffc278  
+3ffffde0:  3ffebdd0 3fffc200 00000022 0053b51c  
+3ffffdf0:  3ffebddc 2c9f0300 4000050c 3fffc278  
+3ffffe00:  401033a4 3fffc200 00000022 00000000  
+3ffffe10:  401007d8 00000030 00000010 ffffffff  
+3ffffe20:  40205b96 0000000f 00000013 0000000e  
+3ffffe30:  0000000a 0000002e 6000080c fffffffe  
+3ffffe40:  ffffffff 3fffc6fc 00000000 00000000  
+3ffffe50:  00000001 3fff0d2c 00000002 00000030  
+3ffffe60:  3ffebdac 3fffc6fc 00000001 00539c84  
+3ffffe70:  3ffebdb8 2c9f0300 4000050c 3fffc278  
+3ffffe80:  401033a4 3fffc200 00000022 00000005  
+3ffffe90:  40205676 00000030 0000001b ffffffff  
+3ffffea0:  402059fe 3fff0bac 00000004 00000005  
+3ffffeb0:  3fffff83 00000000 3ffe8ce4 fffffffe  
+3ffffec0:  ffffffff 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  ffffffff 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000030 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 d5895330 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2046
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  00000016 000000d4 00000020 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 3fff1838 3fffc228 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 a147ae14 00179ec2  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  0000146d 00000000 3fff3c44 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 4bc6a7f0 000014bc 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeefb0 3fff397c  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff397c  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  00000005 00000000 00000020 401002c4  
+3ffffcc0:  feefeffe feefeffe 00000005 40102464  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  40102feb 3ffeefb0 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeefb0 401031c8  
+3ffffd00:  40102feb 3ffeefb0 00000000 00000000  
+3ffffd10:  00007fff 004fc53d 3ffef844 401031c8  
+3ffffd20:  3ffebda0 00000000 00000000 00000001  
+3ffffd30:  00007fff 004fc53d 40103682 00000100  
+3ffffd40:  00000005 00000000 00000020 401002c4  
+3ffffd50:  00000001 00004208 00000005 40102464  
+3ffffd60:  3ffeb525 401056f7 3ffeefb0 004fc53d  
+3ffffd70:  40102feb 3ffeefb0 4000050c 3fffc278  
+3ffffd80:  ffffffaa 004fc6fe 3ffef844 401031c8  
+3ffffd90:  3ffebdac 00000000 00000000 ffffffff  
+3ffffda0:  ffffffaa 004fc6fe 40103682 00000100  
+3ffffdb0:  3ffebdac 7fffffff 00002200 00000001  
+3ffffdc0:  00000001 00004208 00000000 00010000  
+3ffffdd0:  3ffebdac 3fff0d2c 00000006 004fc6fe  
+3ffffde0:  3ffebdb8 2c9f0300 4000050c 3fffc278  
+3ffffdf0:  401033a4 3fffc200 00000022 fffffffe  
+3ffffe00:  40100750 00000030 00000010 ffffffff  
+3ffffe10:  40100750 f9704a32 00000013 00000058  
+3ffffe20:  00000004 0000002e 6000080c fffffffe  
+3ffffe30:  ffffffff 3fffc6fc 00000000 00000010  
+3ffffe40:  00000001 3fff0d2c 00000008 00000030  
+3ffffe50:  ffffffff 3fffc6fc 00000001 3fff0d2c  
+3ffffe60:  000000bf 3fffdad0 3fff0fa4 00000030  
+3ffffe70:  40205dc6 00000030 0000001c ffffffff  
+3ffffe80:  402059d7 3fff0d30 3ff00014 fffffffe  
+3ffffe90:  00000000 00000000 00000000 fffffffe  
+3ffffea0:  ffffffff 3fffc6fc 00000050 3fff0c78  
+3ffffeb0:  3fff0c78 3fffdad0 3fff0fa4 00000030  
+3ffffec0:  3fffff83 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  60000314 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000038 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002e 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 f97094dd 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect.................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2047
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  00007fff 004fca69 40103682 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 00004208 40272383 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 fc6a7ef9 00179f2b  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  0000146d 00000000 3fff3c44 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 4bc6a7f0 000014be 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef88 3fff3974  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff3974  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  feefeffe feefeffe 40272383 40228860  
+3ffffce0:  402288f4 00000000 00000000 00000000  
+3ffffcf0:  00000000 00000000 00000000 00000000  
+3ffffd00:  00000000 00000000 00000000 00000000  
+3ffffd10:  00000005 00000000 00000020 401002c4  
+3ffffd20:  00000005 00000000 00000020 401002c4  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  40102891 401056f7 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeef60 40102464  
+3ffffd60:  40102feb 3ffeef60 3ffef6e8 401031c8  
+3ffffd70:  00007fff 004fc813 3ffef844 401031c8  
+3ffffd80:  3ffebddc 00000000 00000000 00000100  
+3ffffd90:  00007fff 004fc813 40103682 00000100  
+3ffffda0:  3ffebddc 7fffffff 00002200 00000001  
+3ffffdb0:  00000001 00004208 4000050c 3fffc278  
+3ffffdc0:  3ffebddc 00000000 00000022 004fc813  
+3ffffdd0:  3ffebda0 2c9f0300 4000050c 3fffc278  
+3ffffde0:  401033a4 3fffc200 00000022 00000010  
+3ffffdf0:  4000dd38 00000030 00000010 ffffffff  
+3ffffe00:  40002ef1 1d5694b6 00000013 00000028  
+3ffffe10:  00000004 00000020 6000080c fffffffe  
+3ffffe20:  ffffffff 3fffc6fc 00000001 00000050  
+3ffffe30:  1d56948e 3fff0d2c 00000002 00000030  
+3ffffe40:  00000001 3fff0d2c 00000007 00000030  
+3ffffe50:  00000001 3fff0d2c 00000004 00000030  
+3ffffe60:  000000bf 3fffdad0 3fff0fa4 00000030  
+3ffffe70:  4000df4b 00000030 0000001b ffffffff  
+3ffffe80:  40205df4 3fffff7e 3ffe8cdf 00000005  
+3ffffe90:  3fffff7e 0000002f 6000080c fffffffe  
+3ffffea0:  ffffffff 3fffc6fc 00000001 3fff0c78  
+3ffffeb0:  3fff0c78 3fffdad0 3fff0fa4 00000030  
+3ffffec0:  3fffff83 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  60000314 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000002 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002f 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 1d573a4d 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2047
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  3fff0bac 3fff3b5c 3fff1874 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 3fff1838 40272383 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 0083126e 00179ce0  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  0000146c 00000000 3fff3c44 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 4bc6a7f0 000014bd 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef88 3fff3974  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff3974  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  feefeffe feefeffe 40272383 40228860  
+3ffffce0:  402288f4 00000000 00000000 00000000  
+3ffffcf0:  00000000 00000000 00000000 00000000  
+3ffffd00:  00000000 00000000 00000000 00000000  
+3ffffd10:  00000005 00000000 00000020 401002c4  
+3ffffd20:  00000005 00000000 00000020 401002c4  
+3ffffd30:  00000005 00000000 00000020 401002c4  
+3ffffd40:  00000002 00000000 00000005 40102464  
+3ffffd50:  3ffeb525 401056f7 3ffeef88 401002c4  
+3ffffd60:  40102feb 3ffeef88 00000005 40102464  
+3ffffd70:  00007fff 004fc0ca 3ffef844 401031c8  
+3ffffd80:  3ffebda0 00000000 00000000 401031c8  
+3ffffd90:  00007fff 004fc0ca 40103682 00000100  
+3ffffda0:  3ffebda0 7fffffff 00002200 00000001  
+3ffffdb0:  00000001 00004208 40103682 00000100  
+3ffffdc0:  3ffebda0 00040000 00000000 004fc0ca  
+3ffffdd0:  3ffebdac 2c9f0300 4000050c 3fffc278  
+3ffffde0:  401033a4 3fffc200 00000022 401002c4  
+3ffffdf0:  40002eee 00000030 00000010 ffffffff  
+3ffffe00:  40002ef1 413b5487 00000013 00000040  
+3ffffe10:  00000004 0000002f 6000080c fffffffe  
+3ffffe20:  ffffffff 3fffc6fc 00000001 00000050  
+3ffffe30:  413b5447 3fff0d2c 00000003 00000030  
+3ffffe40:  401047f3 00000021 00000002 00040000  
+3ffffe50:  00002200 3fffc6fc 00000064 3fff0d2c  
+3ffffe60:  401036bc 00080000 3fff0fa4 00000030  
+3ffffe70:  3fff0c78 00000000 3fff0fa4 00000030  
+3ffffe80:  4021b188 2c9f0300 4000050c 3fffc278  
+3ffffe90:  401033a4 3fffc200 00000022 3fff0f90  
+3ffffea0:  40216d0e 00000030 0000001b ffffffff  
+3ffffeb0:  40216d4b 00000000 3fffff60 00000003  
+3ffffec0:  4021b188 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  00000000 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000008 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002f 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 413bced6 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2047
+Time was set
+Updating RTC time from SNTP
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+Exception (28):
+epc1=0x4020554a epc2=0x00000000 epc3=0x00000000 excvaddr=0x00000000 depc=0x00000000
+
+>>>stack>>>
+
+ctx: sys
+sp: 3fffeb70 end: 3fffffb0 offset: 0190
+3fffed00:  00000000 3fff3f3e 3fff3c44 4020554a  
+3fffed10:  00000000 00000003 00000000 40215de0  
+3fffed20:  00000000 6d74682f 00000000 00000000  
+3fffed30:  6d74682e 00000000 00000001 4020a018  
+3fffed40:  00000000 3fff3f3e 3fff3c44 4020c181  
+3fffed50:  3fff3c44 3fff3c44 00000000 4020ccae  
+3fffed60:  00000000 00000001 00000000 00000002  
+3fffed70:  00000000 3fff3f3e 3fff3c44 4020a13c  
+3fffed80:  00000016 000000d4 00000020 40216a14  
+3fffed90:  00000000 3fff3f3e 3fff3c78 40216088  
+3fffeda0:  3fff3f3e 3fff1838 40272383 00000002  
+3fffedb0:  00000002 3fff3f3e 3fff3c44 4020a202  
+3fffedc0:  00000000 4bc6a7f0 4bc6a7ef 0018cd4f  
+3fffedd0:  00000000 00000000 4bc6a7f0 00000000  
+3fffede0:  3fff3c78 00000000 401006f5 00000000  
+3fffedf0:  00001573 00000000 3fff3c44 3fff3d8c  
+3fffee00:  3fffee60 3fff3b5c 3fff3a24 4020a3e4  
+3fffee10:  3fffee60 3fff3b5c 3fff3a24 40219fc8  
+3fffee20:  0000016e 3fff3dd2 3fff3b5c 3fff3c44  
+3fffee30:  00000000 3fff0bac 3fff3a24 3fff1874  
+3fffee40:  3fff0000 00000020 3fff39c4 00000000  
+3fffee50:  3fff3d8c 3fff3a24 3fff3b5c 4021a028  
+3fffee60:  3fff34c8 3fff34bc 0000196e 3fff1440  
+3fffee70:  3fff18a8 3fff1440 3fff3d8c 3fff1874  
+3fffee80:  3fff3a24 3fff1878 3fff1879 40255b51  
+3fffee90:  3fff39ea 000000d7 3ffebe36 40253ff0  
+3fffeea0:  00000018 00000000 3ffe88f8 00000000  
+3fffeeb0:  3fff0000 000001a4 00000020 3fff1440  
+3fffeec0:  3fff18a8 3fff3daa 3fff3d8c 402532c5  
+3fffeed0:  00000014 3fff1440 3ffe88f8 40100c9b  
+3fffeee0:  00000000 3fff2b1c 3ffeef88 3fff397c  
+3fffeef0:  3fffdc80 00000020 3fff34a4 3fff397c  
+3fffef00:  3fff1440 00000008 3fff3d8c 4024bfc1  
+3fffef10:  3fffdc80 3fff2dc4 3fff34a4 4024bdbc  
+3fffef20:  40279f41 3fff2dc4 3fff34a4 40279f53  
+3fffef30:  3fff3d9c 3fff3d8c 00000000 3ffe88f4  
+3fffef40:  4027122f 00000000 3fff34a4 40275793  
+3fffef50:  40000f49 3fffdab0 3fffdab0 40000f49  
+3fffef60:  40000e19 000887e9 00000000 00000005  
+3fffef70:  3fffefc0 aa55aa55 000000ed 401057f9  
+3fffef80:  401057ff 00000000 00000005 40100e54  
+3fffef90:  4010000d 38983beb 000887e9 401000ac  
+3fffefa0:  00000000 3fffef3c 00000000 3fffff38  
+3fffefb0:  3fffffc0 00000000 00000000 feefeffe  
+3fffefc0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefd0:  feefeffe feefeffe feefeffe feefeffe  
+3fffefe0:  feefeffe feefeffe feefeffe feefeffe  
+3fffeff0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff000:  feefeffe feefeffe feefeffe feefeffe  
+3ffff010:  feefeffe feefeffe feefeffe feefeffe  
+3ffff020:  feefeffe feefeffe feefeffe feefeffe  
+3ffff030:  feefeffe feefeffe feefeffe feefeffe  
+3ffff040:  feefeffe feefeffe feefeffe feefeffe  
+3ffff050:  feefeffe feefeffe feefeffe feefeffe  
+3ffff060:  feefeffe feefeffe feefeffe feefeffe  
+3ffff070:  feefeffe feefeffe feefeffe feefeffe  
+3ffff080:  feefeffe feefeffe feefeffe feefeffe  
+3ffff090:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff0f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff100:  feefeffe feefeffe feefeffe feefeffe  
+3ffff110:  feefeffe feefeffe feefeffe feefeffe  
+3ffff120:  feefeffe feefeffe feefeffe feefeffe  
+3ffff130:  feefeffe feefeffe feefeffe feefeffe  
+3ffff140:  feefeffe feefeffe feefeffe feefeffe  
+3ffff150:  feefeffe feefeffe feefeffe feefeffe  
+3ffff160:  feefeffe feefeffe feefeffe feefeffe  
+3ffff170:  feefeffe feefeffe feefeffe feefeffe  
+3ffff180:  feefeffe feefeffe feefeffe feefeffe  
+3ffff190:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff1f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff200:  feefeffe feefeffe feefeffe feefeffe  
+3ffff210:  feefeffe feefeffe feefeffe feefeffe  
+3ffff220:  feefeffe feefeffe feefeffe feefeffe  
+3ffff230:  feefeffe feefeffe feefeffe feefeffe  
+3ffff240:  feefeffe feefeffe feefeffe feefeffe  
+3ffff250:  feefeffe feefeffe feefeffe feefeffe  
+3ffff260:  feefeffe feefeffe feefeffe feefeffe  
+3ffff270:  feefeffe feefeffe feefeffe feefeffe  
+3ffff280:  feefeffe feefeffe feefeffe feefeffe  
+3ffff290:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff2f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff300:  feefeffe feefeffe feefeffe feefeffe  
+3ffff310:  feefeffe feefeffe feefeffe feefeffe  
+3ffff320:  feefeffe feefeffe feefeffe feefeffe  
+3ffff330:  feefeffe feefeffe feefeffe feefeffe  
+3ffff340:  feefeffe feefeffe feefeffe feefeffe  
+3ffff350:  feefeffe feefeffe feefeffe feefeffe  
+3ffff360:  feefeffe feefeffe feefeffe feefeffe  
+3ffff370:  feefeffe feefeffe feefeffe feefeffe  
+3ffff380:  feefeffe feefeffe feefeffe feefeffe  
+3ffff390:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff3f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff400:  feefeffe feefeffe feefeffe feefeffe  
+3ffff410:  feefeffe feefeffe feefeffe feefeffe  
+3ffff420:  feefeffe feefeffe feefeffe feefeffe  
+3ffff430:  feefeffe feefeffe feefeffe feefeffe  
+3ffff440:  feefeffe feefeffe feefeffe feefeffe  
+3ffff450:  feefeffe feefeffe feefeffe feefeffe  
+3ffff460:  feefeffe feefeffe feefeffe feefeffe  
+3ffff470:  feefeffe feefeffe feefeffe feefeffe  
+3ffff480:  feefeffe feefeffe feefeffe feefeffe  
+3ffff490:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff4f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff500:  feefeffe feefeffe feefeffe feefeffe  
+3ffff510:  feefeffe feefeffe feefeffe feefeffe  
+3ffff520:  feefeffe feefeffe feefeffe feefeffe  
+3ffff530:  feefeffe feefeffe feefeffe feefeffe  
+3ffff540:  feefeffe feefeffe feefeffe feefeffe  
+3ffff550:  feefeffe feefeffe feefeffe feefeffe  
+3ffff560:  feefeffe feefeffe feefeffe feefeffe  
+3ffff570:  feefeffe feefeffe feefeffe feefeffe  
+3ffff580:  feefeffe feefeffe feefeffe feefeffe  
+3ffff590:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff5f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff600:  feefeffe feefeffe feefeffe feefeffe  
+3ffff610:  feefeffe feefeffe feefeffe feefeffe  
+3ffff620:  feefeffe feefeffe feefeffe feefeffe  
+3ffff630:  feefeffe feefeffe feefeffe feefeffe  
+3ffff640:  feefeffe feefeffe feefeffe feefeffe  
+3ffff650:  feefeffe feefeffe feefeffe feefeffe  
+3ffff660:  feefeffe feefeffe feefeffe feefeffe  
+3ffff670:  feefeffe feefeffe feefeffe feefeffe  
+3ffff680:  feefeffe feefeffe feefeffe feefeffe  
+3ffff690:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff6f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff700:  feefeffe feefeffe feefeffe feefeffe  
+3ffff710:  feefeffe feefeffe feefeffe feefeffe  
+3ffff720:  feefeffe feefeffe feefeffe feefeffe  
+3ffff730:  feefeffe feefeffe feefeffe feefeffe  
+3ffff740:  feefeffe feefeffe feefeffe feefeffe  
+3ffff750:  feefeffe feefeffe feefeffe feefeffe  
+3ffff760:  feefeffe feefeffe feefeffe feefeffe  
+3ffff770:  feefeffe feefeffe feefeffe feefeffe  
+3ffff780:  feefeffe feefeffe feefeffe feefeffe  
+3ffff790:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff7f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff800:  feefeffe feefeffe feefeffe feefeffe  
+3ffff810:  feefeffe feefeffe feefeffe feefeffe  
+3ffff820:  feefeffe feefeffe feefeffe feefeffe  
+3ffff830:  feefeffe feefeffe feefeffe feefeffe  
+3ffff840:  feefeffe feefeffe feefeffe feefeffe  
+3ffff850:  feefeffe feefeffe feefeffe feefeffe  
+3ffff860:  feefeffe feefeffe feefeffe feefeffe  
+3ffff870:  feefeffe feefeffe feefeffe feefeffe  
+3ffff880:  feefeffe feefeffe feefeffe feefeffe  
+3ffff890:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff8f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff900:  feefeffe feefeffe feefeffe feefeffe  
+3ffff910:  feefeffe feefeffe feefeffe feefeffe  
+3ffff920:  feefeffe feefeffe feefeffe feefeffe  
+3ffff930:  feefeffe feefeffe feefeffe feefeffe  
+3ffff940:  feefeffe feefeffe feefeffe feefeffe  
+3ffff950:  feefeffe feefeffe feefeffe feefeffe  
+3ffff960:  feefeffe feefeffe feefeffe feefeffe  
+3ffff970:  feefeffe feefeffe feefeffe feefeffe  
+3ffff980:  feefeffe feefeffe feefeffe feefeffe  
+3ffff990:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9a0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9b0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9c0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9d0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9e0:  feefeffe feefeffe feefeffe feefeffe  
+3ffff9f0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa20:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa30:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa40:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa50:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa60:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa70:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffa90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffaa0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffab0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffac0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffad0:  19999999 00000000 3ffe83c4 3ffffb7d  
+3ffffae0:  feefeffe feefeffe feefeffe 3ffffb60  
+3ffffaf0:  3ffffde4 00000000 3ffffe30 40224df8  
+3ffffb00:  feefeffe feefeffe 3ffffe30 4022906e  
+3ffffb10:  3ffe9d21 3ffe8ce1 3ffe9d24 feefeffe  
+3ffffb20:  3ffffb7c fffffea3 3ffe83c4 40224df0  
+3ffffb30:  00000030 3ffffb7d feefeffe feefeffe  
+3ffffb40:  feefeffe feefeffe feefeffe 3ffffe30  
+3ffffb50:  3ffe9cbf 3ffe83c4 3ffffde4 40228b81  
+3ffffb60:  00000000 0000000a 00000000 00000001  
+3ffffb70:  00000002 3ffffce4 00000004 fe000033  
+3ffffb80:  feefeffe feefeffe feefeffe feefeffe  
+3ffffb90:  feefeffe feefeffe feefeffe feefeffe  
+3ffffba0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbd0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbe0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffbf0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc00:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc10:  feefeffe feefeffe feefeffe feefeffe  
+3ffffc20:  00000000 400042db feefeffe feefeffe  
+3ffffc30:  40004b31 3fff32d4 00000040 000bc000  
+3ffffc40:  40106b4c 400042db 00000040 000bc0c0  
+3ffffc50:  4010126e 00000001 3fff32d4 000bc000  
+3ffffc60:  40106b4c 00000040 00000000 40219070  
+3ffffc70:  4010126e 00000001 3fff32d4 402190fd  
+3ffffc80:  feefeffe 00000040 00000000 40219070  
+3ffffc90:  feefeffe feefeffe 3fff32d4 402190fd  
+3ffffca0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcb0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcc0:  feefeffe feefeffe feefeffe feefeffe  
+3ffffcd0:  00000005 00000000 00000020 401002c4  
+3ffffce0:  402288f4 00000000 00000005 40102464  
+3ffffcf0:  3ffeb525 401056f7 3ffeef88 00000000  
+3ffffd00:  40102feb 3ffeef88 00000000 00000000  
+3ffffd10:  00000002 00000000 00000020 401002c4  
+3ffffd20:  40102891 00000000 00000002 40102464  
+3ffffd30:  3ffeb522 401056df 3ffeec90 401002c4  
+3ffffd40:  00000001 401048ba 3ffef6e8 401002c4  
+3ffffd50:  00000005 00000000 00000020 401002c4  
+3ffffd60:  3ffeb525 401056f7 00000005 40102464  
+3ffffd70:  3ffeb525 401056f7 3ffeef88 00040000  
+3ffffd80:  40102feb 3ffeef88 00040000 401031c8  
+3ffffd90:  00007fff 0053c5d8 3ffef844 401031c8  
+3ffffda0:  3ffebddc 00000000 00000000 401002c4  
+3ffffdb0:  00007fff 0053c5d8 40103682 00000100  
+3ffffdc0:  3ffebddc 7fffffff 00002200 00000001  
+3ffffdd0:  00000001 00004208 00000012 ffffffff  
+3ffffde0:  3ffebddc 0053c3b8 3ffef844 0053c5d8  
+3ffffdf0:  3ffebda0 2c9f0300 4000050c 3fffc278  
+3ffffe00:  401033a4 3fffc200 00000022 00000100  
+3ffffe10:  40205bc0 00000030 00000010 ffffffff  
+3ffffe20:  40205bbd 00000001 00000000 fffffffe  
+3ffffe30:  00000004 00000020 6000080c fffffffe  
+3ffffe40:  ffffffff 3fffc6fc 00000000 00000003  
+3ffffe50:  00000001 3fff0d2c 00000001 00000030  
+3ffffe60:  40207bb8 00000030 0000001b ffffffff  
+3ffffe70:  40207c0f 3fff0c00 4021b178 00000005  
+3ffffe80:  3fffff83 00000000 3ffe8ce4 fffffffe  
+3ffffe90:  ffffffff 3fffc6fc 00000000 3fff0c00  
+3ffffea0:  00000004 3fffdad0 3fff0fa4 00000030  
+3ffffeb0:  40216d14 00000000 00000001 00000001  
+3ffffec0:  00000000 00000000 00000010 401013a8  
+3ffffed0:  40100750 00000001 3fff0d2c 40100780  
+3ffffee0:  00000000 00000000 00000010 401013a8  
+3ffffef0:  40100750 00000000 00000005 401013a8  
+3fffff00:  40100750 3fff0d30 00000016 40100780  
+3fffff10:  3fffdad0 00000016 3fff0d30 40205a79  
+3fffff20:  00000010 00000016 3fff0d30 40205d75  
+3fffff30:  402155fc 00000000 00000000 40214fa0  
+3fffff40:  0000000a 0000000a 0000002f 40214fc8  
+3fffff50:  00000000 00000000 00000000 40207bea  
+3fffff60:  007a1200 66627e12 4021b100 4021b178  
+3fffff70:  00000000 00000004 3fff0c00 40207c0f  
+3fffff80:  00000000 00000000 00000001 401002c4  
+3fffff90:  3fffdad0 00000000 3fff0f90 401002e5  
+3fffffa0:  3fffdad0 00000000 3fff0f90 40216d5a  
+<<<stack<<<
+
+--------------- CUT HERE FOR EXCEPTION DECODER ---------------
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,7)
+
+load 0x4010f000, len 3460, room 16 
+tail 4
+chksum 0xcc
+load 0x3fff20b8, len 40, room 4 
+tail 4
+chksum 0xc9
+csum 0xc9
+v000887f0
+~ld
+
+NTP LED Clock v0.1.0
+Compiled: Oct 10 2022
+Connect................
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2047
+Time was set
+Updating RTC time from SNTP
+2048
+2049
+2050

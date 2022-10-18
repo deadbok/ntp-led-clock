@@ -1,7 +1,7 @@
 #include "CFGWebServer.h"
 #include <LittleFS.h>
 
-CFGWebServer::CFGWebServer() : server(80), NTPws("/ws/ntp")
+CFGWebServer::CFGWebServer() : server(80), ws("/ws")
 {}
 
 void CFGWebServer::start()
@@ -9,20 +9,19 @@ void CFGWebServer::start()
     // Serve files in directory "/" when request url starts with "/"
     // Request to the root or none existing files will try to server the default
     // file name "index.htm" if exists
-    this->server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
+    server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
     //Add handler for NTP WebSockets
-    NTPws.onEvent(this->onNTPWsEvent);
-    this->server.addHandler(&NTPws);
+    ws.onEvent(onWsEvent);
+    server.addHandler(&ws);
 
     //Not found (404) page.
-    this->server.onNotFound([](AsyncWebServerRequest *request){
+    server.onNotFound([](AsyncWebServerRequest *request){
         AsyncWebServerResponse* response = request->beginResponse(LittleFS, 
                                                                   "/404.html",
                                                                   "text/html");
         response->setCode(404);
-        Serial.print("404 on: ");
-        Serial.println(request->url());
+        Serial.printf("404 on: %s\n", request->url().c_str());
         request->send(response);
     });
 
@@ -32,10 +31,10 @@ void CFGWebServer::start()
 
  void CFGWebServer::cleanup()
  {
-    NTPws.cleanupClients();
+    ws.cleanupClients();
  }
 
-void CFGWebServer::onNTPWsEvent(AsyncWebSocket * server,
+void CFGWebServer::onWsEvent(AsyncWebSocket * server,
                                 AsyncWebSocketClient * client,
                                 AwsEventType type, void * arg, uint8_t *data,
                                 size_t len)
@@ -63,13 +62,23 @@ void CFGWebServer::onNTPWsEvent(AsyncWebSocket * server,
             {
                 if (info->opcode == WS_TEXT)
                 {
-                    Serial.printf("Data: %s", data);
+                    Serial.printf("Data: %s\n", data);
                 }
                 else
                     Serial.println(F("Received something unexpected!"));
             }
             break;
     } 
+}
+
+void CFGWebServer::handleCors(AsyncWebServerResponse *response)
+{
+    response->addHeader("Access-Control-Allow-Origin", "*");
+}
+
+void CFGWebServer::handleWSData(char *data)
+{
+
 }
 
 CFGWebServer::~CFGWebServer()

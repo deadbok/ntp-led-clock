@@ -33,7 +33,8 @@ public:
     void    init();
     void    update();
 	void	dots(bool state);
-	void 	SetDateTime(RtcDateTime datetime);
+	void 	setDateTime(RtcDateTime datetime);
+    void    setBrightess(unsigned char val);
             ~NRClock();
 };
 

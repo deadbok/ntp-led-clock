@@ -66,7 +66,7 @@ void time_is_set(bool from_sntp)
     	//Update RTC with UTC time from NTP
     	cb_rtc_time_date.InitWithEpoch32Time(cb_time.tv_sec);
 		//Set clock from NTP
-    	nrclock.SetDateTime(cb_rtc_time_date);
+    	nrclock.setDateTime(cb_rtc_time_date);
   
     	Led.toggle();
   	}

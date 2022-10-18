@@ -61,7 +61,7 @@ void NRClock::init()
     Serial.println(F("Setting up NTP client"));
 	configTime(0, 0, NTP_SERVERS);
 
-    //Set time zone for denmark
+    //Set time zone for Denmark
 	setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
 	tzset();
 }
@@ -98,10 +98,15 @@ void NRClock::dots(bool state)
 	display.setDot(1, state);
 }
 
-void NRClock::SetDateTime(RtcDateTime datetime)
+void NRClock::setDateTime(RtcDateTime datetime)
 {
 	RTC.SetDateTime(datetime);
 } 
+
+void NRClock::setBrightess(unsigned char val)
+{
+    display.setBrightness(val);
+}
 
 NRClock::~NRClock()
 {}

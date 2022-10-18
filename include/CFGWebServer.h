@@ -23,16 +23,26 @@ public:
     void start();
     void cleanup();
 
-    static void onNTPWsEvent(AsyncWebSocket * server,
+    static void onWsEvent(AsyncWebSocket * server,
                              AsyncWebSocketClient * client, AwsEventType type,
                              void * arg, uint8_t *data, size_t len);
+    void handleCors(AsyncWebServerResponse *response);
+    void handleWSData(char *data);
 
 	~CFGWebServer();    
 private:
 	//The web server
     AsyncWebServer server;
     //Web Socket
-    AsyncWebSocket NTPws;
+    AsyncWebSocket ws;
+    //Variables to indicate that a value is updated.
+    bool    timeZone;
+    bool    NTPServer;
+    bool    time;
+    bool    brightness;
+    bool    SSID;
+    bool    hostname;
+
 };
 
 #endif

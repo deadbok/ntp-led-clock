@@ -14,7 +14,7 @@
 		<div class="column left">&nbsp;</div>
 		<div class="column middle">
 			<h3>NTP and time zone:</h3>
-			<form onsubmit="ntp_cfg()" action="">
+			<form action="">
 				<label for="server">Server host name:</label><br>
 				<input type="text" id="server" name="server" value="pool.ntp.org"><br><br>
 				<label for="tz">Time zone:</label><br>
@@ -484,22 +484,22 @@
 				<input type="button" onclick="ntp_cfg()" value="Set"><br><br>
 			</form>
 			<h3>Display:</h3>
-			<form onsubmit="time_cfg()" action="">
+			<form action="">
 				<label for="itime">Time:</label><br>
-				<input type="time" id="itime">
-				<input type="button" onclick="time_cfg()" value="Set"><br><br>
+				<input type="time" id="time">
+				<input type="button" onclick="display_cfg()" value="Set"><br><br>
 				<label for="brightness">Brightness:</label><br>
-				<input type="range" min="1" max="7" value="4" class="slider" id="brightness"><br><br>
+				<input type="range" min="1" max="7" value="4" class="slider" id="brightness" onchange="updateBrightness()"><br><br>
 			</form>
 			<h3>Network:</h3>
-			<form onsubmit="networkSelect()" action="">
+			<form action="">
 				<label for="networks">SSID:</label><br>
 				<select id="networks">
 					<option value="nets">Networks...</option>
 				</select><br><br>
 				<label for="hostname">Hostname:</label><br>
 				<input type="text" id="hostname" maxlength="32">
-				<input type="button" onclick="setHostname()" value="Set">
+				<input type="button" onclick="net_cfg()" value="Set">
 			</form>
 			<hr />
 			<div class="message" id="state">
@@ -509,25 +509,102 @@
 	</div> 	
 	<div class="footer inverted">
 		<small><span class="copyright">&copy; Copyright 2022 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
-	</div>		
-	<script src="./js/request.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		function ntp_cfg() {
-			var data = JSON.stringify({
-				tz: document.getElementById("tz").value,
-				server: document.getElementById("server").value
-			});
+	</div>
+	<script type="text/javascript">	
+		var socket;
+		var data = 
+			{
+				NTPServer: null,
+				TimeZone: null,
+				Time: null,
+				Brightness: 0,
+				SSID: null,
+				Hostname: null
+			};
 
-			JSONrequest('PUT', '/ws/ntp', function(data) {
-				state.className += " success";
-				state.innerHTML = "<strong>Done!</strong> configuration updated.";
-				window.location.assign("/index.html");
-			}, function() {
-				state.className += " error";
-				state.innerHTML = "<strong>Error!</strong> Could not update configuration.";
-			});
+		function initWebSocket()
+		{
+    		console.log('Opening a WebSocket connection...');
+    		socket = new WebSocket('ws://' + window.location.hostname + '/ws');
+		}
+
+		window.addEventListener('load', onLoad);
+		
+		function onLoad(even)
+		{
+			initWebSocket();
+		}
+
+		function PrestinizeData(ldata)
+		{
+			ldata.NTPServer = null;
+			ldata.TimeZone = null;
+			ldata.Time = null;
+			ldata.Brightness = -1;
+			ldata.SSID = null;
+			ldata.Hostname = null;
+		}
+
+		socket.onopen = function(event) 
+		{
+			console.log('Connection established');
+		};
+		
+		socket.onmessage = function(event)
+		{
+			console.log(`Data received from server: ${event.data}`);
+		};
+		
+		socket.onclose = function(event)
+		{
+			console.log('Connection closed');
+		    setTimeout(initWebSocket, 2000);
+		};
+		
+		socket.onerror = function(error)
+		{
+			alert(`An web socket error ocurred:\n${error.message}`);
+		};
+
+		function ntp_cfg()
+		{
+			PrestinizeData(data);
+
+			data.NTPServer = document.getElementById("server").value;
+			data.TimeZone = document.getElementById("tz").value;
+
+			socket.send(JSON.stringify(data));
+		}
+
+		function display_cfg() 
+		{
+			PrestinizeData(data);
+			
+			data.Time = document.getElementById("time").value;
+			data.Brightness = document.getElementById("brightness").value;
+
+			socket.send(JSON.stringify(data));
+		}
+
+		function net_cfg() 
+		{
+			PrestinizeData(data);
+			
+			data.SSID = document.getElementById("networks").value;
+			data.Hostname = document.getElementById("hostname").value;
+
+			socket.send(JSON.stringify(data));
+		}
+
+		function updateBrightness()
+		{
+			PrestinizeData(data);
+			
+			data.Brightness = document.getElementById("brightness").value;
+
+			socket.send(JSON.stringify(data));
 		}
 	</script>
-	<noscript>Sorry I need JavaScript!</noscript>
+	<noscript>Sorry, I need JavaScript!</noscript>
 </body>
 </html>

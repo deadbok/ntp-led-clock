@@ -1,7 +1,7 @@
  /**
  * NTP LED Clock.
  * 
- * CFGWebServer.h
+ * RTWebServer.h
  *
  * Web server handling configuration in running mode.
  *
@@ -12,13 +12,13 @@
 #include <AsyncJson.h>
 #include <ArduinoJson.h>
 
-#ifndef _CFG_WEB_SERVER_H_
-#define _CFG_WEB_SERVER_H_
+#ifndef _RT_WEB_SERVER_H_
+#define _RT_WEB_SERVER_H_
 
-class CFGWebServer
+class RTWebServer
 {
 public:
-	CFGWebServer();
+	RTWebServer();
 
     void start();
     void cleanup();
@@ -29,19 +29,12 @@ public:
     void handleCors(AsyncWebServerResponse *response);
     void handleWSData(char *data);
 
-	~CFGWebServer();    
+	~RTWebServer();    
 private:
 	//The web server
     AsyncWebServer server;
     //Web Socket
     AsyncWebSocket ws;
-    //Variables to indicate that a value is updated.
-    bool    timeZone;
-    bool    NTPServer;
-    bool    time;
-    bool    brightness;
-    bool    SSID;
-    bool    hostname;
 
 };
 

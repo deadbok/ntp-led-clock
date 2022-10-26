@@ -1,10 +1,10 @@
-#include "CFGWebServer.h"
+#include "RTWebServer.h"
 #include <LittleFS.h>
 
-CFGWebServer::CFGWebServer() : server(80), ws("/ws")
+RTWebServer::RTWebServer() : server(80), ws("/ws")
 {}
 
-void CFGWebServer::start()
+void RTWebServer::start()
 {
     // Serve files in directory "/" when request url starts with "/"
     // Request to the root or none existing files will try to server the default
@@ -29,12 +29,12 @@ void CFGWebServer::start()
     this->server.begin();
 }
 
- void CFGWebServer::cleanup()
+ void RTWebServer::cleanup()
  {
     ws.cleanupClients();
  }
 
-void CFGWebServer::onWsEvent(AsyncWebSocket * server,
+void RTWebServer::onWsEvent(AsyncWebSocket * server,
                                 AsyncWebSocketClient * client,
                                 AwsEventType type, void * arg, uint8_t *data,
                                 size_t len)
@@ -71,15 +71,15 @@ void CFGWebServer::onWsEvent(AsyncWebSocket * server,
     } 
 }
 
-void CFGWebServer::handleCors(AsyncWebServerResponse *response)
+void RTWebServer::handleCors(AsyncWebServerResponse *response)
 {
     response->addHeader("Access-Control-Allow-Origin", "*");
 }
 
-void CFGWebServer::handleWSData(char *data)
+void RTWebServer::handleWSData(char *data)
 {
 
 }
 
-CFGWebServer::~CFGWebServer()
+RTWebServer::~RTWebServer()
 {}

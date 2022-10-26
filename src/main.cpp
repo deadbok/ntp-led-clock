@@ -21,27 +21,28 @@
 #include <sntp.h>
 #include <ESP8266TimerInterrupt.h>
 #include <LittleFS.h>
-#include "CFGWebServer.h"
+#include "Config.h"
+#include "RTWebServer.h"
 #include "ap_secret.h"
 #include "hardware.h"
 #include "led.h"
-#include "nrclock.h"
+#include "NRClock.h"
 #include "version.h"
 
 //The instance to control the LED
-LED                   Led(LED_PIN);
+LED                   	Led(LED_PIN);
 //Init ESP8266 timer 1
-ESP8266Timer          ITimer;
+ESP8266Timer          	ITimer;
 //Variable used in the ISR for counting seconds
-volatile unsigned int ISR_seconds;
+volatile unsigned int 	ISR_seconds;
 //Update dots
-volatile bool         update_dots;
+volatile bool         	update_dots;
 //Dots on/off
-volatile bool         dots;
+volatile bool         	dots;
 //The NTP & RTC clock 
-NRClock               nrclock;
+NRClock               	nrclock;
 //Web server for configuring when running.
-CFGWebServer          cfgWebServer;
+RTWebServer				runtimeWebServer;
 
 //Set the delay between SNTP updates to 12 hours.
 uint32_t sntp_update_delay_MS_rfc_not_less_than_15000()
@@ -136,7 +137,7 @@ void setup()
 	//Init clock
   	nrclock.init();
 
-  	cfgWebServer.start();
+  	runtimeWebServer.start();
 }
 
 void loop()
@@ -153,5 +154,5 @@ void loop()
   	}
 
   	//Do housekeeping of the webserver
-  	cfgWebServer.cleanup();
+  	runtimeWebServer.cleanup();
 }

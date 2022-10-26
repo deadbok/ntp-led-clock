@@ -8,7 +8,7 @@
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
 
-#include "nrclock.h"
+#include "NRClock.h"
 #include <TZ.h>
 #include <time.h>
 #include <sys/time.h>

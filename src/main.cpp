@@ -27,6 +27,7 @@
 #include "hardware.h"
 #include "led.h"
 #include "NRClock.h"
+#include "Config.h"
 #include "version.h"
 
 //The instance to control the LED
@@ -43,7 +44,9 @@ volatile bool         	dots;
 NRClock               	nrclock;
 //Web server for configuring when running.
 RTWebServer				runtimeWebServer;
-
+//Configuration data and handling.
+static Config			config;
+ 
 //Set the delay between SNTP updates to 12 hours.
 uint32_t sntp_update_delay_MS_rfc_not_less_than_15000()
 {

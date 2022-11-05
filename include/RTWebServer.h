@@ -7,10 +7,7 @@
  *
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
-#include <ESPAsyncWebServer.h>
-#include <ESPAsyncTCP.h>
-#include <AsyncJson.h>
-#include <ArduinoJson.h>
+#include <ESP8266WebServer.h>
 
 #ifndef _RT_WEB_SERVER_H_
 #define _RT_WEB_SERVER_H_
@@ -21,21 +18,15 @@ public:
 	RTWebServer();
 
     void start();
-    void cleanup();
 
-    static void onWsEvent(AsyncWebSocket * server,
-                             AsyncWebSocketClient * client, AwsEventType type,
-                             void * arg, uint8_t *data, size_t len);
-    void handleCors(AsyncWebServerResponse *response);
-    void handleWSData(char *data);
+    void onNotFound();
+
+    void handleClient(void);
 
 	~RTWebServer();    
 private:
 	//The web server
-    AsyncWebServer server;
-    //Web Socket
-    AsyncWebSocket ws;
-
+    ESP8266WebServer server;
 };
 
 #endif

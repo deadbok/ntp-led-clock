@@ -1,84 +1,53 @@
 #include "RTWebServer.h"
 #include <LittleFS.h>
 
-RTWebServer::RTWebServer() : server(80), ws("/ws")
+RTWebServer::RTWebServer() : server(80)
 {}
 
 void RTWebServer::start()
 {
-    // Serve files in directory "/" when request url starts with "/"
-    // Request to the root or none existing files will try to server the default
-    // file name "index.htm" if exists
-    server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
-
-    //Add handler for NTP WebSockets
-    ws.onEvent(onWsEvent);
-    server.addHandler(&ws);
+    // Serve files needed for the index page.
+    server.serveStatic("/", LittleFS, "index.html");
+    server.serveStatic("/css/normalize.css", LittleFS, "/css/normalize.css");
+    server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
 
     //Not found (404) page.
-    server.onNotFound([](AsyncWebServerRequest *request){
-        AsyncWebServerResponse* response = request->beginResponse(LittleFS, 
-                                                                  "/404.html",
-                                                                  "text/html");
-        response->setCode(404);
-        Serial.printf("404 on: %s\n", request->url().c_str());
-        request->send(response);
-    });
+    server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
 
     //Start the web server
-    this->server.begin();
+    server.begin();
 }
 
- void RTWebServer::cleanup()
- {
-    ws.cleanupClients();
- }
-
-void RTWebServer::onWsEvent(AsyncWebSocket * server,
-                                AsyncWebSocketClient * client,
-                                AwsEventType type, void * arg, uint8_t *data,
-                                size_t len)
+void RTWebServer::onNotFound()
 {
-    switch(type)
+    Serial.println(F("In 404 handler: ") + server.uri());
+    if (LittleFS.exists("/404.html"))
     {
-        case WS_EVT_CONNECT:
-            Serial.printf("ws[%s][%u] connect\n", server->url(), client->id());
-            break;
-        case WS_EVT_DISCONNECT:
-            Serial.printf("ws[%s][%u] disconnect\n", server->url(),
-                          client->id());
-            break;
-        case WS_EVT_ERROR:
-            Serial.printf("ws[%s][%u] error(%u): %s\n", server->url(),
-                          client->id(), *((uint16_t*)arg), (char*)data);
-            break;
-        case WS_EVT_PONG:
-            Serial.printf("ws[%s][%u] pong[%u]: %s\n", server->url(),
-                          client->id(), len, (len)?(char*)data:"");
-            break;
-        case WS_EVT_DATA:
-            AwsFrameInfo * info = (AwsFrameInfo*)arg;
-            if(info->final && info->index == 0 && info->len == len)
+        File file = LittleFS.open("/404.html", "r");
+
+        //Check if open succeded
+        if (file)
+        {
+            String data;
+                      
+            while (file.available())
             {
-                if (info->opcode == WS_TEXT)
-                {
-                    Serial.printf("Data: %s\n", data);
-                }
-                else
-                    Serial.println(F("Received something unexpected!"));
+                data += char(file.read());
             }
-            break;
-    } 
+            file.close();
+
+            server.send(404, "text/html", data.c_str());
+        }
+    }
+    else
+    {
+        server.send(404, "text/plain", "Page not found.");
+    }
 }
 
-void RTWebServer::handleCors(AsyncWebServerResponse *response)
+void RTWebServer::handleClient(void)
 {
-    response->addHeader("Access-Control-Allow-Origin", "*");
-}
-
-void RTWebServer::handleWSData(char *data)
-{
-
+    server.handleClient();
 }
 
 RTWebServer::~RTWebServer()

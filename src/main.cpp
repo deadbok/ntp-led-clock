@@ -155,7 +155,5 @@ void loop()
     
     	update_dots = false;
   	}
-
-  	//Do housekeeping of the webserver
-  	runtimeWebServer.cleanup();
+	runtimeWebServer.handleClient();
 }

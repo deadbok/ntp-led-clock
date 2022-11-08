@@ -8,6 +8,7 @@
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
 #include <WString.h>
+#include "NRClock.h"
 
 #ifndef config_h
 #define config_h
@@ -15,7 +16,7 @@
 class Config
 {
     public:
-        Config();
+        Config(NRClock& nrclock);
 
         void setNTPServer(String server);
         String getNTPServer();
@@ -48,6 +49,11 @@ class Config
 		unsigned char       brightness;
         String			    SSID;
 		String              hostname;
+
+        //Has the configuration changed?
+        bool                changed;
+        //Clock object.
+        NRClock&            clock;
 };
 
 #endif

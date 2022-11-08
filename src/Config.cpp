@@ -1,8 +1,10 @@
 #include <Esp.h>
 #include "Config.h"
 
-Config::Config() : NTPServer(""), timeZone(""), time(""), brightness(4),
-                   SSID(""), hostname("clock" + ESP.getChipId())
+Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
+                                   brightness(4), SSID(""),
+                                   hostname("clock" + ESP.getChipId()),
+                                   changed(false), clock(nrclock)
 {
 }
 
@@ -39,6 +41,8 @@ String Config::getTime()
 void Config::setBrightness(unsigned char brightness)
 {
     this->brightness = brightness;
+    this->changed = true;
+    this->clock.setBrightness(brightness);
 }
 
 unsigned char Config::getBrightness()

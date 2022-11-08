@@ -1,7 +1,7 @@
 #include "RTWebServer.h"
 #include <LittleFS.h>
 
-RTWebServer::RTWebServer() : server(80)
+RTWebServer::RTWebServer(Config& config) : server(80), config(config)
 {}
 
 void RTWebServer::start()
@@ -11,11 +11,38 @@ void RTWebServer::start()
     server.serveStatic("/css/normalize.css", LittleFS, "/css/normalize.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
 
+    // Endpoints for configuration
+    server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
+
     //Not found (404) page.
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
 
     //Start the web server
     server.begin();
+}
+
+void RTWebServer::handleBrightness()
+{
+    Serial.printf("In brightness handler: %d ", server.method());
+    if (server.method() == HTTP_GET)
+    {
+        Serial.println("GET");
+
+        server.send(200, "text/plain", "OK");
+    }
+    else if (server.method() == HTTP_POST)
+    {
+        Serial.println("PUT");
+        Serial.printf("Recived: %s\n", server.arg("plain").c_str());
+
+        this->config.setBrightness(atoi(server.arg("plain").c_str()));
+
+        server.send(200, "text/plain", "OK");
+    }
+    else
+    {
+        server.send(501, "text/plain", "Not implemented");
+    }
 }
 
 void RTWebServer::onNotFound()

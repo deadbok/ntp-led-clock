@@ -1,0 +1,34 @@
+load 0x4010f000, len 3460, room ...............
+WiFi connected: gaylord
+IP address: 192.168.0.218
+Starting timer
+Setting up NTP client
+2223
+Time was set
+Updating RTC time from SNTP
+2224
+In 404 handler: /favicon.ico
+In brightness handler: 3 PUT
+Recived: 2
+In brightness handler: 3 PUT
+Recived: 5
+In brightness handler: 3 PUT
+Recived: 7
+In brightness handler: 3 PUT
+Recived: 6
+In brightness handler: 3 PUT
+Recived: 5
+In brightness handler: 3 PUT
+Recived: 1
+In brightness handler: 3 PUT
+Recived: 3
+In brightness handler: 3 PUT
+Recived: 5
+In brightness handler: 3 PUT
+Recived: 6
+In brightness handler: 3 PUT
+Recived: 7
+In brightness handler: 3 PUT
+Recived: 4
+2225
+2226

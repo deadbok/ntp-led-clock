@@ -103,7 +103,11 @@ void NRClock::setDateTime(RtcDateTime datetime)
 	RTC.SetDateTime(datetime);
 } 
 
-void NRClock::setBrightess(unsigned char val)
+unsigned char NRClock::getBrightness()
+{
+    return(display.getBrightness());
+}
+void NRClock::setBrightness(unsigned char val)
 {
     display.setBrightness(val);
 }

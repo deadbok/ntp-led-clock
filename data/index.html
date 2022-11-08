@@ -525,7 +525,7 @@
 		function initWebSocket()
 		{
     		console.log('Opening a WebSocket connection...');
-    		socket = new WebSocket('ws://' + window.location.hostname + '/ws');
+    		socket = new WebSocket();
 		}
 
 		window.addEventListener('load', onLoad);
@@ -598,11 +598,24 @@
 
 		function updateBrightness()
 		{
-			PrestinizeData(data);
-			
-			data.Brightness = document.getElementById("brightness").value;
-
-			socket.send(JSON.stringify(data));
+			var xhttp = new XMLHttpRequest();
+		    xhttp.onreadystatechange = function()
+			{
+				var state = document.getElementById("state");
+	
+	    		if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<strong>Done!</strong> Brightness set.";
+       			}
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+					state.innerHTML = "<strong>Error!</strong> Failed to set brightness (" + this.status + ").";
+       			}
+    		};
+    		xhttp.open("POST", 'http://' + window.location.hostname + '/brightness', true);
+    		xhttp.send(document.getElementById("brightness").value); 
 		}
 	</script>
 	<noscript>Sorry, I need JavaScript!</noscript>

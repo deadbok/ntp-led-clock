@@ -29,13 +29,14 @@ private:
     unsigned char         last_minute;
 
 public:
-            NRClock();
-    void    init();
-    void    update();
-	void	dots(bool state);
-	void 	setDateTime(RtcDateTime datetime);
-    void    setBrightess(unsigned char val);
-            ~NRClock();
+                    NRClock();
+    void            init();
+    void            update();
+	void	        dots(bool state);
+	void 	        setDateTime(RtcDateTime datetime);
+    unsigned char   getBrightness();
+    void            setBrightness(unsigned char val);
+                    ~NRClock();
 };
 
 #endif

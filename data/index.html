@@ -532,7 +532,18 @@
 		
 		function onLoad(even)
 		{
-			initWebSocket();
+			var xhttp = new XMLHttpRequest();
+
+			//Get brightness
+  			xhttp.onreadystatechange = function()
+			{
+    			if (this.readyState == 4 && this.status == 200)
+				{
+					document.getElementById("brightness").value = this.responseText;
+    			}
+  			};
+  			xhttp.open("GET", 'http://' + window.location.hostname + '/brightness', true);
+  			xhttp.send();
 		}
 
 		function PrestinizeData(ldata)

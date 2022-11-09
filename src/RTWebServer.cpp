@@ -10,6 +10,7 @@ void RTWebServer::start()
     server.serveStatic("/", LittleFS, "index.html");
     server.serveStatic("/css/normalize.css", LittleFS, "/css/normalize.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
+    server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
 
     // Endpoints for configuration
     server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
@@ -23,20 +24,14 @@ void RTWebServer::start()
 
 void RTWebServer::handleBrightness()
 {
-    Serial.printf("In brightness handler: %d ", server.method());
     if (server.method() == HTTP_GET)
     {
-        Serial.println("GET");
-
-        server.send(200, "text/plain", "OK");
+        String brightness = String(this->config.getBrightness());
+        server.send(200, "text/plain", brightness);
     }
     else if (server.method() == HTTP_POST)
     {
-        Serial.println("PUT");
-        Serial.printf("Recived: %s\n", server.arg("plain").c_str());
-
-        this->config.setBrightness(atoi(server.arg("plain").c_str()));
-
+        this->config.setBrightness(server.arg("plain").toInt());
         server.send(200, "text/plain", "OK");
     }
     else

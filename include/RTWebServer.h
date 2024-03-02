@@ -22,7 +22,10 @@ public:
 
     void onNotFound();
 
+    void handleNTPTZ();
+    void handleTime();
     void handleBrightness();
+    void handleNet();
 
     void handleClient(void);
 

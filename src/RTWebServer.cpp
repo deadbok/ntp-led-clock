@@ -13,7 +13,10 @@ void RTWebServer::start()
     server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
 
     // Endpoints for configuration
+    server.on("/ntptz", std::bind(&RTWebServer::handleNTPTZ, this));
+    server.on("/time", std::bind(&RTWebServer::handleTime, this));    
     server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
+    server.on("/net", std::bind(&RTWebServer::handleNet, this));  
 
     //Not found (404) page.
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
@@ -21,6 +24,30 @@ void RTWebServer::start()
     //Start the web server
     server.begin();
 }
+
+void RTWebServer::handleNTPTZ()
+{
+    if (server.method() == HTTP_GET)
+    {
+        Serial.println("GET");
+        String NTPTZ = this->config.getJSON("NTPServer, TZ, region");
+        server.send(200, "text/plain", NTPTZ);
+    }
+    else if (server.method() == HTTP_POST)
+    {
+        Serial.println("POST");
+        String json = server.arg("plain");
+        Serial.println(json);
+        server.send(200, "text/plain", "OK");
+    }
+    else
+    {
+        server.send(501, "text/plain", "Not implemented");
+    }
+}
+
+void RTWebServer::handleTime()
+{}
 
 void RTWebServer::handleBrightness()
 {
@@ -39,6 +66,9 @@ void RTWebServer::handleBrightness()
         server.send(501, "text/plain", "Not implemented");
     }
 }
+
+void RTWebServer::handleNet()
+{}
 
 void RTWebServer::onNotFound()
 {
@@ -73,4 +103,6 @@ void RTWebServer::handleClient(void)
 }
 
 RTWebServer::~RTWebServer()
-{}
+{
+    server.stop();
+}

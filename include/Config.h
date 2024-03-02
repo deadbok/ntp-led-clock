@@ -8,6 +8,7 @@
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
 #include <WString.h>
+#include "ArduinoJson.h"
 #include "NRClock.h"
 
 #ifndef config_h
@@ -24,6 +25,9 @@ class Config
         void setTimeZone(String TZ);
         String getTimeZone();
 
+        void setRegion(String region);
+        String getRegion();        
+
         void setTime(String time);
         String getTime();
 
@@ -36,6 +40,8 @@ class Config
         void setHostname(String hostname);
         String getHostname();
 
+        String& getJSON(String var_name);
+
         ~Config();
     private:
         //Version of the configuration data in the class.
@@ -45,6 +51,7 @@ class Config
         //Actual confiuration data.
         String              NTPServer;
         String	            timeZone;
+        String              region;
         String			    time;
 		unsigned char       brightness;
         String			    SSID;
@@ -54,6 +61,8 @@ class Config
         bool                changed;
         //Clock object.
         NRClock&            clock;
+        //JSON document for config.
+        String              JSONConfig;
 };
 
 #endif

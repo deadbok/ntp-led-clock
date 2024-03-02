@@ -510,29 +510,15 @@
 	<div class="footer inverted">
 		<small><span class="copyright">&copy; Copyright 2022 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
 	</div>
-	<script type="text/javascript">	
-		var socket;
-		var data = 
-			{
-				NTPServer: null,
-				TimeZone: null,
-				Time: null,
-				Brightness: 0,
-				SSID: null,
-				Hostname: null
-			};
-
-		function initWebSocket()
-		{
-    		console.log('Opening a WebSocket connection...');
-    		socket = new WebSocket();
-		}
+	<script type="text/javascript">
+		//The info area at the bottom
+		var state = document.getElementById("state");
 
 		window.addEventListener('load', onLoad);
 		
 		function onLoad(even)
 		{
-			var xhttp = new XMLHttpRequest();
+			let xhttp = new XMLHttpRequest();
 
 			//Get brightness
   			xhttp.onreadystatechange = function()
@@ -546,74 +532,65 @@
   			xhttp.send();
 		}
 
-		function PrestinizeData(ldata)
-		{
-			ldata.NTPServer = null;
-			ldata.TimeZone = null;
-			ldata.Time = null;
-			ldata.Brightness = -1;
-			ldata.SSID = null;
-			ldata.Hostname = null;
-		}
-
-		socket.onopen = function(event) 
-		{
-			console.log('Connection established');
-		};
-		
-		socket.onmessage = function(event)
-		{
-			console.log(`Data received from server: ${event.data}`);
-		};
-		
-		socket.onclose = function(event)
-		{
-			console.log('Connection closed');
-		    setTimeout(initWebSocket, 2000);
-		};
-		
-		socket.onerror = function(error)
-		{
-			alert(`An web socket error ocurred:\n${error.message}`);
-		};
-
 		function ntp_cfg()
 		{
-			PrestinizeData(data);
+			let data =
+				{
+					ntp: "",
+					tz: ""
+				};
+			let xhttp = new XMLHttpRequest();
 
-			data.NTPServer = document.getElementById("server").value;
-			data.TimeZone = document.getElementById("tz").value;
+		    xhttp.onreadystatechange = function()
+			{
+				if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<strong>Done!</strong> Server and time zone set.";
+       			}
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+					state.innerHTML = "<strong>Error!</strong> Failed to set server and time zone (" + this.status + ").";
+       			}
+    		};
+    		xhttp.open("POST", 'http://' + window.location.hostname + '/ntptz', true);
 
-			socket.send(JSON.stringify(data));
+			data.ntp = document.getElementById("server").value;
+			data.tz = document.getElementById("tz").value;			
+			
+    		xhttp.send(data); 
 		}
 
-		function display_cfg() 
+		function time_cfg() 
 		{
-			PrestinizeData(data);
+			let xhttp = new XMLHttpRequest();
+
+		    xhttp.onreadystatechange = function()
+			{
+				if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<strong>Done!</strong> Time set.";
+       			}
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+					state.innerHTML = "<strong>Error!</strong> Failed to set time (" + this.status + ").";
+       			}
+    		};
+    		xhttp.open("POST", 'http://' + window.location.hostname + '/time', true);
 			
-			data.Time = document.getElementById("time").value;
-			data.Brightness = document.getElementById("brightness").value;
+			let data = document.getElementById("time").value;
 
-			socket.send(JSON.stringify(data));
-		}
-
-		function net_cfg() 
-		{
-			PrestinizeData(data);
-			
-			data.SSID = document.getElementById("networks").value;
-			data.Hostname = document.getElementById("hostname").value;
-
-			socket.send(JSON.stringify(data));
+			xhttp.send(data); 
 		}
 
 		function updateBrightness()
 		{
-			var xhttp = new XMLHttpRequest();
+			let xhttp = new XMLHttpRequest();
 		    xhttp.onreadystatechange = function()
 			{
-				var state = document.getElementById("state");
-	
 	    		if (this.readyState == 4 && this.status == 200)
 				{
 					state.className = "message success";
@@ -627,6 +604,36 @@
     		};
     		xhttp.open("POST", 'http://' + window.location.hostname + '/brightness', true);
     		xhttp.send(document.getElementById("brightness").value); 
+		}
+
+		function net_cfg() 
+		{
+			let data =
+				{
+					ssid: "",
+					hostname: ""
+				};
+			let xhttp = new XMLHttpRequest();
+
+		    xhttp.onreadystatechange = function()
+			{
+				if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<strong>Done!</strong> SSID and hostname set.";
+       			}
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+					state.innerHTML = "<strong>Error!</strong> Failed to set SSID and hostname (" + this.status + ").";
+       			}
+    		};
+    		xhttp.open("POST", 'http://' + window.location.hostname + '/net', true);
+
+			data.ssid = document.getElementById("networks").value;
+			data.hostname = document.getElementById("hostname").value;			
+			
+    		xhttp.send(data);
 		}
 	</script>
 	<noscript>Sorry, I need JavaScript!</noscript>

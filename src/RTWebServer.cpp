@@ -42,7 +42,8 @@ void RTWebServer::handleBrightness()
 
 void RTWebServer::onNotFound()
 {
-    Serial.println(F("In 404 handler: ") + server.uri());
+    Serial.print(F("In 404 handler: "));
+    Serial.println(server.uri());
     if (LittleFS.exists("/404.html"))
     {
         File file = LittleFS.open("/404.html", "r");

@@ -14,12 +14,12 @@
 #define USING_TIM_DIV256              true
 
 #include <Arduino.h>
-#include <ESP8266WiFi.h>
-#include <RtcDateTime.h>
-#include <coredecls.h> 
+#include <WiFi.h>
+#include <RtcDS3231.h>
+//#include <coredecls.h> 
 #include <stdlib.h>
-#include <sntp.h>
-#include <ESP8266TimerInterrupt.h>
+#include <esp_sntp.h>
+#include <TimerInterrupt_Generic.h>
 #include <LittleFS.h>
 #include "Config.h"
 #include "RTWebServer.h"

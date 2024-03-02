@@ -3,7 +3,7 @@
 
 Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
                                    brightness(4), SSID(""),
-                                   hostname("clock" + ESP.getChipId()),
+                                   hostname("clock" +ESP.getEfuseMac()),
                                    changed(false), clock(nrclock)
 {
 }

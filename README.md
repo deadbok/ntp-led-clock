@@ -70,3 +70,9 @@ The clock has a built-in web server to configure:
       - [ ] Configuration from web page to and from clock
       - [ ] Set AP mode when no WiFi connection could be established
       - [ ] Get time-zone from browser
+
+## Changes because of porting to ESP32
+
+  - [ ] The ESP32 have an internal RTC, test if it fits our needs
+  - [ ] Check for critical sections, due to new timer code
+  - [ ] Check SNTP code, due changes in handling

@@ -78,7 +78,7 @@ void NRClock::update()
         last_minute = rtc_now.Minute();
     
         //Get UTC from RTC
-        now = rtc_now.Epoch32Time();
+        now = rtc_now.Unix32Time();
         //Convert to local time
         time_info = localtime(&now);
 

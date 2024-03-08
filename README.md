@@ -35,7 +35,7 @@ The clock has a built-in web server to configure:
 
 ## Y2K38
 
-*At the time this code was written, the ESP8266 time_t value uses signed 32 bit.*
+*At the time this code was written, the ESP8266 time_t value is signed 32 bit.*
 *That means that the esp8266 time functions will suffer from the the Y2K38*
 *problem: <https://en.wikipedia.org/wiki/Year_2038_problem>.*
 *This means that the esp8266 time library code will malfunction starting*
@@ -73,6 +73,7 @@ The clock has a built-in web server to configure:
 
 ## Changes because of porting to ESP32
 
-  - [ ] The ESP32 have an internal RTC, test if it fits our needs
+  - ~~[ ] The ESP32 have an internal RTC, test if it fits my needs~~
+    (No battery backup).
   - [ ] Check for critical sections, due to new timer code
   - [ ] Check SNTP code, due changes in handling

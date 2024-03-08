@@ -8,8 +8,8 @@
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
 #include <TM1650.h>
-#include <ThreeWire.h>  
-#include <RtcDS1302.h>
+#include <Wire.h>  
+#include <RtcDS3231.h>
 
 #ifndef _NRCLOCK_H_
 #define _NRCLOCK_H_
@@ -23,8 +23,7 @@ private:
     //The instance for the 7-segment display.
     TM1650                display;
     //The instance for the RTC.
-    ThreeWire             RTCWire;
-    RtcDS1302<ThreeWire>  RTC;
+    RtcDS3231<TwoWire>    RTC;
     //Keep track of last minute to determine when to update the display
     unsigned char         last_minute;
 

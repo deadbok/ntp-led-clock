@@ -14,8 +14,7 @@
 #include <sys/time.h>
 #include "hardware.h"
 
-NRClock::NRClock() : display(), RTCWire(DS1302_IO, DS1302_SCLK, DS1302_CE),
-           		     RTC(RTCWire)
+NRClock::NRClock() : display(), RTC(Wire)
 {}
 
 void NRClock::init()
@@ -23,8 +22,6 @@ void NRClock::init()
 	last_minute = 0;
 
     // Initialise the 7-segment display
-    Wire.begin(TM1650_SDA, TM1650_SCL);
-
     display.init();
     display.displayOn();
 
@@ -39,11 +36,8 @@ void NRClock::init()
 
     RtcDateTime compiled = RtcDateTime(__DATE__, __TIME__);
 
-    if (RTC.GetIsWriteProtected())
-    {
-        Serial.println(F("Enabling RTC writing"));
-        RTC.SetIsWriteProtected(false);
-    }
+    Serial.println(F("Disabling RTC 32 kHz output"));
+    RTC.Enable32kHzPin(false);
 
     if (!RTC.IsDateTimeValid()) 
     {

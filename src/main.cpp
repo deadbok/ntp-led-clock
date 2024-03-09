@@ -142,11 +142,11 @@ void setup()
     	Serial.println(F("Error starting timer 0"));
   	}
 
-	// Attach onTimer function to our timer.
+	// Attach timer_handler function to our timer.
 	timerAttachInterrupt(timer, &timer_handler, true);
 
-  timerAlarmWrite(timer, 1000000, true);
-  timerAlarmEnable(timer);
+	timerAlarmWrite(timer, 1000000, true);
+  	timerAlarmEnable(timer);
 
 	//Init clock
   	nrclock.init();

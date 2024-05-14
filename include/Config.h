@@ -36,6 +36,9 @@ class Config
         void setHostname(String hostname);
         String getHostname();
 
+        void setNTPenable(bool NTP);
+        bool getNTPenable();    
+
         ~Config();
     private:
         //Version of the configuration data in the class.
@@ -49,6 +52,7 @@ class Config
 		unsigned char       brightness;
         String			    SSID;
 		String              hostname;
+        bool                NTP;
 
         //Has the configuration changed?
         bool                changed;

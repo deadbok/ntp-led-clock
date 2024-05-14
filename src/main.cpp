@@ -14,6 +14,7 @@
 #define USING_TIM_DIV256              true
 
 #include <Arduino.h>
+#include <ArduinoOTA.h>
 #include <WiFi.h>
 #include <RtcDS3231.h>
 //#include <coredecls.h> 
@@ -49,12 +50,6 @@ Config						config(nrclock);
 RTWebServer					runtimeWebServer(config);
 
  
-//Set the delay between SNTP updates to 12 hours.
-uint32_t sntp_update_delay_MS_rfc_not_less_than_15000()
-{
-	return(1000*60*60*12); // 12 hours.
-}
-
 //Callback when the time is set.
 void time_is_set_sntp(struct timeval *cb_time)
 {
@@ -62,12 +57,16 @@ void time_is_set_sntp(struct timeval *cb_time)
 
 	Serial.println(F("Time was set"));
    	Led.toggle();
-   	Serial.println(F("Updating RTC time from SNTP"));
+   	Serial.println(F("Updating RTC time from NTP"));
+
+	Serial.println(cb_time->tv_sec);
   
    	//Get time set by NTP
-   	gettimeofday(cb_time, NULL);
+   	//gettimeofday(cb_time, NULL);
+
+	Serial.println(cb_time->tv_sec);
+	cb_rtc_time_date.InitWithUnix32Time(cb_time->tv_sec);
    	//Update RTC with UTC time from NTP
-   	cb_rtc_time_date.InitWithUnix32Time(cb_time->tv_sec);
 	//Set clock from NTP
    	nrclock.setDateTime(cb_rtc_time_date);
   
@@ -95,8 +94,11 @@ void ARDUINO_ISR_ATTR timer_handler()
 
 void setup()
 {
+	//Delay for platformio serial monitor to be ready
+	delay(5000);
 	//Greetings on the serial port.
   	Serial.begin(115200);
+//	Serial.setDebugOutput(true);
   	Serial.println(F(""));
   	Serial.print(F("NTP LED Clock v"));
   	Serial.println(F(VERSION));
@@ -147,11 +149,67 @@ void setup()
 
 	timerAlarmWrite(timer, 1000000, true);
   	timerAlarmEnable(timer);
+   	
+	//Serial.println(F("Setting NTP client sync interval"));
+	
+	sntp_set_sync_interval(NTP_SYNC_INTERVAL);
+//	sntp_restart();
 
 	//Init clock
+	Serial.printf("Initialising clock\n");
   	nrclock.init();
 
+	Serial.printf("NTP sync interval: %u seconds\n", sntp_get_sync_interval());
+
+	Serial.printf("Starting web server\n");
   	runtimeWebServer.start();
+
+	Serial.printf("Initialising OTA\n");
+	ArduinoOTA
+    	.onStart([]() 
+		{
+      		String type;
+      		if (ArduinoOTA.getCommand() == U_FLASH) {
+        		type = "sketch";
+      		} else {  // U_SPIFFS
+        		type = "filesystem";
+      		}
+
+      		// NOTE: if updating SPIFFS this would be the place to unmount SPIFFS using SPIFFS.end()
+      		Serial.println("Start updating " + type);
+    	})
+    	.onEnd([]() 
+		{
+      		Serial.println("\nEnd");
+    	})
+    	.onProgress([](unsigned int progress, unsigned int total) 
+		{
+      		Serial.printf("Progress: %u%%\r", (progress / (total / 100)));
+    	})
+    	.onError([](ota_error_t error) 
+		{
+      		Serial.printf("Error[%u]: ", error);
+      		if (error == OTA_AUTH_ERROR) 
+			{
+        		Serial.println("Auth Failed");
+      		} else if (error == OTA_BEGIN_ERROR) 
+			{
+        		Serial.println("Begin Failed");
+      		} else if (error == OTA_CONNECT_ERROR) 
+			{
+        		Serial.println("Connect Failed");
+      		} else if (error == OTA_RECEIVE_ERROR) 
+			{
+        		Serial.println("Receive Failed");
+      		} else if (error == OTA_END_ERROR) 
+			{
+        		Serial.println("End Failed");
+      		}
+    	});
+
+  	ArduinoOTA.begin();
+
+	Serial.println(F("Initialisation done"));
 }
 
 void loop()
@@ -170,4 +228,6 @@ void loop()
 	portEXIT_CRITICAL(&timer_mux);
 
 	runtimeWebServer.handleClient();
+
+	ArduinoOTA.handle();
 }

@@ -7,7 +7,8 @@ RTWebServer::RTWebServer(Config& config) : server(80), config(config)
 void RTWebServer::start()
 {
     // Serve files needed for the index page.
-    server.serveStatic("/", LittleFS, "index.html");
+    server.serveStatic("/", LittleFS, "/index.html");
+    server.serveStatic("/index.html", LittleFS, "/index.html");
     server.serveStatic("/css/normalize.css", LittleFS, "/css/normalize.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
     server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
@@ -32,6 +33,24 @@ void RTWebServer::handleBrightness()
     else if (server.method() == HTTP_POST)
     {
         this->config.setBrightness(server.arg("plain").toInt());
+        server.send(200, "text/plain", "OK");
+    }
+    else
+    {
+        server.send(501, "text/plain", "Not implemented");
+    }
+}
+
+void RTWebServer::handleNTP()
+{
+    if (server.method() == HTTP_GET)
+    {
+        String ntp = String(this->config.getNTPenable());
+        server.send(200, "text/plain", ntp);
+    }
+    else if (server.method() == HTTP_POST)
+    {
+        this->config.setNTPenable(server.arg("plain").toInt());
         server.send(200, "text/plain", "OK");
     }
     else

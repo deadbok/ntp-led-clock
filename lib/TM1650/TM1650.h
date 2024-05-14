@@ -105,7 +105,7 @@ private:
 	char iString[TM1650_MAX_STRING + 1];
 	byte iBuffer[TM1650_NUM_DIGITS + 1];
 	byte iCtrl[TM1650_NUM_DIGITS];
-	 size_t write(unsigned char);
+	size_t write(unsigned char);
 };
 
 #endif /* _TM1650_H_ */

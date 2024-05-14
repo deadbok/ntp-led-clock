@@ -24,6 +24,8 @@ public:
 
     void handleBrightness();
 
+    void handleNTP();
+
     void handleClient(void);
 
 	~RTWebServer();    

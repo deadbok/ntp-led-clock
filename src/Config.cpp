@@ -1,9 +1,9 @@
-#include <Esp.h>
+#include <hardware.h>
 #include "Config.h"
 
 Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
                                    brightness(4), SSID(""),
-                                   hostname("clock" +ESP.getEfuseMac()),
+                                   hostname("clock" + chipID()),
                                    changed(false), clock(nrclock)
 {
 }
@@ -68,6 +68,16 @@ void Config::setHostname(String hostname)
 String Config::getHostname()
 {
     return(this->hostname);
+}
+
+void Config::setNTPenable(bool NTP)
+{
+    this->NTP = NTP;
+}
+
+bool Config::getNTPenable()
+{
+    return(this->NTP);
 }
 
 Config::~Config()

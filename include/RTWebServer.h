@@ -8,6 +8,7 @@
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
 #include <WebServer.h>
+#include <ArduinoJson.h>
 #include "Config.h"
 
 #ifndef _RT_WEB_SERVER_H_

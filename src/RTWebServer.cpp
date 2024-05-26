@@ -9,12 +9,14 @@ void RTWebServer::start()
     // Serve files needed for the index page.
     server.serveStatic("/", LittleFS, "/index.html");
     server.serveStatic("/index.html", LittleFS, "/index.html");
-    server.serveStatic("/css/normalize.css", LittleFS, "/css/normalize.css");
+    server.serveStatic("/css/pico.red.min.css", LittleFS, "/css/pico.red.min.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
     server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
+    server.serveStatic("/js/tzdata.js", LittleFS , "/js/tzdata.js");
 
     // Endpoints for configuration
     server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
+    server.on("/ntp_state", std::bind(&RTWebServer::handleNTP, this));
 
     //Not found (404) page.
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));

@@ -1,119 +1,81 @@
 /*!
  * Custom CSS rules for Clock.
  * 
- * Copyright 2022 Martin Bo Kristensen Grønholdt
+ * Copyright 2022-24 Martin Bo Kristensen Grønholdt
  *
  */
 .inverted
 {
-	color: rgb(230, 220, 220);
-	background: rgb(28, 28, 28);
+    filter: invert(100%);
 }
 
-.header
+h1, h2, h3, h4
 {
-	text-align: center;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 3;
-	width: 100%;
-	display: block;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+    text-align: center;
 }
 
-.footer
+header
 {
-	text-align: center;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	z-index: 3;
-	width: 100%;
-	display: block;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	padding-left: 1em;
+    border-bottom-style: solid;
+    border-width: thin;
 }
 
-.main
+article
 {
-	padding: 2em 1em;
+    border-top-left-radius: 1rem; 
+    border-top-right-radius: 1rem;
+    border-style: solid;
+    border-width: thin;  
 }
 
-.license
+article header
 {
-	padding-left: 1em;
+    border-top-left-radius: 1rem; 
+    border-top-right-radius: 1rem;
+    text-align: center;
+    background-color: var(--pico-muted-border-color);
+    border-bottom-style: solid;
+    border-width: thin;
 }
 
-.grey
+article header h4
 {
-	color: dimgrey;
+    color: var(--pico-color);
+}
+
+.copyright
+{
+    color: var(---pico-muted-color);
+    font-size: 0.7rem;
 }
 
 .message
 {
-	padding:1.5em;
 	margin-top: 1em;
-	background:#def;
-	border-left:5px solid #59d
+    border-radius: 1rem; 
+    border-style: solid;
+	border-left-width: 0.33rem;
 }
 
 .error
 {
 	border-color: #e44; 
-	background: #fdd;
+	background: rgba(255, 0, 0, 0.25);
 }
 
 .success
 {
 	border-color: #2d2;
-	background: #dfd;
+	background: rgba(0, 255, 0, 0.25);
 }
 
-input[type=text]
+.bottom-line
 {
- 	box-sizing: border-box;
+    border-bottom-style: solid;
+    border-width: thin;
 }
 
-input[type=time]
+.tighten
 {
-	box-sizing: border-box;
+    padding: 0.5rem;
 }
-
-.row
-{
-	padding-top: 2.5em;
-	padding-bottom: 2.5em;
-}
-
-.column
-{
-	float: left;
-}
-
-.left, .right 
-{
-	width: 25%;
-}
-
-.middle 
-{
-	width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after 
-{
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-.column {
-	width: 100%;
-}
-} 

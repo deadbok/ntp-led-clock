@@ -7,6 +7,9 @@
  *
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
+#define CONFIGSTORAGE_DEBUG true // show debug messages for ConfigStorage
+
+#include <ArduinoJson.h>
 #include <WString.h>
 #include "NRClock.h"
 
@@ -42,8 +45,10 @@ class Config
         ~Config();
     private:
         //Version of the configuration data in the class.
+        //Major version bump: Breaking changes
         const unsigned char vmajor = 0;
-        const unsigned char vminor = 1;
+        //Minor version bump: Backward compatible changes.
+        unsigned char       vminor = 1;
 
         //Actual confiuration data.
         String              NTPServer;
@@ -58,6 +63,14 @@ class Config
         bool                changed;
         //Clock object.
         NRClock&            clock;
+        //JSON document that for the configuration.
+        JsonDocument        configDoc;
+        
+        void updateJSON();
+        void updateFromJSON();
+        //Read/Write configuration to flash.
+        bool readJSON(String filename);
+        bool writeJSON(String filename);
 };
 
 #endif

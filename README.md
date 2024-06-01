@@ -75,5 +75,5 @@ The clock has a built-in web server to configure:
 
   - ~~[ ] The ESP32 have an internal RTC, test if it fits my needs~~
     (No battery backup).
-  - [ ] Check for critical sections, due to new timer code
-  - [ ] Check SNTP code, due changes in handling
+  - [x] Check for critical sections, due to new timer code
+  - [x] Check SNTP code, due changes in handling

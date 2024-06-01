@@ -32,4 +32,15 @@ Working on html frontend.
  * data/index.html: Added getBrightness().
                     Added getNTP().
                     Added Status card.
+                    Added listener for DOMContentLoaded event.
 * data/css/custom.css: Added classes for status card.
+
+## 01-06-2024
+
+Working on saving configuration to flash.
+
+ * include/Config.*: Added readJSON.
+                     Added writeJSON.
+                     Added updateJSON.
+                     Added updateFromJson.
+* src/Config.cpp: Added 'changed' update to every setter.

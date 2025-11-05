@@ -1,0 +1,81 @@
+/*!
+ * Custom CSS rules for Clock.
+ * 
+ * Copyright 2022-24 Martin Bo Kristensen Grønholdt
+ *
+ */
+.inverted
+{
+    filter: invert(100%);
+}
+
+h1, h2, h3, h4
+{
+    text-align: center;
+}
+
+header
+{
+    border-bottom-style: solid;
+    border-width: thin;
+}
+
+article
+{
+    border-top-left-radius: 1rem; 
+    border-top-right-radius: 1rem;
+    border-style: solid;
+    border-width: thin;  
+}
+
+article header
+{
+    border-top-left-radius: 1rem; 
+    border-top-right-radius: 1rem;
+    text-align: center;
+    background-color: var(--pico-muted-border-color);
+    border-bottom-style: solid;
+    border-width: thin;
+}
+
+article header h4
+{
+    color: var(--pico-color);
+}
+
+.copyright
+{
+    color: var(---pico-muted-color);
+    font-size: 0.7rem;
+}
+
+.message
+{
+	margin-top: 1em;
+    border-radius: 1rem; 
+    border-style: solid;
+	border-left-width: 0.33rem;
+}
+
+.error
+{
+	border-color: #e44; 
+	background: rgba(255, 0, 0, 0.25);
+}
+
+.success
+{
+	border-color: #2d2;
+	background: rgba(0, 255, 0, 0.25);
+}
+
+.bottom-line
+{
+    border-bottom-style: solid;
+    border-width: thin;
+}
+
+.tighten
+{
+    padding: 0.5rem;
+}

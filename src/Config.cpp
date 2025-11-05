@@ -8,12 +8,14 @@ Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
                                    changed(false), clock(nrclock),
                                    configDoc()
 {
+   // this->readJSON(config_fn);
 }
 
 void Config::setNTPServer(String server)
 {
     this->changed = true;
     this->NTPServer = server;
+    this->writeJSON();
 }
 
 String Config::getNTPServer()
@@ -25,6 +27,7 @@ void Config::setTimeZone(String TZ)
 {
     this->changed = true;
     this->timeZone = TZ;
+    this->writeJSON();
 }
 
 String Config::getTimeZone()
@@ -36,6 +39,7 @@ void Config::setTime(String time)
 {
     this->changed = true;
     this->time = time;
+    this->writeJSON();
 }
 
 String Config::getTime()
@@ -48,6 +52,7 @@ void Config::setBrightness(unsigned char brightness)
     this->brightness = brightness;
     this->changed = true;
     this->clock.setBrightness(brightness);
+    this->writeJSON();
 }
 
 unsigned char Config::getBrightness()
@@ -59,6 +64,7 @@ void Config::setSSID(String SSID)
 {
     this->changed = true;
     this->SSID = SSID;
+    this->writeJSON();    
 }
 
 String Config::getSSID()
@@ -70,6 +76,7 @@ void Config::setHostname(String hostname)
 {
     this->changed = true;
     this->hostname = hostname;
+    this->writeJSON();    
 }
 
 String Config::getHostname()
@@ -81,6 +88,7 @@ void Config::setNTPenable(bool NTP)
 {
     this->changed = true;
     this->NTP = NTP;
+    this->writeJSON();    
 }
 
 bool Config::getNTPenable()
@@ -126,11 +134,11 @@ void Config::updateFromJSON()
 
 }
 
-bool Config::readJSON(String filename)
+bool Config::readJSON()
 {
-    Serial.printf("Reading configuration file: %s\r\n", filename.c_str());
+    Serial.printf("Reading configuration file: %s\r\n", config_fn.c_str());
 
-    File file = LittleFS.open(filename, FILE_READ);
+    File file = LittleFS.open(config_fn, FILE_READ);
     if (!file)
     {
         Serial.println("Could not open file.");
@@ -145,16 +153,23 @@ bool Config::readJSON(String filename)
     }
 
     file.close();
+
+    Serial.println("Read configuration:");
+    serializeJsonPretty(configDoc, Serial);        
+
+    updateFromJSON();
     return(true);
 }
 
-bool Config::writeJSON(String filename)
+bool Config::writeJSON()
 {
     if (changed)
     {
-        Serial.printf("Writing configuration file: %s\r\n", filename.c_str());
+        updateJSON();
 
-        File file = LittleFS.open(filename, FILE_WRITE);
+        Serial.printf("Writing configuration file: %s\r\n", config_fn.c_str());
+
+        File file = LittleFS.open(config_fn, FILE_WRITE);
         if (!file)
         {
             Serial.println("Could not open file");
@@ -166,6 +181,9 @@ bool Config::writeJSON(String filename)
             Serial.println("Could not save file.");
             return(false);
         }
+
+        Serial.println("Saving configuration:");
+        serializeJsonPretty(configDoc, Serial);        
 
         file.close();
     }

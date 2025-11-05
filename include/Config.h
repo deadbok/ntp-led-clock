@@ -7,8 +7,6 @@
  *
  * Copyright 2022 Martin Bo Kristensen Grønholdt
  */
-#define CONFIGSTORAGE_DEBUG true // show debug messages for ConfigStorage
-
 #include <ArduinoJson.h>
 #include <WString.h>
 #include "NRClock.h"
@@ -41,6 +39,9 @@ class Config
 
         void setNTPenable(bool NTP);
         bool getNTPenable();    
+        //Read/Write configuration to flash.
+        bool readJSON();
+        bool writeJSON();
 
         ~Config();
     private:
@@ -65,12 +66,11 @@ class Config
         NRClock&            clock;
         //JSON document that for the configuration.
         JsonDocument        configDoc;
+        //The filename of the configuration file
+        const String        config_fn = "/config.json";
         
         void updateJSON();
         void updateFromJSON();
-        //Read/Write configuration to flash.
-        bool readJSON(String filename);
-        bool writeJSON(String filename);
 };
 
 #endif

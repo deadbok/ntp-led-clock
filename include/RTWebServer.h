@@ -24,8 +24,8 @@ public:
     void onNotFound();
 
     void handleBrightness();
-
     void handleNTP();
+    void handleIP();
 
     void handleClient(void);
 

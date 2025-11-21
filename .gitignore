@@ -1,3 +1,5 @@
 .pio
 .vscode
 logs
+tools/test_server/__pycache__/
+

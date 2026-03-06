@@ -1,5 +1,5 @@
 .pio
 .vscode
 logs
-tools/test_server/__pycache__/
+**/__pycache__/
 

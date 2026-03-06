@@ -82,9 +82,9 @@
         </header>
           <form action="">
             <label for="time">Time: </label>
-            <input type="time" id="server" name="time" value="00:00:00"><br>
+            <input type="time" id="time" name="time" value="00:00:00"><br>
             <label for="date">Date: </label>
-            <input type="date" id="server" name="date" value="16/5-2024"><br>
+            <input type="date" id="date" name="date" value="16/5-2024"><br>
           </form>
       </article>            
     </div>
@@ -104,7 +104,7 @@
         return Reflect.get(target, prop);
       },
       set: function(target, prop, value) {
-        console.log({ type: 'set', target, prop, value });
+        console.log({ type: 'set', target, prop, 'Set: ': value });
         post_config();
         return Reflect.set(target, prop, value);
       }
@@ -138,8 +138,8 @@
       var time_card = document.getElementById("time_card");
       if (config_data.ntp === true)
       {
-        time_card.style.display = "none";                
         ntp_card.style.display = "block";
+        time_card.style.display = "none";
       }
       else 
       {
@@ -161,7 +161,7 @@
       document.getElementById("tz").selectedIndex = config_data.tz_index;
       //No reason to get the 'tz_value', as the index should be enough.
       //Update NTP server address
-      document.getElementById("server").innerText = config_data.ntp_server;      
+      document.getElementById("server").value = config_data.ntp_server;      
     }
 
     function get_config()
@@ -198,7 +198,7 @@
       //Update from brightness slider
       config_data.brightness = document.getElementById("brightness").value;
       //Update NTP server address
-      config_data.ntp_server = document.getElementById("server").innerText;  
+      config_data.ntp_server = document.getElementById("server").value;  
       //Set timezone selection index.
       config_data.tz_index = document.getElementById("tz").selectedIndex;
       //Set timezone string

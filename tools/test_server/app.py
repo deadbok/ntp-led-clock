@@ -3,10 +3,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 clock_config = {
-    "ntp_server": "",
+    "ntp_server": "pool.ntp.org",
     "tz_index": 15,
     "tz_value": "",
-    "time": "00:00:00",
+    "time": "01:02:03",
     "brightness": 5,
     "ssid": "wtf",
     "ip": "127.0.0.1",
@@ -23,8 +23,9 @@ def send():
 @app.post("/config")
 def get():
     print("Recieve: ")
-    print(request.json)
+    print(request.data)
     #TODO: Get data into clock_config
+    clock_config = request.data
     return clock_config
 
 #@app.get("/brightness")

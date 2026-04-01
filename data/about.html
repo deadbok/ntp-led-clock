@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/pico.red.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>NTP/RTC LED clock</title>
+  </head>
+  <body></body> <!-- style="visibility: hidden;"> -->
+    <!-- Fix for firefox to prevent flash of unstyled content-->
+    <script>0</script>
+    <main class="container bottom-line">
+      <nav>
+          <ul>
+            <li><h3>About</h3></li>
+        </ul>
+        <ul>
+          <li><a href="index.html" class="contrast">Settings</a></li>
+          <li><a href="wireless.html" class="contrast">Wireless</a></li>
+       </ul>
+      </nav>
+      <div class="grid">
+      </div>
+  </main>
+  <footer class="container tighten">
+     <small><span class="copyright">&copy; Copyright 2022-26 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
+  </footer>
+  <script type="text/javascript">
+    // TODO: remove console log statements before 1.0.0
+
+    let domReady = (cb) => {
+      document.readyState === 'interactive' || document.readyState === 'complete'
+      ? cb() 
+      : document.addEventListener('DOMContentLoaded', cb);
+    };
+
+    domReady(() => {
+      get_config()
+      // Display body when DOM is loaded
+      document.body.style.visibility = 'visible';
+    });
+	</script>
+  <noscript><style>body { visibility: visible; }</style>Sorry, JavaScript is needed for the functionality of this page!</noscript>
+  </body>
+</html>

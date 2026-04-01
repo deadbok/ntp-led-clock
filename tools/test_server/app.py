@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import time
 
 app = Flask(__name__)
 
@@ -14,19 +15,36 @@ clock_config = {
     "ntp": True 
 }
 
+ssids = {
+    "test","PrettyFlyForAWiFi", "YouSee12A7"
+}
+
 @app.get("/config")
-def send():
-    print("Sending: ")
+def config_get():
+    print("Sending config: ")
     print(clock_config)
     return(clock_config)
 
 @app.post("/config")
-def get():
-    print("Recieve: ")
+def config_post():
+    print("Recieving config: ")
     print(request.data)
-    #TODO: Get data into clock_config
     clock_config = request.data
     return clock_config
+
+@app.get("/ssids")
+def ssid_get():
+    # Emulate wifi scan delay
+    time.sleep(5)
+    print("Sending SSIDs: ")
+    print(ssids)
+    return(ssids)
+
+@app.post("/passwd")
+def passwd_post():
+    print("Recieving password: ")
+    print(request.data)
+    return(request.data)
 
 #@app.get("/brightness")
 #def brightness_get():

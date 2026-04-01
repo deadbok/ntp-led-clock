@@ -54,7 +54,7 @@ article header h4
 	margin-top: 1em;
     border-radius: 1rem; 
     border-style: solid;
-	border-left-width: 0.33rem;
+/*	border-left-width: 0.33rem; */
 }
 
 .error

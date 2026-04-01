@@ -6,43 +6,68 @@
     	<meta name="color-scheme" content="light dark" />
     	<link rel="stylesheet" href="css/pico.red.min.css">
     	<link rel="stylesheet" href="css/custom.css">
-    	<title>NTP LED clock</title>
+    	<title>NTP/RTC LED clock</title>
   	</head>
-  	<body>
-    	<header><h3>Settings</h3></header>
-	    <main class="container">
+  	<body></body> <!-- style="visibility: hidden;"> -->
+    <!-- Fix for firefox to prevent flash of unstyled content-->
+    <script>0</script>
+		<header><h3>WiFi Settings</h3></header>
+		<main class="container bottom-line">
 			<div class="grid">
 				<article>
 					<header>
 						<h4>WiFi password setup</h4>
 					</header>
-					<form onsubmit="setPasswd()">
+					<form onsubmit="post_passwd()">
 						Password:<br />
 						<input type="password" id="passwd" maxlength="64">
-						<input type="button" onclick="setPasswd()" value="Set">
+						<input type="button" onclick="post_passwd()" value="Set">
 					</form>
 				</article>
 			</div>
 		</main>
-		<div class="footer inverted">
-			<small><span class="copyright">&copy; Copyright 2022 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
-		</div>		
-		<script src="js/request.js"></script>
-		<script>
-			function setPasswd()
-			{
-				var passwd = document.getElementById("passwd").value;
-				var state = document.getElementById("state");
+		<footer class="container tighten">
+			<small><span class="copyright">&copy; Copyright 2022-26 Martin Bo Kristensen Gr&oslash;nholdt.</span></small>
+		</footers>
+		<script type="text/javascript">	
+			// TODO: remove console log statements before 1.0.0
 
-				JSONrequest('PUT', '/rest/net/password', function(data) {
-					state.className += " success";
-					state.innerHTML = "<strong>Done!</strong> WIFI password saved.";
-					window.location.assign("/index.html");
-				}, function() {
-					state.className += " error";
-					state.innerHTML = "<strong>Error!</strong> Could not update password.";
-				}, "{ \"password\" : \"" + passwd + "\" }");
+			function post_passwd()
+			{
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function()
+				{
+					var state = document.getElementById("state");
+		
+					if (this.readyState == 4 && this.status == 200)
+					{
+						state.className = "message success";
+						state.innerHTML = "<strong>Done!</strong> Sent configuration.";
+					}
+					else if (this.readyState == 4 && this.status != 200)
+					{
+						state.className = "message error";
+						state.innerHTML = "<strong>Error!</strong> Failed to sent configuration  (" + this.status + ").";
+					}
+				};
+				xhttp.open("POST", 'http://' + window.location.hostname +':' + window.location.port + '/passwd', true);
+				xhttp.setRequestHeader("Content-Type", "text/plain");
+				xhttp.send(document.getElementById("passwd").value); 
+				console.log(document.getElementById("passwd").value);
 			}
+
+			let domReady = (cb) => {
+				document.readyState === 'interactive' || document.readyState === 'complete'
+				? cb() 
+				: document.addEventListener('DOMContentLoaded', cb);
+			};
+
+			domReady(() => {
+				get_config()
+				// Display body when DOM is loaded
+				document.body.style.visibility = 'visible';
+			});
 		</script>
 		<noscript>Sorry, I need JavaScript!</noscript>
 		</main>

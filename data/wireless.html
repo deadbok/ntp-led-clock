@@ -12,23 +12,24 @@
     <!-- Fix for firefox to prevent flash of unstyled content-->
     <script>0</script>
     <main class="container bottom-line">
-      <nav>
+      <nav class="bottom-line">
         <ul>
           <li><h3>Wireless</h3></li>
         </ul>
         <ul>
-          <li><a href="index.html" class="contrast">Settings</a></li>
-          <li><a href="about.html" class="contrast">About</a></li>
+          <li><a href="index.html">Settings</a></li>
+          <li><a href="about.html">About</a></li>
        </ul>
       </nav>
       <div class="grid">
         <fieldset>
-          <label for="ssid">Network name:</label>
-          <select id="ssid" onchange="post_config()" required></select>
+          <label for="ssids">Network name:</label>
+          <select id="ssids" onchange="postConfig()" required></select>
           <label for="ip">IP address: </label>
-          <input type="text" id="ip" name="ip" value="127.0.0.1">
+          <input type="text" oninput="postConfig()" id="ip" name="ip">
           <label for="hostname">Hostname: </label>
-          <input type="text" id="hostname" name="hostname" value="led-clock">          
+          <input type="text" oninput="postConfig()" id="hostname" 
+            name="hostname">          
         </fieldset>
       </div>
     <article id="state" class="message"><br></article>   
@@ -38,6 +39,115 @@
   </footer>
   <script type="text/javascript">
     // TODO: remove console log statements before 1.0.0
+    var configData = {};
+
+    function configListener()
+    {
+      configData = JSON.parse(this.responseText);
+
+      //Update IP address
+      document.getElementById("ip").value = configData.ip;
+      //Update hostname
+      document.getElementById("hostname").value = configData.hostname;
+      //Update SSID
+      document.getElementById("ssids").value = configData.ssid;
+    }
+
+    function getConfig()
+	  {
+			var xhttp = new XMLHttpRequest();
+
+      xhttp.addEventListener("load", configListener);
+		
+      xhttp.onreadystatechange = function()
+			{
+				var state = document.getElementById("state");
+	
+        if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<small><strong>Done!</strong> Read configuration.</small>";
+        }
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+          state.innerHTML = "<small><strong>Error!</strong> Failed to read configuration (" + this.status + ").</small>";
+        }
+      };
+      xhttp.open("GET", 'http://' + window.location.hostname +':' + window.location.port + '/config', true);
+      xhttp.send();
+		}
+
+    function postConfig()
+	  {
+			var xhttp = new XMLHttpRequest();
+
+      //Update from SSIDs select
+      configData.ssid = document.getElementById("ssids").value;
+      //Update IP from text box
+      configData.ip = document.getElementById("ip").value;
+      //Update hostname from text box
+      configData.hostname = document.getElementById("hostname").value;  
+		
+      xhttp.onreadystatechange = function()
+			{
+				var state = document.getElementById("state");
+	
+        if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<strong>Done!</strong> Sent configuration.";
+        }
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+          state.innerHTML = "<strong>Error!</strong> Failed to sent configuration  (" + this.status + ").";
+        }
+      };
+      xhttp.open("POST", 'http://' + window.location.hostname +':' + window.location.port + '/config', true);
+      xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xhttp.send(JSON.stringify(configData)); 
+      console.log(JSON.stringify(configData));
+    }
+
+    function SSIDsListener()
+    {
+      let ssids = JSON.parse(this.responseText);
+      let selectTag = document.getElementById("ssids");
+
+      ssids.forEach(function(item)
+      {
+        let opt = document.createElement("option");
+        opt.text = item;
+        opt.value = item;
+        selectTag.add(opt);
+      });
+    }
+
+    function getSSIDs()
+	  {
+			var xhttp = new XMLHttpRequest();
+
+      xhttp.addEventListener("load", SSIDsListener);
+		
+      xhttp.onreadystatechange = function()
+			{
+				var state = document.getElementById("state");
+	
+        if (this.readyState == 4 && this.status == 200)
+				{
+					state.className = "message success";
+					state.innerHTML = "<small><strong>Done!</strong> Got SSIDs.</small>";
+        }
+				else if (this.readyState == 4 && this.status != 200)
+				{
+					state.className = "message error";
+          state.innerHTML = "<small><strong>Error!</strong> Failed to get SSIDs (" + this.status + ").</small>";
+        }
+      };
+      xhttp.open("GET", 'http://' + window.location.hostname +':' + window.location.port + '/ssids', true);
+      xhttp.send();
+		}
 
     let domReady = (cb) => {
       document.readyState === 'interactive' || document.readyState === 'complete'
@@ -46,7 +156,8 @@
     };
 
     domReady(() => {
-      get_config()
+      getSSIDs();
+      getConfig();
       // Display body when DOM is loaded
       document.body.style.visibility = 'visible';
     });

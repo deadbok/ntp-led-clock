@@ -12,13 +12,13 @@
     <!-- Fix for firefox to prevent flash of unstyled content-->
     <script>0</script>
     <main class="container bottom-line">
-      <nav>
+      <nav class="bottom-line">
           <ul>
             <li><h3>Settings</h3></li>
         </ul>
         <ul>
-          <li><a href="wireless.html" class="contrast">Wirelesst</a></li>
-          <li><a href="about.html" class="contrast">About</a></li>
+          <li><a href="wireless.html">Wirelesst</a></li>
+          <li><a href="about.html">About</a></li>
        </ul>
       </nav>
       <div class="grid">
@@ -46,7 +46,7 @@
           </header>
           <form action="">
           <label for="server">Server: </label>
-          <input type="text" id="server" name="server" value="pool.ntp.org" onchange="post_config()">
+          <input type="text" id="server" name="server" value="pool.ntp.org" oninput="post_config()">
           <label for="tz">Time zone:</label>
           <select id="tz" onchange="post_config()" required>
           <script type="text/javascript">
@@ -74,8 +74,8 @@
                 {
                   let opt = document.createElement("option");
                   opt.value = zones[key];
-                  opt.innerHTML = key;
-                  select_tag.append(opt);
+                  opt.text = key;
+                  select_tag.add(opt);
                 }
               }  
             }
@@ -90,9 +90,9 @@
         </header>
           <form action="">
             <label for="time">Time: </label>
-            <input type="time" id="time" name="time" value="00:00:00"><br>
+            <input type="time" id="time" name="time" onchange="post_config()"><br>
             <label for="date">Date: </label>
-            <input type="date" id="date" name="date" value="16/5-2024"><br>
+            <input type="date" id="date" name="date" onchange="post_config()"><br>
           </form>
       </article>            
     </div>
@@ -108,11 +108,9 @@
     //Send data if config_proxy is changed
     var config_proxy = new Proxy(config_data, {
       get: function(target, prop) {
-        console.log({ type: 'get', target, prop });
         return Reflect.get(target, prop);
       },
       set: function(target, prop, value) {
-        console.log({ type: 'set', target, prop, 'Set: ': value });
         post_config();
         return Reflect.set(target, prop, value);
       }
@@ -169,7 +167,9 @@
       document.getElementById("tz").selectedIndex = config_data.tz_index;
       //No reason to get the 'tz_value', as the index should be enough.
       //Update NTP server address
-      document.getElementById("server").value = config_data.ntp_server;      
+      document.getElementById("server").value = config_data.ntp_server;
+      //Update time
+      document.getElementById("time").value = config_data.time;     
     }
 
     function get_config()
@@ -230,7 +230,6 @@
       xhttp.open("POST", 'http://' + window.location.hostname +':' + window.location.port + '/config', true);
       xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
       xhttp.send(JSON.stringify(config_data)); 
-      console.log(JSON.stringify(config_data));
     }
 
     let domReady = (cb) => {
@@ -240,11 +239,12 @@
     };
 
     domReady(() => {
-      get_config()
+      get_config();
       // Display body when DOM is loaded
       document.body.style.visibility = 'visible';
     });
 	</script>
-  <noscript><style>body { visibility: visible; }</style>Sorry, JavaScript is needed for the functionality of this page!</noscript>
+  <noscript><style>body { visibility: visible; }</style>Sorry, JavaScript is 
+    needed for the functionality of this page!</noscript>
   </body>
 </html>

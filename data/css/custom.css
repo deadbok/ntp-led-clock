@@ -20,6 +20,11 @@ header
     border-width: thin;
 }
 
+nav
+{
+    margin-bottom: 1em;
+}
+
 article
 {
     border-top-left-radius: 1rem; 

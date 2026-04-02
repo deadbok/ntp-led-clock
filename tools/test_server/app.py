@@ -15,9 +15,9 @@ clock_config = {
     "ntp": True 
 }
 
-ssids = {
+ssids = [
     "test","PrettyFlyForAWiFi", "YouSee12A7"
-}
+]
 
 @app.get("/config")
 def config_get():

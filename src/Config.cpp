@@ -116,7 +116,7 @@ void Config::updateJSON()
 
 void Config::updateFromJSON()
 {
-    if (this->configDoc["ma_ver"] > this->vmajor)
+    if (this->configDoc["ma_ver"].as<unsigned char>() > this->vmajor)
     {
         Serial.println("Configuration data newer than parser.");
         return;
@@ -157,7 +157,7 @@ bool Config::readJSON()
     Serial.println("Read configuration:");
     serializeJsonPretty(configDoc, Serial);        
 
-    updateFromJSON();
+    this->updateFromJSON();
     return(true);
 }
 

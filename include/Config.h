@@ -49,7 +49,7 @@ class Config
         //Major version bump: Breaking changes
         const unsigned char vmajor = 0;
         //Minor version bump: Backward compatible changes.
-        unsigned char       vminor = 1;
+        const unsigned char vminor = 1;
 
         //Actual confiuration data.
         String              NTPServer;

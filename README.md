@@ -70,6 +70,7 @@ The clock has a built-in web server to configure:
       - [ ] Configuration from web page to and from clock
       - [ ] Set AP mode when no WiFi connection could be established
       - [ ] Get time-zone from browser
+      - [ ] Make configuration for static IP possible.
 
 ## Changes because of porting to ESP32
 

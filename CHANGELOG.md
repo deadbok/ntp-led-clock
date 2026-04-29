@@ -104,3 +104,14 @@ Working on configuration "backend".
 
 * data/index.html:
   * Selection of timezone now done. For real.
+
+## 29-04-2026
+
+* data/about.html:
+  * Added.
+* data/wireless.html:
+  * Added.
+* src/RTWebServer.cpp:
+  * Added endpoints for the files above.
+* README.md
+  * Added Staric IP configuration to the list.

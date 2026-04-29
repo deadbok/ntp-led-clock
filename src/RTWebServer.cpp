@@ -10,6 +10,8 @@ void RTWebServer::start()
     // Serve files needed for the index page.
     server.serveStatic("/", LittleFS, "/index.html");
     server.serveStatic("/index.html", LittleFS, "/index.html");
+    server.serveStatic("/wireless.html", LittleFS, "/wireless.html");
+    server.serveStatic("/about.html", LittleFS, "/about.html");
     server.serveStatic("/css/pico.red.min.css", LittleFS, "/css/pico.red.min.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
     server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
@@ -41,7 +43,7 @@ void RTWebServer::handleBrightness()
     else if (server.method() == HTTP_POST)
     {
         this->config.setBrightness(server.arg("plain").toInt());
-        Serial.printf("handleBrightness, POST recieved, %s\n", server.arg("plain"));
+        Serial.printf("handleBrightness, POST recieved, %s\n", server.arg("plain").c_str());
         server.send(200, "text/plain", "OK");
     }
     else
@@ -61,7 +63,7 @@ void RTWebServer::handleNTP()
     else if (server.method() == HTTP_POST)
     {
         this->config.setNTPenable(server.arg("plain"));
-        Serial.printf("handleNTP, POST recieved, %s\n", server.arg("plain"));
+        Serial.printf("handleNTP, POST recieved, %s\n", server.arg("plain").c_str());
         server.send(200, "text/plain", "OK");
     }
     else

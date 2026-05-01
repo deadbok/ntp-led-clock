@@ -21,6 +21,7 @@ void RTWebServer::start()
     server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
     server.on("/ntp_state", std::bind(&RTWebServer::handleNTP, this));
     server.on("/ip", std::bind(&RTWebServer::handleIP, this));
+    server.on("/config", std::bind(&RTWebServer::handleConfig, this));
 
     //Not found (404) page.
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
@@ -79,6 +80,27 @@ void RTWebServer::handleIP()
         String ip = WiFi.localIP().toString();
         Serial.printf("handleIP, GET response, %s\n", ip.c_str());
         server.send(200, "text/plain", ip);
+    }
+    else
+    {
+        server.send(501, "text/plain", "Not implemented");
+    }
+}
+
+void RTWebServer::handleConfig()
+{
+    if (server.method() == HTTP_GET)
+    {
+        String config = this->config.getJSON();
+        Serial.printf("handleConfig, GET response, %s\n", config.c_str());
+        server.send(200, "application/json", config);
+    }
+    else if (server.method() == HTTP_POST)
+    {
+        Serial.printf("handleConfig, POST recieved: %s\n", server.arg("plain").c_str());
+        this->config.setFromJSON(server.arg("plain"));
+		this->config.writeJSON();
+        server.send(200, "text/plain", "OK");
     }
     else
     {

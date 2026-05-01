@@ -1,10 +1,13 @@
 {
-    "NTP": {
-        "server": "pool.ntp.org",
-        "tz": "CET-1CEST,M3.5.0,M10.5.0/3"
-    },
-    "network": {
-        "SSID": "",
-        "hostname": "clock01"
-    }
+    "ma_ver": 0,
+    "mi_ver": 2,
+    "ntp_server": "pool.ntp.org",
+    "tz_index": 15,
+    "tz_value": "",
+    "time": "01:02:03",
+    "brightness": 5,
+    "ssid": "wtf",
+    "ip": "127.0.0.1",
+    "hostname": "kurwa",
+    "ntp_en": true 
 }

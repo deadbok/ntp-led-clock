@@ -132,7 +132,7 @@
         time_card.style.display = "block";
       }
       
-      config_proxy.ntp = src.checked;
+      config_proxy.ntp_en = src.checked;
     }
     
     function config_listener()
@@ -142,7 +142,7 @@
       //Switch between local RTC and NTP cards
       var ntp_card = document.getElementById("ntp_card");
       var time_card = document.getElementById("time_card");
-      if (config_data.ntp === true)
+      if (config_data.ntp__en === true)
       {
         ntp_card.style.display = "block";
         time_card.style.display = "none";
@@ -154,7 +154,7 @@
       }
 
       //Update NTP checkbox
-      document.getElementById("ntp_update").checked = config_data.ntp;       
+      document.getElementById("ntp_update").checked = config_data.ntp_en;       
       //Update brightness slider
       document.getElementById("brightness").value = config_data.brightness;
       //Update IP address
@@ -202,7 +202,7 @@
 			var xhttp = new XMLHttpRequest();
 
       //Update from NTP checkbox
-      config_data.ntp = document.getElementById("ntp_update").checked;
+      config_data.ntp_en = document.getElementById("ntp_update").checked;
       //Update from brightness slider
       config_data.brightness = document.getElementById("brightness").value;
       //Update NTP server address

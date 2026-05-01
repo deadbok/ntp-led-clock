@@ -26,15 +26,16 @@ public:
     void handleBrightness();
     void handleNTP();
     void handleIP();
+	void handleConfig();
 
     void handleClient(void);
 
 	~RTWebServer();    
 private:
 	//The web server
-    WebServer    server;
+    WebServer	server;
     //The config.
-    Config&             config;
+    Config&		config;
 };
 
 #endif

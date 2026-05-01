@@ -64,7 +64,7 @@ The clock has a built-in web server to configure:
     - ~~[ ] Websocket server code~~
     - [ ] *Remember* 12 hour mode
     - [ ] Rechargeable battery support for the RTC
-    - [ ] Save config as JSON file in the FS
+    - [x] Save config as JSON file in the FS
     - [ ] mDNS
     - [ ] Web page for configuration
       - [ ] Configuration from web page to and from clock

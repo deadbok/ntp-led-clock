@@ -22,6 +22,9 @@ class Config
         void setNTPServer(String server);
         String getNTPServer();
 
+        void setTimeZoneIndex(unsigned short index);
+        unsigned short getTimeZoneIndex();
+
         void setTimeZone(String TZ);
         String getTimeZone();
 
@@ -34,11 +37,21 @@ class Config
         void setSSID(String SSID);
         String getSSID();
 
+        void setIP(String ip);
+        String getIP();
+
         void setHostname(String hostname);
         String getHostname();
 
         void setNTPenable(bool NTP);
-        bool getNTPenable();    
+        bool getNTPenable();
+        
+        // Get JSON string of config data.
+        String getJSON();
+
+        // Set config data from JSON string.
+        int setFromJSON(String json);
+
         //Read/Write configuration to flash.
         bool readJSON();
         bool writeJSON();
@@ -49,14 +62,16 @@ class Config
         //Major version bump: Breaking changes
         const unsigned char vmajor = 0;
         //Minor version bump: Backward compatible changes.
-        const unsigned char vminor = 1;
+        const unsigned char vminor = 2;
 
         //Actual confiuration data.
         String              NTPServer;
         String	            timeZone;
+        unsigned short      timeZoneIndex;
         String			    time;
 		unsigned char       brightness;
         String			    SSID;
+        String              IP;
 		String              hostname;
         bool                NTP;
 

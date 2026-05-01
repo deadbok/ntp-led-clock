@@ -115,3 +115,42 @@ Working on configuration "backend".
   * Added endpoints for the files above.
 * README.md
   * Added Staric IP configuration to the list.
+
+## 01-05-2026
+
+* Added DEBUG define
+* src/RTWebServer.cpp:
+  * Updated time zone endpoint.
+* README.md
+  * Save JSON checked
+* data/config.json
+  * Updated to current version
+* data/index.html:
+  * Updated config code to reflect current JSON version
+* data/js/requst.js
+  * Removed. Not used.
+* include/Config.h
+  * Added comments
+  * Added getJSON
+  * Added setFromJSON
+  * Added setTimeZoneIndex
+  * Added getTimeZoneIndex
+  * Added setIP
+  * Added getIP
+  * Updated configuration data to V. 0.2
+* include/RTWebServer.h:
+  * Added handleConfig
+* src/Config.cpp
+  * Added setTimeZoneIndex implmentation
+  * Added getTimeZoneIndex implmentation
+  * Added setIP implmentation
+  * Added getIP implmentation
+  * Added getJSON implementation
+  * Added setFromJSON implementation
+  * Updated updateJSON with new config format
+  * Updated updateFromJSON with new config format
+  * Removed check fot configuration changes from writeJSON
+* src/RTWebServer.cpp:
+  * Registered /config handler on web server
+  * Added handleConfig
+

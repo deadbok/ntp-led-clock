@@ -1,6 +1,7 @@
 #include "Config.h"
 #include "hardware.h"
 #include <LittleFS.h>
+#include <WiFi.h>
 
 Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
                                    brightness(4), SSID(""),
@@ -21,6 +22,18 @@ void Config::setNTPServer(String server)
 String Config::getNTPServer()
 {
     return(this->NTPServer);
+}
+
+void Config::setTimeZoneIndex(unsigned short index)
+{
+    this->changed = true;
+    this->timeZoneIndex = index;
+    this->writeJSON();
+}
+
+unsigned short Config::getTimeZoneIndex()
+{
+    return(this->timeZoneIndex);
 }
 
 void Config::setTimeZone(String TZ)
@@ -72,6 +85,19 @@ String Config::getSSID()
     return(this->SSID);
 }
 
+//TODO: For static IP and stuff this getter/setter will need work.
+void Config::setIP(String ip)
+{
+    this->changed = true;
+    this->IP = ip;
+    this->writeJSON();
+}
+
+String Config::getIP()
+{
+    return(WiFi.localIP().toString());
+}
+
 void Config::setHostname(String hostname)
 {
     this->changed = true;
@@ -96,6 +122,56 @@ bool Config::getNTPenable()
     return(this->NTP);
 }
 
+// Return the config data as a serialised string
+String Config::getJSON()
+{
+    size_t  ret;
+    String  serialJSON;
+
+    if (changed)
+    {
+        updateJSON();
+    }
+
+    ret = serializeJson(configDoc, serialJSON);
+    if (ret == 0)
+    {
+        Serial.println(F("Serialised document is empty."));
+        return("{}");
+    }
+
+#ifdef DEBUG
+    Serial.println(serialJSON);
+#endif
+
+    return(serialJSON);
+}
+
+int Config::setFromJSON(String json)
+{
+#ifdef DEBUG
+    Serial.println(F("Updating configuration from JSON string:"));
+    Serial.println(json);
+#endif
+
+    DeserializationError error = deserializeJson(configDoc, json);
+    if (error)
+    {
+        Serial.println(F("Failed to deserialise the data."));
+        return(-1);
+    }
+
+#ifdef DEBUG
+    Serial.println(F("JSON data:"));  
+    serializeJsonPretty(configDoc, Serial);
+    Serial.println();
+#endif
+
+    this->updateFromJSON();
+    return(0);   
+}
+
+// Update the JSON document from values in the config object
 void Config::updateJSON()
 {
     this->configDoc.clear();
@@ -103,17 +179,20 @@ void Config::updateJSON()
     this->configDoc["ma_ver"] = this->vmajor;
     this->configDoc["mi_ver"] = this->vminor;
 
-    this->configDoc["ntp_srv"] = this->NTPServer;
-    this->configDoc["tz"] = this->timeZone;
+    this->configDoc["ntp_server"] = this->NTPServer;
+    this->configDoc["tz_value"] = this->timeZone;
+    this->configDoc["tz_index"] = this->timeZoneIndex;
 
     this->configDoc["brightness"] = this->brightness;
     this->configDoc["ssid"] = this->SSID;
-    this->configDoc["host"] = this->hostname;
+    this->configDoc["ip"] = this->IP;
+    this->configDoc["hostname"] = this->hostname;
     this->configDoc["ntp_en"] = this->NTP;
 
     this->changed = false;
 }
 
+// Update the values in the config object from the JSON document
 void Config::updateFromJSON()
 {
     if (this->configDoc["ma_ver"].as<unsigned char>() > this->vmajor)
@@ -122,16 +201,17 @@ void Config::updateFromJSON()
         return;
     }
     
-    this->NTPServer = this->configDoc["ntp_srv"].as<String>();
-    this->timeZone = this->configDoc["tz"].as<String>();
+    this->NTPServer = this->configDoc["ntp_server"].as<String>();
+    this->timeZone = this->configDoc["tz_value"].as<String>();
+    this->timeZoneIndex = this->configDoc["tz_index]"];
 
     this->brightness = this->configDoc["brightness"];
     this->SSID = this->configDoc["ssid"].as<String>();
-    this->hostname = this->configDoc["host"].as<String>();
+    this->IP = this->configDoc["ip"].as<String>();
+    this->hostname = this->configDoc["hostname"].as<String>();
     this->NTP = this->configDoc["ntp_en"].as<bool>();
 
     this->changed = false;
-
 }
 
 bool Config::readJSON()
@@ -166,8 +246,8 @@ bool Config::readJSON()
 
 bool Config::writeJSON()
 {
-    if (changed)
-    {
+    //if (changed)
+    //{
         updateJSON();
 
         Serial.printf("Writing configuration file: %s\r\n", config_fn.c_str());
@@ -192,11 +272,11 @@ bool Config::writeJSON()
 #endif
 
         file.close();
-    }
-    else
-    {
-        Serial.println("No configuration changes. Nothing to be written.");
-    }
+    //}
+    //else
+    //{
+    //    Serial.println("No configuration changes. Nothing to be written.");
+    //}
     return(true);
 }
 

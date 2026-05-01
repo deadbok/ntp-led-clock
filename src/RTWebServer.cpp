@@ -15,7 +15,7 @@ void RTWebServer::start()
     server.serveStatic("/css/pico.red.min.css", LittleFS, "/css/pico.red.min.css");
     server.serveStatic("/css/custom.css", LittleFS, "/css/custom.css");
     server.serveStatic("/favicon.ico", LittleFS, "/favicon.ico");
-    server.serveStatic("/js/tzdata.js", LittleFS , "/js/tzdata.js");
+    server.serveStatic("/js/zones.json", LittleFS , "/js/zones.json");
 
     // Endpoints for configuration
     server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));

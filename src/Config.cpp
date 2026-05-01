@@ -154,8 +154,11 @@ bool Config::readJSON()
 
     file.close();
 
-    Serial.println("Read configuration:");
-    serializeJsonPretty(configDoc, Serial);        
+    Serial.println("Read configuration.");
+#ifdef DEBUG    
+    serializeJsonPretty(configDoc, Serial);
+    Serial.println();
+#endif
 
     this->updateFromJSON();
     return(true);
@@ -182,8 +185,11 @@ bool Config::writeJSON()
             return(false);
         }
 
-        Serial.println("Saving configuration:");
-        serializeJsonPretty(configDoc, Serial);        
+        Serial.println("Saving configuration.");
+#ifdef DEBUG
+        serializeJsonPretty(configDoc, Serial);
+        Serial.println();
+#endif
 
         file.close();
     }

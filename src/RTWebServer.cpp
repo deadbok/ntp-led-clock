@@ -7,7 +7,7 @@ RTWebServer::RTWebServer(Config& config) : server(80), config(config)
 
 void RTWebServer::start()
 {
-    // Serve files needed for the index page.
+    // Serve files needed for the webinterface page.
     server.serveStatic("/", LittleFS, "/index.html");
     server.serveStatic("/index.html", LittleFS, "/index.html");
     server.serveStatic("/wireless.html", LittleFS, "/wireless.html");
@@ -18,10 +18,8 @@ void RTWebServer::start()
     server.serveStatic("/js/zones.json", LittleFS , "/js/zones.json");
 
     // Endpoints for configuration
-    server.on("/brightness", std::bind(&RTWebServer::handleBrightness, this));
-    server.on("/ntp_state", std::bind(&RTWebServer::handleNTP, this));
-    server.on("/ip", std::bind(&RTWebServer::handleIP, this));
     server.on("/config", std::bind(&RTWebServer::handleConfig, this));
+    server.on("/ssids", std::bind(&RTWebServer::handleSSIDs, this));
 
     //Not found (404) page.
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
@@ -33,72 +31,25 @@ void RTWebServer::start()
     server.begin();
 }
 
-void RTWebServer::handleBrightness()
-{
-    if (server.method() == HTTP_GET)
-    {
-        String brightness = String(this->config.getBrightness());
-        Serial.printf("handleBrightness, GET response, %s\n", brightness.c_str());
-        server.send(200, "text/plain", brightness);
-    }
-    else if (server.method() == HTTP_POST)
-    {
-        this->config.setBrightness(server.arg("plain").toInt());
-        Serial.printf("handleBrightness, POST recieved, %s\n", server.arg("plain").c_str());
-        server.send(200, "text/plain", "OK");
-    }
-    else
-    {
-        server.send(501, "text/plain", "Not implemented");
-    }
-}
-
-void RTWebServer::handleNTP()
-{
-    if (server.method() == HTTP_GET)
-    {
-        String ntp = String(this->config.getNTPenable());
-        Serial.printf("handleNTP, GET response, %s\n", ntp.c_str());
-        server.send(200, "text/plain", ntp);
-    }
-    else if (server.method() == HTTP_POST)
-    {
-        this->config.setNTPenable(server.arg("plain"));
-        Serial.printf("handleNTP, POST recieved, %s\n", server.arg("plain").c_str());
-        server.send(200, "text/plain", "OK");
-    }
-    else
-    {
-        server.send(501, "text/plain", "Not implemented");
-    }
-}
-
-void RTWebServer::handleIP()
-{
-    if (server.method() == HTTP_GET)
-    {
-        String ip = WiFi.localIP().toString();
-        Serial.printf("handleIP, GET response, %s\n", ip.c_str());
-        server.send(200, "text/plain", ip);
-    }
-    else
-    {
-        server.send(501, "text/plain", "Not implemented");
-    }
-}
-
+// Send or receive a JSON configuration
 void RTWebServer::handleConfig()
 {
     if (server.method() == HTTP_GET)
     {
         String config = this->config.getJSON();
+#ifdef DEBUG
         Serial.printf("handleConfig, GET response, %s\n", config.c_str());
+#endif
         server.send(200, "application/json", config);
     }
     else if (server.method() == HTTP_POST)
     {
-        Serial.printf("handleConfig, POST recieved: %s\n", server.arg("plain").c_str());
+#ifdef DEBUG
+        Serial.printf("handleConfig, POST received: %s\n", server.arg("plain").c_str());
+#endif
+        // Set configuration from the received data.
         this->config.setFromJSON(server.arg("plain"));
+        // Save configuration.
 		this->config.writeJSON();
         server.send(200, "text/plain", "OK");
     }
@@ -108,6 +59,52 @@ void RTWebServer::handleConfig()
     }
 }
 
+// Send all detected SSIDs 
+void RTWebServer::handleSSIDs()
+{
+    if (server.method() == HTTP_GET)
+    {
+		// Create an empty JSON array
+		JsonDocument doc;
+		JsonArray ssids = doc.to<JsonArray>();
+
+		Serial.print("Scanning WiFi networks...");
+    
+        int n = WiFi.scanNetworks();
+        
+        if (n == 0) 
+        {
+            Serial.println("no networks found");
+        }
+        else
+        {
+            Serial.printf("%d networks found", n);
+
+            for (int i = 0; i < n; ++i)
+			{
+				String ssid = WiFi.SSID(i);
+
+          		Serial.printf("%2d: %s\n", i + 1, ssid.c_str());
+				ssids.add(ssid);
+      		}
+	    }
+
+		
+    	String  serialJSON;
+	    serializeJson(doc, serialJSON);
+
+#ifdef DEBUG
+        Serial.printf("handleSSIDs, GET response, %s\n", serialJSON.c_str());
+#endif
+        server.send(200, "application/json", serialJSON);
+    }
+    else
+    {
+        server.send(501, "text/plain", "Not implemented");
+    }   
+}
+
+// Error handler, a requested URL does not exist.
 void RTWebServer::onNotFound()
 {
     Serial.print(F("In 404 handler: "));
@@ -116,7 +113,7 @@ void RTWebServer::onNotFound()
     {
         File file = LittleFS.open("/404.html", "r");
 
-        //Check if open succeded
+        //Check if open succeeded
         if (file)
         {
             String data;

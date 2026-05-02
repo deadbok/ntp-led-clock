@@ -23,10 +23,8 @@ public:
 
     void onNotFound();
 
-    void handleBrightness();
-    void handleNTP();
-    void handleIP();
 	void handleConfig();
+    void handleSSIDs();
 
     void handleClient(void);
 

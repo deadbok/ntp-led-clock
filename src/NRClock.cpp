@@ -14,13 +14,11 @@
 #include <sys/time.h>
 #include "hardware.h"
 
-NRClock::NRClock() : display(TM1637_SCL, TM1637_SDA), RTC(Wire)
+NRClock::NRClock() : display(TM1637_SCL, TM1637_SDA), RTC(Wire), last_minute(0)
 {}
 
 void NRClock::init()
 {
-	last_minute = 0;
-
     // Initialise the 7-segment display
     display.init();
     display.colonOff();
@@ -64,7 +62,7 @@ void NRClock::update()
 {
     struct tm       *time_info;
     RtcDateTime     rtc_now = RTC.GetDateTime();
-    time_t          now;
+//    time_t          now;
     char			digits[5];
 
     if (last_minute != rtc_now.Minute())
@@ -72,7 +70,7 @@ void NRClock::update()
         last_minute = rtc_now.Minute();
     
         //Get UTC from RTC
-        now = rtc_now.Unix32Time();
+        time_t now = rtc_now.Unix32Time();
         //Convert to local time
         time_info = localtime(&now);
 
@@ -83,7 +81,9 @@ void NRClock::update()
         digits[3] = '0' + (time_info->tm_min % 10);*/
     
         sprintf(digits, "%02d%02d", time_info->tm_hour, time_info->tm_min);
-        Serial.printf("%s\n", digits);
+#ifdef DEBUG
+        Serial.printf("Time updated: %s\n", digits);
+#endif
 
         display.display(String(digits));
     }

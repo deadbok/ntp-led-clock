@@ -60,7 +60,7 @@ void time_is_set_sntp(struct timeval *cb_time)
    	Serial.println(F("Updating RTC time from NTP"));
 	
 #ifdef DEBUG
-	Serial.println(cb_time->tv_sec);
+	Serial.printf("Got %ld seconds\n", cb_time->tv_sec);
 #endif
 	
   
@@ -97,9 +97,15 @@ void ARDUINO_ISR_ATTR timer_handler()
 void setup()
 {
 	//Delay for platformio serial monitor to be ready
+#ifdef DEBUG
 	delay(5000);
+#endif
 	//Greetings on the serial port.
   	Serial.begin(115200);
+	while (!Serial)
+	{
+    	delay(10);
+  	}
 #ifdef DEBUG	
 	Serial.setDebugOutput(true);
 #endif
@@ -146,7 +152,7 @@ void setup()
 
 	// Set timer frequency to 1Mhz
 	// Timer 0
-	// Prescaler 80
+	// Pre-:scaler 80
 	// Count up
 	timer = timerBegin(0, 80, true);
 	if (timer == NULL)

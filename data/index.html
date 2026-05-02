@@ -9,7 +9,7 @@
     <title>NTP/RTC LED clock</title>
   </head>
   <body></body> <!-- style="visibility: hidden;"> -->
-    <!-- Fix for firefox to prevent flash of unstyled content-->
+    <!-- Fix for Firefox to prevent flash of unstyled content-->
     <script>0</script>
     <main class="container bottom-line">
       <nav class="bottom-line">
@@ -17,7 +17,7 @@
             <li><h3>Settings</h3></li>
         </ul>
         <ul>
-          <li><a href="wireless.html">Wirelesst</a></li>
+          <li><a href="wireless.html">Wireless</a></li>
           <li><a href="about.html">About</a></li>
        </ul>
       </nav>
@@ -27,7 +27,7 @@
             <h4>General</h4>
           </header>
           <fieldset>
-            <label for="ntp_update">Periodicly update time from the internet
+            <label for="ntp_update">periodically update time from the internet
             </label>
             <input type="checkbox" role="switch" id="ntp_update" 
               name="ntp_update" onchange="toggle_ntp(this)"/><br><br>
@@ -142,7 +142,7 @@
       //Switch between local RTC and NTP cards
       var ntp_card = document.getElementById("ntp_card");
       var time_card = document.getElementById("time_card");
-      if (config_data.ntp__en === true)
+      if (config_data.ntp_en === true)
       {
         ntp_card.style.display = "block";
         time_card.style.display = "none";

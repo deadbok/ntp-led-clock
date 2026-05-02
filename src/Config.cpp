@@ -14,9 +14,11 @@ Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
 
 void Config::setNTPServer(String server)
 {
+#ifdef DEBUG
+    Serial.printf("Setting NTP server: %s\n", server.c_str());
+#endif
     this->changed = true;
     this->NTPServer = server;
-    this->writeJSON();
 }
 
 String Config::getNTPServer()
@@ -26,9 +28,11 @@ String Config::getNTPServer()
 
 void Config::setTimeZoneIndex(unsigned short index)
 {
+#ifdef DEBUG
+    Serial.printf("Setting time zone index: %d\n", index);
+#endif
     this->changed = true;
     this->timeZoneIndex = index;
-    this->writeJSON();
 }
 
 unsigned short Config::getTimeZoneIndex()
@@ -38,9 +42,11 @@ unsigned short Config::getTimeZoneIndex()
 
 void Config::setTimeZone(String TZ)
 {
+#ifdef DEBUG
+    Serial.printf("Setting time zone: %s\n", TZ.c_str());
+#endif
     this->changed = true;
     this->timeZone = TZ;
-    this->writeJSON();
 }
 
 String Config::getTimeZone()
@@ -50,9 +56,11 @@ String Config::getTimeZone()
 
 void Config::setTime(String time)
 {
+#ifdef DEBUG
+    Serial.printf("Setting time: %s\n", time.c_str());
+#endif
     this->changed = true;
     this->time = time;
-    this->writeJSON();
 }
 
 String Config::getTime()
@@ -62,10 +70,12 @@ String Config::getTime()
 
 void Config::setBrightness(unsigned char brightness)
 {
+#ifdef DEBUG
+    Serial.printf("Setting brightness %d\n", brightness);
+#endif
     this->brightness = brightness;
     this->changed = true;
     this->clock.setBrightness(brightness);
-    this->writeJSON();
 }
 
 unsigned char Config::getBrightness()
@@ -75,9 +85,11 @@ unsigned char Config::getBrightness()
 
 void Config::setSSID(String SSID)
 {
+#ifdef DEBUG
+    Serial.printf("Setting SSID: %s\n", SSID.c_str());
+#endif
     this->changed = true;
     this->SSID = SSID;
-    this->writeJSON();    
 }
 
 String Config::getSSID()
@@ -88,9 +100,11 @@ String Config::getSSID()
 //TODO: For static IP and stuff this getter/setter will need work.
 void Config::setIP(String ip)
 {
+#ifdef DEBUG
+    Serial.printf("Setting IP: %s\n", ip.c_str());
+#endif
     this->changed = true;
     this->IP = ip;
-    this->writeJSON();
 }
 
 String Config::getIP()
@@ -100,9 +114,11 @@ String Config::getIP()
 
 void Config::setHostname(String hostname)
 {
+#ifdef DEBUG
+    Serial.printf("Setting host name: %s\n", hostname.c_str());
+#endif
     this->changed = true;
     this->hostname = hostname;
-    this->writeJSON();    
 }
 
 String Config::getHostname()
@@ -112,9 +128,11 @@ String Config::getHostname()
 
 void Config::setNTPenable(bool NTP)
 {
+#ifdef DEBUG
+    Serial.printf("Setting NTP enable: %d\n", NTP);
+#endif
     this->changed = true;
     this->NTP = NTP;
-    this->writeJSON();    
 }
 
 bool Config::getNTPenable()
@@ -201,17 +219,17 @@ void Config::updateFromJSON()
         return;
     }
     
-    this->NTPServer = this->configDoc["ntp_server"].as<String>();
-    this->timeZone = this->configDoc["tz_value"].as<String>();
-    this->timeZoneIndex = this->configDoc["tz_index]"];
+    setNTPServer(this->configDoc["ntp_server"].as<String>());
+    setNTPenable(this->configDoc["ntp_en"].as<bool>());
 
-    this->brightness = this->configDoc["brightness"];
-    this->SSID = this->configDoc["ssid"].as<String>();
-    this->IP = this->configDoc["ip"].as<String>();
-    this->hostname = this->configDoc["hostname"].as<String>();
-    this->NTP = this->configDoc["ntp_en"].as<bool>();
+    setTimeZone(this->configDoc["tz_value"].as<String>());
+    setTimeZoneIndex(this->configDoc["tz_index"]);
 
-    this->changed = false;
+    setBrightness(configDoc["brightness"]);
+    
+    setSSID(this->configDoc["ssid"].as<String>());
+    setIP(this->configDoc["ip"].as<String>());
+    setHostname(configDoc["hostname"].as<String>());
 }
 
 bool Config::readJSON()
@@ -246,8 +264,8 @@ bool Config::readJSON()
 
 bool Config::writeJSON()
 {
-    //if (changed)
-    //{
+    if (changed)
+    {
         updateJSON();
 
         Serial.printf("Writing configuration file: %s\r\n", config_fn.c_str());
@@ -272,11 +290,11 @@ bool Config::writeJSON()
 #endif
 
         file.close();
-    //}
-    //else
-    //{
-    //    Serial.println("No configuration changes. Nothing to be written.");
-    //}
+    }
+    else
+    {
+        Serial.println("No configuration changes. Nothing to be written.");
+    }
     return(true);
 }
 

@@ -14,6 +14,9 @@
 #ifndef config_h
 #define config_h
 
+#define CONFIG_FORMAT_MAJOR 0
+#define CONFIG_FORMAT_MINOR 2
+
 class Config
 {
     public:
@@ -60,11 +63,11 @@ class Config
     private:
         //Version of the configuration data in the class.
         //Major version bump: Breaking changes
-        const unsigned char vmajor = 0;
+        const unsigned char vmajor = CONFIG_FORMAT_MAJOR;
         //Minor version bump: Backward compatible changes.
-        const unsigned char vminor = 2;
+        const unsigned char vminor = CONFIG_FORMAT_MINOR;
 
-        //Actual confiuration data.
+        //Actual configuration data.
         String              NTPServer;
         String	            timeZone;
         unsigned short      timeZoneIndex;
@@ -72,6 +75,7 @@ class Config
 		unsigned char       brightness;
         String			    SSID;
         String              IP;
+        //String            netmask;
 		String              hostname;
         bool                NTP;
 
@@ -89,3 +93,4 @@ class Config
 };
 
 #endif
+

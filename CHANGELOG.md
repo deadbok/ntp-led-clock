@@ -56,9 +56,9 @@ Working on saving configuration to flash.
 
 Working on configuration "backend".
 
-* platformio.ini: Removed debug ouput from "lolin32" target.
+* platformio.ini: Removed debug output from "lolin32" target.
 * inlude/Config.h:
-  * Removed uneeded define
+  * Removed unneeded define
   * Added const config_fn to hold the config filename.
 * src/Config.cpp:
   * Added writeJSON to setters
@@ -80,7 +80,7 @@ Working on configuration "backend".
 * tools/app.py:
   * Sending json formatted data to the web interface, all to one "/config" endpoint.
 * data/index.html:
-  * Added get_config to requst config from the webserver
+  * Added get_config to request config from the webserver
   * Added config_listener to update web interface from a JSON response.
   * Added post_config to sent config data to the webserver.
   * Added config_proxy to sent config when changed.
@@ -114,13 +114,11 @@ Working on configuration "backend".
 * src/RTWebServer.cpp:
   * Added endpoints for the files above.
 * README.md
-  * Added Staric IP configuration to the list.
+  * Added static IP configuration to the list.
 
 ## 01-05-2026
 
 * Added DEBUG define
-* src/RTWebServer.cpp:
-  * Updated time zone endpoint.
 * README.md
   * Save JSON checked
 * data/config.json
@@ -141,16 +139,35 @@ Working on configuration "backend".
 * include/RTWebServer.h:
   * Added handleConfig
 * src/Config.cpp
-  * Added setTimeZoneIndex implmentation
-  * Added getTimeZoneIndex implmentation
-  * Added setIP implmentation
-  * Added getIP implmentation
+  * Added setTimeZoneIndex implementation
+  * Added getTimeZoneIndex implementation
+  * Added setIP implementation
+  * Added getIP implementation
   * Added getJSON implementation
   * Added setFromJSON implementation
   * Updated updateJSON with new config format
   * Updated updateFromJSON with new config format
   * Removed check fot configuration changes from writeJSON
 * src/RTWebServer.cpp:
+  * Updated time zone endpoint.
   * Registered /config handler on web server
   * Added handleConfig
 
+## 01-05-2026
+
+* data/index.html:
+  * Fixed a spelling mistake
+  * Fixed 'ntp__en'
+* include/Config.h
+* include/RTWebServer.h:
+  * Removed unused endpoints and handlers.
+  * Added SSIDs handler.
+* src/Config.cpp:
+  * Lots of changes to fit the way JSON is exchanged with the web pages.
+* src/NRClock.cpp:
+  * Fixed a couple of thing identified as defects by the PlatformIO inspector.
+* src/RTWebServer.cpp:
+  * Removed unused endpoints and handlers.
+  * Added SSIDs handler.
+* src/main.cpp:
+	 * Smaller cosmetic changes.

@@ -25,7 +25,7 @@ void RTWebServer::start()
     server.onNotFound(std::bind(&RTWebServer::onNotFound, this));
 
     //Read configuration file.
-    config.readJSON();
+    //config.readJSON();
 
     //Start the web server
     server.begin();
@@ -107,8 +107,7 @@ void RTWebServer::handleSSIDs()
 // Error handler, a requested URL does not exist.
 void RTWebServer::onNotFound()
 {
-    Serial.print(F("In 404 handler: "));
-    Serial.println(server.uri());
+    Serial.printf("In 404 handler: %s\n", server.uri().c_str());
     if (LittleFS.exists("/404.html"))
     {
         File file = LittleFS.open("/404.html", "r");

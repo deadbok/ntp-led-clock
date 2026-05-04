@@ -9,6 +9,7 @@ Config::Config(NRClock& nrclock) : NTPServer(""), timeZone(""), time(""),
                                    changed(false), clock(nrclock),
                                    configDoc()
 {
+    //nrclock.init();
    // this->readJSON(config_fn);
 }
 
@@ -154,7 +155,7 @@ String Config::getJSON()
     ret = serializeJson(configDoc, serialJSON);
     if (ret == 0)
     {
-        Serial.println(F("Serialised document is empty."));
+        Serial.println("Serialised document is empty.");
         return("{}");
     }
 
@@ -168,19 +169,19 @@ String Config::getJSON()
 int Config::setFromJSON(String json)
 {
 #ifdef DEBUG
-    Serial.println(F("Updating configuration from JSON string:"));
+    Serial.println("Updating configuration from JSON string:");
     Serial.println(json);
 #endif
 
     DeserializationError error = deserializeJson(configDoc, json);
     if (error)
     {
-        Serial.println(F("Failed to deserialise the data."));
+        Serial.println("Failed to deserialise the data.");
         return(-1);
     }
 
 #ifdef DEBUG
-    Serial.println(F("JSON data:"));  
+    Serial.println("JSON data:");  
     serializeJsonPretty(configDoc, Serial);
     Serial.println();
 #endif
@@ -246,7 +247,7 @@ bool Config::readJSON()
     DeserializationError error = deserializeJson(configDoc, file);
     if (error)
     {
-        Serial.println(F("Failed to read file."));
+        Serial.println("Failed reading file.");
         return(false);
     }
 

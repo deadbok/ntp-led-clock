@@ -21,7 +21,6 @@
 #include <stdlib.h>
 #include <esp_sntp.h>
 #include <LittleFS.h>
-#include "Config.h"
 #include "RTWebServer.h"
 #include "ap_secret.h"
 #include "hardware.h"
@@ -55,9 +54,9 @@ void time_is_set_sntp(struct timeval *cb_time)
 {
 	RtcDateTime cb_rtc_time_date(0);
 
-	Serial.println(F("Time was set"));
+	Serial.println("Time was set");
    	Led.toggle();
-   	Serial.println(F("Updating RTC time from NTP"));
+   	Serial.println("Updating RTC time from NTP");
 	
 #ifdef DEBUG
 	Serial.printf("Got %ld seconds\n", cb_time->tv_sec);
@@ -109,19 +108,16 @@ void setup()
 #ifdef DEBUG	
 	Serial.setDebugOutput(true);
 #endif
-  	Serial.println(F(""));
-  	Serial.print(F("NTP LED Clock v"));
-  	Serial.print(F(VERSION));
+  	Serial.printf("\nNTP LED Clock v %s", VERSION);
 #ifdef DEBUG
-	Serial.println(F("-DEBUG"));
+	Serial.printf("-DEBUG\n");
 #else
-	Serial.println();
+	Serial.print("\f");
 #endif
 
-  	Serial.print(F("Compiled: "));
-  	Serial.println(F(__DATE__));
+  	Serial.printf("Compiled: %s\n\n", __DATE__);
 
-  	//Set the callback for when time is set.
+  	//Set the callback for when time is set via NTP.
   	sntp_set_time_sync_notification_cb(time_is_set_sntp);
     
    	//Initialise the LED
@@ -130,34 +126,20 @@ void setup()
     //Init filesystem
   	if (!LittleFS.begin())
   	{
-    	Serial.println(F("Error starting LittleFS."));
+    	Serial.println("Error starting LittleFS.");
   	}
 
-  	//Connect to the network
-  	WiFi.mode(WIFI_STA);
-  	WiFi.begin(STASSID, STAPSK);
-  	Serial.print(F("Connect"));
-  	while (WiFi.status() != WL_CONNECTED)
-  	{
-    	Led.toggle();
-    	Serial.print(F("."));
-    	delay(200);
-  	}
-  	Serial.println(F(""));
-  	Serial.print(F("WiFi connected: "));
-  	Serial.println(STASSID);
-  	Serial.print(F("IP address: "));
-  	Serial.println(WiFi.localIP());
-  	Led.on();
+	//Read config file
+	config.readJSON();
 
-	// Set timer frequency to 1Mhz
+		// Set timer frequency to 1Mhz
 	// Timer 0
 	// Pre-:scaler 80
 	// Count up
 	timer = timerBegin(0, 80, true);
 	if (timer == NULL)
 	{
-    	Serial.println(F("Error starting timer 0."));
+    	Serial.println("Error starting timer 0.");
   	}
 
 	// Attach timer_handler function to our timer.
@@ -165,22 +147,34 @@ void setup()
 
 	timerAlarmWrite(timer, 1000000, true);
   	timerAlarmEnable(timer);
-   	
-	//Serial.println(F("Setting NTP client sync interval"));
-	
+
 	sntp_set_sync_interval(NTP_SYNC_INTERVAL);
-//	sntp_restart();
 
 	//Init clock
-	Serial.println(F("Initialising clock."));
+	Serial.printf("Initialising clock.\n");
   	nrclock.init();
 
 	Serial.printf("NTP sync interval: %u seconds\n", sntp_get_sync_interval());
 
-	Serial.println(F("Starting web server"));
+  	//Connect to the network
+  	WiFi.mode(WIFI_STA);
+  	WiFi.begin(STASSID, STAPSK);
+  	Serial.print("Connect");
+  	while (WiFi.status() != WL_CONNECTED)
+  	{
+    	Led.toggle();
+    	Serial.print(".");
+    	delay(200);
+  	}
+
+  	Serial.printf("\nWiFi connected: %s\n", STASSID);
+  	Serial.printf("IP address: %s\n", WiFi.localIP().toString().c_str());
+  	Led.on();
+
+	Serial.println("Starting web server");
   	runtimeWebServer.start();
 
-	Serial.println(F("Initialising OTA."));
+	Serial.println("Initialising OTA.");
 	ArduinoOTA
     	.onStart([]() 
 		{
@@ -198,7 +192,7 @@ void setup()
     	})
     	.onEnd([]() 
 		{
-      		Serial.println(F("\nEnd"));
+      		Serial.printf("\nEnd");
     	})
     	.onProgress([](unsigned int progress, unsigned int total) 
 		{
@@ -209,29 +203,29 @@ void setup()
       		Serial.printf("Error[%u]: ", error);
       		if (error == OTA_AUTH_ERROR) 
 			{
-        		Serial.println(F("Auth Failed"));
+        		Serial.println("Auth Failed");
       		}
 			else if (error == OTA_BEGIN_ERROR) 
 			{
-        		Serial.println(F("Begin Failed"));
+        		Serial.println("Begin Failed");
       		}
 			else if (error == OTA_CONNECT_ERROR) 
 			{
-        		Serial.println(F("Connect Failed"));
+        		Serial.println("Connect Failed");
       		}
 			else if (error == OTA_RECEIVE_ERROR) 
 			{
-        		Serial.println(F("Receive Failed"));
+        		Serial.println("Receive Failed");
       		}
 			else if (error == OTA_END_ERROR) 
 			{
-        		Serial.println(F("End Failed"));
+        		Serial.println("End Failed");
       		}
     	});
 
   	ArduinoOTA.begin();
 
-	Serial.println(F("Initialisation done."));
+	Serial.println("Initialisation done.");
 }
 
 void loop()

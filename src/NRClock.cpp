@@ -19,6 +19,7 @@ NRClock::NRClock() : display(TM1637_SCL, TM1637_SDA), RTC(Wire), last_minute(0)
 
 void NRClock::init()
 {
+    Serial.printf("Initialising clock.\n");
     // Initialise the 7-segment display
     display.init();
     display.colonOff();
@@ -32,30 +33,30 @@ void NRClock::init()
 
     RtcDateTime compiled = RtcDateTime(__DATE__, __TIME__);
 
-    Serial.println(F("Disabling RTC 32 kHz output"));
+    Serial.printf("Disabling RTC 32 kHz output\n");
     RTC.Enable32kHzPin(false);
 
     if (!RTC.IsDateTimeValid()) 
     {
-        Serial.println(F("RTC time is not valid, setting default"));
+        Serial.print("RTC time is not valid, setting default\n");
         RTC.SetDateTime(compiled);
     }
 
     if (!RTC.GetIsRunning())
     {
-        Serial.println(F("Starting RTC"));
+        Serial.printf("Starting RTC");
         RTC.SetIsRunning(true);
     }
 
     //Set up NTP
-    Serial.println(F("Setting up NTP client"));
+    Serial.printf("Setting up NTP client\n");
 	configTime(0, 0, NTP_SERVERS);
 
     //Set time zone for Denmark
 	setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
 	tzset();
 
-	Serial.println(F("Clock initialisation done"));
+	Serial.printf("Clock initialisation done\n");
 }
 
 void NRClock::update()

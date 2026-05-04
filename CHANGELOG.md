@@ -171,3 +171,22 @@ Working on configuration "backend".
   * Added SSIDs handler.
 * src/main.cpp:
 	 * Smaller cosmetic changes.
+
+## 04-05-2026
+
+* data/index.html
+  * Spelling
+* data/wireless.html
+  * Spelling
+* src/Config.cpp
+  * Removed PROGMEM strings, not needed on ESP32
+* src/NRClock.cpp
+  * Removed PROGMEM strings, not needed on ESP32
+* src/RTWebServer.cpp
+  * Do not wait till the web server to load the configuration file
+  * Removed PROGMEM strings, not needed on ESP32
+* src/main.cpp
+  * Removed double include
+  * Removed PROGMEM strings, not needed on ESP32
+  * Rearagned setup code for coming config changes
+
